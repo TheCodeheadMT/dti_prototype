@@ -1,0 +1,4196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>app.dti.proto.DTILCS API documentation</title>
+<meta name="description" content="This software project was created in 2023 by the U.S. Federal government.
+See INTENT.md for information about what that means. See CONTRIBUTORS.md
+…" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>app.dti.proto.DTILCS</code></h1>
+</header>
+<section id="section-intro">
+<p>This software project was created in 2023 by the U.S. Federal government.
+See INTENT.md for information about what that means. See CONTRIBUTORS.md and
+LICENSE.md for licensing, copyright, and attribution information.</p>
+<p>Copyright 2023 U.S. Federal Government (in countries where recognized)
+Copyright 2023 Michael Todd and Gilbert Peterson</p>
+<p>Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<p>This package is an extention of the scikit-ExSTraCS project located at
+<a href="https://github.com/UrbsLab/scikit-ExSTraCS.git.">https://github.com/UrbsLab/scikit-ExSTraCS.git.</a></p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#34;&#34;&#34;
+This software project was created in 2023 by the U.S. Federal government.
+See INTENT.md for information about what that means. See CONTRIBUTORS.md and
+LICENSE.md for licensing, copyright, and attribution information.
+
+Copyright 2023 U.S. Federal Government (in countries where recognized)
+Copyright 2023 Michael Todd and Gilbert Peterson
+
+Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+This package is an extention of the scikit-ExSTraCS project located at 
+https://github.com/UrbsLab/scikit-ExSTraCS.git.
+&#34;&#34;&#34;
+import pathlib
+import os
+import time
+import pickle
+import pandas as pd
+import numpy as np
+from skExSTraCS import ExSTraCS
+from imblearn.over_sampling import RandomOverSampler
+from collections import Counter
+
+from sklearn.metrics import (
+    roc_curve,
+    f1_score,
+    roc_auc_score,
+    precision_recall_curve,
+    auc,
+    accuracy_score,
+    balanced_accuracy_score,
+    classification_report,
+    confusion_matrix,
+)
+from sklearn.metrics import RocCurveDisplay as rcd
+from sklearn.metrics import PrecisionRecallDisplay as pcd
+from skrebate import ReliefF
+from sklearn.model_selection import train_test_split, cross_val_score
+import matplotlib.pyplot as plt
+
+# from rich.console import Console
+from rich.traceback import install
+
+# from rich import inspect
+from .Utils import (
+    cumulativeFreq,
+    movingAvg,
+    plot_confusion_matrix,
+    Timer,
+    analyze_model,
+    copy_ek_rules,
+    report
+)
+
+class DTILCS:
+    __version__=&#34;0.0.30&#34;
+    DATA_DIR = &#34;./data/&#34;
+    MOD_DIR = &#34;./models/&#34;
+    FIGS_DIR = None
+    WRK_DIR = None
+    FIG_W = 6.8
+    FIG_H = 6.8
+    FIG_DPI = 1000
+    CLR = &#39;\x1b[1K\r&#39;
+    CLRN = &#39;\x1b[1K\r\n&#39;
+
+    def __init__(self, name: str, class_label=None, rules=None, headless=False) -&gt; None:
+        self.name = name
+        self.fit_mod_name = None
+        self.class_label = class_label
+        self.cur_mod = None
+        self.fit_mod = None
+        self.x_trn = None
+        self.x_val = None
+        self.y_trn = None
+        self.y_val = None
+        self.trn_data = None
+        self.hdrs = None
+        self.trn_fn = None
+        self.tst_fn = None
+        self.tst_hdrs = None
+        self.tst_data = None
+        self.EK_scores = None
+        self.TEST_DATA_FILE = None
+        self.headless = headless
+        self.trl_name = None
+        self.pred = None
+        self.pred_probs = None
+        self.yhat = None
+        self.pred_fn = None
+        self.rules = rules
+        self.report_path = None
+
+        # run setup
+        self._setup()
+
+        # rich install custom console output
+        install()
+        # self.con = Console(width=250)
+
+    def _reset(self) -&gt; None:
+        # reset state on all object variables
+        self.fit_mod_name = None
+        self.class_label = None
+        self.cur_mod = None
+        self.fit_mod = None
+        self.x_trn = None
+        self.x_val = None
+        self.y_trn = None
+        self.y_val = None
+        self.trn_data = None
+        self.hdrs = None
+        self.tst_fn = None
+        self.tst_hdrs = None
+        self.tst_data = None
+        self.EK_scores = None
+        self.TEST_DATA_FILE = None
+
+
+    def _setup(self) -&gt; None:
+        # Create working directories and check environment
+        try:
+            if not os.path.exists(self.MOD_DIR):
+                os.makedirs(self.MOD_DIR)
+
+            if not os.path.exists(self.DATA_DIR):
+                os.makedirs(self.DATA_DIR)
+
+        except OSError as e:
+            raise IsADirectoryError(
+                &#34;Setup failed. Check permissions in local directory.&#34;
+            ) from e
+        plt.style.use(&#39;fast&#39;)
+        font = {&#39;family&#39; : &#39;arial&#39;,
+        &#39;size&#39;   : 16}
+        plt.rc(&#39;font&#39;, **font)
+
+    def load_train_data(self, trn_data_fn: str = None, headers_only=False) -&gt; None:
+        &#34;&#34;&#34;Load DTI training data from a CSV file.
+
+        Args:
+            trn_data_fn (str, optional): Path to the DTI source file. Defaults to None.
+            headers_only (bool, optional): True if only headers are being loaded, e.g., full data is not required. Defaults to False.
+
+        Raises:
+            FileExistsError: If data directory does not exist and it can not be created.
+            FileExistsError: If the trn_data in DATA_DIR can not be loaded.
+        &#34;&#34;&#34;
+        _data_file = pathlib.Path(self.DATA_DIR, trn_data_fn)
+        _data_file_reduced = pathlib.Path(self.DATA_DIR, trn_data_fn, &#34;_reduced.csv&#34;)
+        try:
+            if os.path.isfile(_data_file):
+                if headers_only:
+                    self.trn_data = pd.read_csv(_data_file, nrows=5)
+                else:
+                    # print(f&#34;&gt; Load train data:\t{str(_data_file)}&#34;)
+                    print(f&#34;&gt; Load train data:\t{str(_data_file)}&#34;, end=&#34;\r&#34;)
+                    self.trn_data = pd.read_csv(_data_file)
+                    self.trn_fn = trn_data_fn
+
+                # remove any uef that might have been appended
+                # self.trn_dat.rename(lambda x: x  if any(k in x for k in keys) else x, axis=1)
+
+                print(
+                    f&#34;- Loaded train data: \t{str(_data_file)} ({len(self.trn_data)} rows)  &#34;
+                )
+
+            else:
+                raise FileExistsError(
+                    &#34;file not found at &#34; + str(_data_file)
+                )
+
+        except OSError as e:
+            raise FileExistsError(
+                &#34;unable to load file &#34; + str(_data_file)
+            ) from e
+
+    def load_test_data(self, tst_data_fn: str = None) -&gt; None:
+        &#34;&#34;&#34;Load DTI test data from a CSV file.
+
+        Args:
+            tst_data_fn (str): Filename of test data rule set to load. This file must be in the
+            DATA_DIR.
+
+        Raises:
+            FileExistsError: If data directory does not exist and it can not be created.
+            FileExistsError: If the tst_data_fn in DATA_DIR can not be loaded into a DataFrame.
+        &#34;&#34;&#34;
+        _test_file = pathlib.Path(self.DATA_DIR, tst_data_fn)
+        try:
+            if os.path.isfile(_test_file):
+                print(f&#34;&gt; Load test data:\t{str(_test_file)}&#34;, end=&#34;\r&#34;)
+                self.tst_data = pd.read_csv(_test_file)
+                self.tst_fn = tst_data_fn
+                print(
+                    f&#34;- Loaded test data: \t{str(_test_file)} ({len(self.tst_data)} rows)&#34;)
+            else:
+                raise FileExistsError(
+                    &#34;load_train_data: FILE NOT FOUND at &#34; + str(_test_file)
+                )
+
+        except OSError as e:
+            raise FileExistsError(
+                &#34;load_train_data: Unable to load file &#34; + str(_test_file)
+            ) from e
+
+    def prep_dataset(
+        self, val_size=0, random_state=None, do_ek=False, reduce_features=True, oversample_minority=True
+    ) -&gt; None:
+        &#34;&#34;&#34;Split data into train and validation split.
+
+        Args:
+            class_label (str): phenotype/class either 1 or 0.
+            val_size (float, optional): float value between 0-1. Defaults to .30.
+            random_state (int, optional): int value. Defaults to None.
+
+        Raises:
+            KeyError: If self.trn_data is not loaded.
+            RuntimeError: If class label not found self.trn_data.
+            RuntimeError: If sklearn.model_selection.train_test_split or skrebate.ReliefF functions fail
+            to execute correctly.
+            ValueError: If self.trn_data not set. Use load_train_data(filename.csv).
+        &#34;&#34;&#34;
+        # check if a data source has be set
+        if self.trn_data is not None:
+            # verify the class label being used is in the training data
+            if self.class_label not in self.trn_data:
+                raise KeyError(&#34;class label not found in dataset -&gt; &#34; + self.class_label)
+
+            try:
+                # if any features are completely empty, drop them before proceeding.
+                # tmp_headers_before = set(self.trn_data.columns)
+                # self.trn_data = self.trn_data.loc[:, (self.trn_data != 0).any(axis=0)]
+                # tmp_headers_after = set(self.trn_data.columns)
+                # if tmp_headers_before != tmp_headers_after:
+                #     print(f&#34;\n  [!] Removed empty features: {tmp_headers_before.difference(tmp_headers_after)}&#34;)
+
+                if reduce_features and self.tst_data is not None:
+                    print(f&#39;Reducing feature set to match train and test data provided.&#39;)
+                    # Drop all rows that are not found in train or test datasets.
+                    try:
+                        cols_in_trn = self.trn_data.loc[:, ~self.trn_data.any()].columns.values
+                        cols_in_tst = self.tst_data.loc[:, ~self.trn_data.any()].columns.values
+                        drop_cols = set(cols_in_trn) &amp; set(cols_in_tst)
+                        self.trn_data.drop(drop_cols, axis=1, inplace=True)
+                        self.tst_data.drop(drop_cols, axis=1, inplace=True)
+                    except RuntimeError as drop_dataframes_error:
+                        raise RuntimeError(
+                            &#34;failed to drop empty columsn from training and test data sets before training&#34;
+                        ) from drop_dataframes_error
+
+                # get data values for to split
+                _data_features = self.trn_data.drop(self.class_label, axis=1)
+                # get header names (meta-feature names) while still a df
+                self.hdrs = _data_features.columns
+                print(f&#39;\n  [:)] Training with [{len(self.hdrs)}] features: {str(self.hdrs)}\n&#39;)
+                # get np array of training data
+                _data_features = _data_features.values
+                # get np array of phenotype label (class)
+                _data_labels = self.trn_data[self.class_label].values
+                # create a balanced dataset using oversampling
+                if oversample_minority:
+                    oversample = RandomOverSampler(sampling_strategy=&#39;minority&#39;)
+                    # fit and apply the transform
+                    Xs, ys = oversample.fit_resample(_data_features, _data_labels)
+                else:
+                    Xs = _data_features
+                    ys = _data_labels
+
+                print(&#34;&gt; Preparing data&#34;)
+
+                if val_size == 0:
+                    self.x_trn = Xs
+                    self.y_trn = ys
+                    print(f&#39;  o Class disribution: {Counter(self.y_trn)}&#39;)
+                else:
+                    (
+                        self.x_trn,
+                        self.x_val,
+                        self.y_trn,
+                        self.y_val,
+                    ) = train_test_split(
+                        Xs,
+                        ys,
+                        test_size=val_size,
+                        random_state=random_state
+                    )
+                    print(f&#39;  o Class disribution in training data: {Counter(self.y_trn)}&#39;)
+                    print(f&#39;  o Class disribution in validation data: {Counter(self.y_val)}&#39;)
+
+                print(&#34;&gt; Split training data&#34;, end=&#34;\r&#34;)
+
+            except RuntimeError as e:
+                raise RuntimeError(&#34;failed to split data.&#34;) from e
+
+            try:
+                if do_ek:
+                    with Timer() as t: 
+                        # set EK scores for use during fit
+                        print(&#34;&gt; Find feature importance&#34;, end=&#34;\r&#34;)
+                        relieff = ReliefF()
+                        relieff.fit(self.x_trn, self.y_trn)
+                        self.EK_scores = relieff.feature_importances_
+
+                    print(f&#34;[DONE] Found feature importance ({&#39;%.03f&#39;% t.interval} sec.)&#34;)    
+                else:
+                    self.EK_scores = None
+
+            except RuntimeError as e:
+                raise RuntimeError(
+                    &#34;failed to create EK_scores to identify feature importance.&#34;
+                ) from e
+
+        else:
+            raise ValueError(
+                &#34;self.trn_data not set, use load_train_data(filename.csv).&#34;
+            )
+
+    def compile(
+        self, trial=None, iters=10000, N=6000, nu=5, random_state=None
+    ) -&gt; ExSTraCS:
+        &#34;&#34;&#34;Initialize the ExSTraCS LCS and sets hyper parameters.
+
+        Args:
+            iters (int, optional): The number of training cycles to run. Defaults to 10000.
+            N (int, optional):  Maximum micro classifier population size (sum of classifier numerosities). Defaults to 6000.
+            nu (int, optional): Power parameter used to determine the importance of high accuracy when calculating fitness. Defaults to 5.
+
+        Returns:
+            ExSTraCS: ExSTraCS 2.0 object (Extended Supervised Tracking and Classifying System)
+        &#34;&#34;&#34;
+        try:
+
+            if trial is not None:
+                self.trl_name = (
+                    str(trial) + &#34;_&#34; + str(iters) + &#34;_&#34; + str(N) + &#34;_&#34; + str(nu)
+                )
+                if random_state is not None:
+                    self.trl_name = self.trl_name + &#34;_seed-&#34; + str(random_state)
+
+            # Initialize ExSTraCS Model
+            if self.EK_scores is not None:
+                self.cur_mod = ExSTraCS(
+                    learning_iterations=iters,
+                    N=N,
+                    nu=nu,
+                    track_accuracy_while_fit=True,
+                    expert_knowledge=self.EK_scores,
+                )
+            else:
+                self.cur_mod = ExSTraCS(
+                    learning_iterations=iters, N=N, nu=nu, track_accuracy_while_fit=True
+                )
+        except RuntimeError as e:
+            raise RuntimeError(&#34;compile: Failed to create ExSTraCS model.&#34;) from e
+
+    def fit(self, exp_trking_data: bool = True) -&gt; None:
+        &#34;&#34;&#34;Fit the current model using paramters set by compile.
+
+        Args:
+            exp_trking_data (bool, optional): _description_. Defaults to True.
+
+        Raises:
+            ValueError: If self.cur_mod not defined.
+            RuntimeError: If model is not yet compiled.
+        &#34;&#34;&#34;
+        if self.cur_mod is not None:
+            if self.x_trn is not None and self.y_trn is not None:
+                print(&#34;&gt; Fit model          &#34;, end=&#34;\r&#34;)
+                # Fit the model using training data and labels
+
+                with Timer() as t:
+                    self.fit_mod = self.cur_mod.fit(self.x_trn, self.y_trn)
+                _build_tm = &#34;%.03f sec.&#34; % t.interval
+
+                timehack = &#34;_&#34; + time.strftime(&#34;%Y%m%d_%H%M%S&#34;)
+
+                try:
+                    # create work dir to save files and figures in
+                    if self.trl_name is not None:
+                        self.fit_mod_name = self.name + &#34;_&#34; + self.trl_name + timehack
+                    else:
+                        self.fit_mod_name = self.name + timehack
+
+                    # create model named directory
+                    _mod_dir = pathlib.Path(self.MOD_DIR, self.fit_mod_name)
+                    os.makedirs(_mod_dir)
+
+                except IOError as e:
+                    raise IOError(f&#34;failed creating {str(_mod_dir)}&#34;) from e
+
+                # set working directory
+                self._set_wrk_dir(_mod_dir, dir=True)
+
+                # save the iteration tracking to disk
+                if exp_trking_data:
+                    self.fit_mod.export_iteration_tracking_data(
+                        str(
+                            pathlib.Path(
+                                self.WRK_DIR, self.fit_mod_name + &#34;_iterData.csv&#34;
+                            )
+                        )
+                    )
+
+                # export final rule population
+                self.fit_mod.export_final_rule_population(
+                    self.hdrs,
+                    self.class_label,
+                    filename=str(
+                        pathlib.Path(
+                            self.WRK_DIR, self.fit_mod_name + &#34;_finalRulePop.csv&#34;
+                        )
+                    ),
+                    DCAL=False,
+                )
+                print(f&#34;- Model fit in {_build_tm}&#34;)
+
+            else:
+                raise ValueError(&#34;x_trn and y_trn not set: run load_test_data first.&#34;)
+        else:
+            raise RuntimeError(&#34;cur_mod not defined: compile model before fitting.&#34;)
+
+    def cross_validate(self, k=5) -&gt; float:
+        &#34;&#34;&#34;Cross validate the current model using sklearn cross_val_score.
+
+        Args:
+            k (int, optional): Cross validation folds. Defaults to 5.
+
+        Raises:
+            RuntimeError: if cross validate fails
+        &#34;&#34;&#34;
+        print(f&#34;&gt; {str(k)}-fold Cross Validation&#34;, end=&#39;\r&#39;)
+        try:
+            # shuffling data before cross validation
+            _formatted = np.insert(self.x_trn, self.x_trn.shape[1], self.y_trn, 1)
+            np.random.shuffle(_formatted)
+            _data_features = np.delete(_formatted, -1, axis=1)
+            _data_labels = _formatted[:, -1]
+
+            # Defaults to 5 fold CV
+            try:
+                with Timer() as t:
+                    try:
+                        cv_scores = cross_val_score(estimator=self.cur_mod, X=_data_features, y=_data_labels, cv=k)
+                        # cv_scores = cross_val_score(self.fit_mod, _data_features, _data_labels, cv=k)
+                        print(f&#39;    o CV Scores: {cv_scores}&#39;)
+                        cv_score = round(np.mean(cv_scores),2,)         
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;Cross validation failed.&#34;) from e    
+            finally:     
+                print(f&#34;- {str(k)}-fold Cross Validation score:\t{str(cv_score)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)
+
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;cross validate failed - check x and y data shapes.&#34;
+            ) from e
+
+        return cv_score
+
+    def save_model(self) -&gt; None:
+        &#34;&#34;&#34;Save a model to disk using pickle file.
+
+        Raises:
+            IOError: If self.fit_mod does not exist.
+            RuntimeError: If picket.dump fails to write the model to disk.
+        &#34;&#34;&#34;
+        if self.fit_mod is not None:
+            try:
+                assert (
+                    self.WRK_DIR is not None
+                ), &#34;can not save without work directory being established.&#34;
+                outfile = pathlib.Path(self.WRK_DIR, self.fit_mod_name + &#34;_model.pkl&#34;)
+                pickle.dump(self.fit_mod, open(outfile, &#34;wb&#34;))
+                print(f&#34;- Saved model -&gt; {str(outfile)}&#34;)
+
+            except IOError as e:
+                raise IOError(
+                    f&#34;pickel.dump: Failed to call picket.dump to {str(outfile)}&#34;
+                ) from e
+        else:
+            raise RuntimeError(
+                &#34;save_model: fit_mod not defined--compile and fit model before savinging.&#34;
+            )
+
+    def load_model(self, model_path: str = None) -&gt; None:
+        &#34;&#34;&#34;Loads existing model from a pkl file and sets the fit_mod and fit_mod_name values.
+
+        Args:
+            model_name (str): file name of the model, normally in the format &#39;mod1_20231010_150556_model.pkl&#39;.
+
+        Raises:
+            FileNotFoundError: If model file does not exist.
+            IOError: if pickel.load fails to load model.
+
+        &#34;&#34;&#34;
+        try:
+            # print(f&#39;provided to load model: {model_path}&#39;)
+            _mod_path = pathlib.Path(model_path)
+            if os.path.isfile(_mod_path):
+                # load model from pkl file
+                print(&#34;&gt; Load model&#34;, end=&#34;\r&#34;)
+                self.fit_mod = pickle.load(open(_mod_path, &#34;rb&#34;))
+
+                # set working directory to loaded models
+                self._set_wrk_dir(_mod_path)
+
+                print(f&#34;- Loaded model:\t\t{str(_mod_path)}   &#34;)
+            else:
+                print(f&#34;[FAIL] Load model\t\t{str(_mod_path)}&#34;)
+                raise FileNotFoundError(f&#34;model file not found: {str(_mod_path)}&#34;)
+
+        except IOError as e:
+            raise IOError(
+                f&#34;pickel.load failed to load model model_name {str(_mod_path)}&#34;
+            ) from e
+
+    def predict(self, unseen_data: pd.DataFrame, class_label=None) -&gt; np.ndarray:
+        &#34;&#34;&#34;Given a pandas DataFrame of observations, predict the phenotype (class) as relevant or not.
+
+        Args:
+            unseen_data (pd.DataFrame): _description_
+            class_label (_type_, optional): _description_. Defaults to None.
+
+        Raises:
+            RuntimeError: If model.predict fails.
+
+        Returns:
+            np.ndarray: array of int values representing phenotype label (0 not relevant, 1 relevant)
+        &#34;&#34;&#34;
+        try:
+            if class_label is not None:
+                # data was provided a label
+                xs = unseen_data.drop(class_label, axis=1).values
+            else:
+                xs = unseen_data.values
+
+            # get predcition for each unseen observation
+            self.pred = self.fit_mod.predict(xs)
+
+            return self.pred
+
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;predict failed, if unseen data is labled, specific class_label=&#39;class&#39;&#34;
+            ) from e
+
+    def test_model(
+        self,
+        predict=True,
+        acc_score=True,
+        class_rpt=True,
+        model_metrics=False,
+        roc_prc=False,
+        predict_proba=False,
+        threshold=0.5,
+        train_data=None,
+        class_label=None,
+    ):
+        &#34;&#34;&#34;Test a fit or loaded model and produce various reports and plots. By default, only predict, accuracy score,
+        and classification report are produced if no options are specified.
+
+        Args:
+            predict (bool, optional): Predict using fit model x and y data. Defaults to True.
+            acc_score (bool, optional): Calculate accuracy score using fit model x and y data. Defaults to True.
+            class_rpt (bool, optional): Create a classification report using fit model x and y data.. Defaults to True.
+            model_metrics (bool, optional): Output plots of model metrics. Defaults to False.
+            roc_prc (bool, optional): Create ROC/PRC plots using fit model x and y data. Defaults to False.
+            predict_proba (bool, optional): Predict probabilities using fit model x and y data. Defaults to False.
+            threshold (float, optional): Set threshold. Defaults to 0.5.
+            train_data (_type_, optional): x-data to be tested with fit or loaded model. Defaults to None.
+            class_label (_type_, optional): Class label as string, the column name. Defaults to None.
+
+        Raises:
+            ValueError: If class label not found in data training and test datasets.
+            ValueError: If test_model test data hdrs do not match training hdrs.
+            RuntimeError: If failed to drop class label.   
+            RuntimeError: If model predict failed.
+            RuntimeError: If predict test failed.
+            IOError: If failed to write test data to csv.
+            RuntimeError: If model predict proba failed.
+            RuntimeError: If failed to create roc/prc curves.
+            RuntimeError: If failed to plot model metrics.
+            RuntimeError: If failed to plot model stats.
+            RuntimeError: If failed to create classification report.
+            IOError: If failed to write classification report.
+            IOError: If failed to write confusion matrix.
+            IOError: If failed to write confusion matrix (normlalized).
+            IOError: If failed to write ROC display from pred.
+            IOError: If failed to write PRC threshold. 
+            RuntimeError: If failed to create plots.
+            RuntimeError: If test data not loaded.
+
+        Returns:
+             np.ndarray: Array of predicted values, e.g., y-hat.
+        &#34;&#34;&#34;
+        assert (
+            self.WRK_DIR is not None
+            and self.fit_mod_name is not None
+            and self.FIGS_DIR is not None
+        ), &#34;directories are not setup!&#34;
+
+        acc, bal_acc, err, model_cm = None, None, None, None
+
+        if self.tst_data is not None:
+            if self.fit_mod is not None:
+                if self.trn_data is None:
+                    assert (
+                        train_data is not None
+                    ), &#34;Training data not loaded, must provide a path to training data.&#34;
+                    self.load_train_data(train_data, headers_only=True)
+
+                assert (
+                    self.trn_data is not None and self.tst_data is not None
+                ), &#34;training or test data not loaded.&#34;
+                self.hdrs = self.trn_data.columns.tolist()
+                _tst_hdrs = self.tst_data.columns.tolist()
+
+                if class_label in self.hdrs and class_label in _tst_hdrs:
+                    self.class_label = class_label
+                else:
+                    raise ValueError(
+                        f&#34;Class label {class_label} not found in data training and test datasets.&#34;
+                    )
+
+                try:
+                    # get header names (meta-feature names) while still a df
+                    self.tst_hdrs = self.tst_data.columns.tolist()
+                    # get test data values
+                    if set(self.hdrs) != set(self.tst_hdrs):
+                        raise ValueError(
+                            &#34;test_model: test data hdrs do not match training hdrs.&#34;
+                        )
+                    _test_ys = self.tst_data[self.class_label].values
+                    _tst_data_features = self.tst_data.drop(
+                        self.class_label, axis=1
+                    ).values
+                except RuntimeError as e:
+                    raise RuntimeError(f&#34;Failed to drop class label: {self.class_label}&#34;) from e
+
+                # get prediction for each unseen observation
+                if predict:
+                    try:
+                        with Timer() as t:
+                            try:
+                                print(&#34;&gt; Predict test&#34;, end=&#34;\r&#34;)
+                                self.yhat = self.fit_mod.predict(_tst_data_features)
+                                self.tst_data[&#34;pred&#34;] = self.yhat
+                                self.pred_fn = pathlib.Path(
+                                    self.WRK_DIR,
+                                    self.fit_mod_name + &#34;__pred_on_&#34; + self.tst_fn,
+                                )
+
+                            except RuntimeError as e:
+                                raise RuntimeError(&#34;Model predict failed.&#34;) from e
+                        try:    
+                            self.tst_data.to_csv(self.pred_fn, index=False)    
+                            print(f&#34;- Predicted test saved to -&gt; {str(self.pred_fn)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)
+                        except IOError as e:
+                            raise IOError(&#34;Failed to write predicted values to file.&#34;) from e
+
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;predict test failed.&#34;) from e
+
+                # get prediction probablities (default False)
+                if predict_proba:
+                    try:
+                        with Timer() as t:
+
+                            print(
+                                &#34;&gt; Predict proba&#34;,
+                                end=&#34;\r&#34;,
+                            )
+                            self.pred_prob = self.fit_mod.predict_proba(
+                                _tst_data_features
+                            )
+                            self.tst_data[&#34;pred_not_rel&#34;] = self.pred_prob[:, 0]
+                            self.tst_data[&#34;pred_rel&#34;] = self.pred_prob[:, 1]
+                            fn = pathlib.Path(
+                                self.WRK_DIR,
+                                self.fit_mod_name
+                                + &#34;__pred_proba_on_&#34;
+                                + self.tst_fn,
+                            )
+                            try:
+                                self.tst_data.to_csv(fn, index=False)
+                            except IOError as e:
+                                raise IOError(&#34;failed to write test data to csv.&#34;) from e
+
+                        print(f&#34;- Predicted proba saved to -&gt; {str(fn)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)    
+
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;model predict proba failed&#34;) from e
+
+                if roc_prc:
+                    print(&#34;&gt; Plot ROC/PRC&#34;, end=&#34;\r&#34;)
+                    try:
+                        with Timer() as t:
+                            self._roc_prc_curves(Xs=_tst_data_features, ys=_test_ys)
+
+                        print(f&#34;- ROC/PRC plot saved to -&gt; {self.FIGS_DIR} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)
+
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;failed to create roc/prc curves&#34;) from e
+
+                if model_metrics:
+                    print(&#34;&gt; Plot model metrics&#34;, end=&#34;\r&#34;)
+                    try:
+                        with Timer() as t:
+
+                            self._plot_model_stats()
+                        print(f&#34;- Model metrics saved to -&gt; {self.FIGS_DIR} ({&#39;%.03f&#39;% t.interval} sec.) &#34;)        
+
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;failed to plot model metrics&#34;) from e
+
+                if acc_score:
+                    if acc_score and not predict:
+                        print(
+                            &#34;NOTE: Skipping accuracy score--must set predict=True to produce accuracy score.&#34;
+                        )
+
+                    else:
+                        print(&#34;&gt; Check accuracy&#34;, end=&#34;\r&#34;)
+                        try:
+                            with Timer() as t:
+                                acc = accuracy_score(
+                                    self.tst_data[self.class_label].values,
+                                    self.tst_data[&#34;pred&#34;].values,
+                                )
+                                class_names = [&#34;Not Relevant&#34;, &#34;Relevant&#34;]
+
+                                y_truth = self.tst_data[self.class_label].values
+                                y_pred = self.tst_data[&#34;pred&#34;].values
+
+                                if threshold != 0.5:
+                                    y_pred[y_pred &gt; threshold] = 1
+                                    y_pred[y_pred &lt; threshold] = 0
+
+                                # accuracy scores
+                                bal_acc = balanced_accuracy_score(y_truth, y_pred)
+                                acc, bal_acc, err = (
+                                    round(acc, 2),
+                                    round(bal_acc, 2),
+                                    round(1 - acc, 2),
+                                )
+                            print(f&#34;- Accuracy: {str(acc)} | Balanced Accuracy: {str(bal_acc)} | Error: {str(err)} ({&#39;%.03f&#39;% t.interval} sec.) &#34;)
+
+                        except RuntimeError as e:
+                            print(f&#34;[FAIL] Check accuracy scores using {self.fit_mod_name}&#34;)
+                            raise RuntimeError(&#34;failed to plot model stats&#34;) from e    
+
+                # classification report to figures
+                model_cm = None
+                if class_rpt:
+
+                    try: 
+                        # classification report
+                        cr = classification_report(
+                            y_truth, y_pred, target_names=class_names
+                        )
+                    except RuntimeError as e:
+                        raise RuntimeError (&#34;failed to create classification report.&#34;) from e
+
+                    try:
+                        _cr_file = pathlib.Path(self.WRK_DIR,self.fit_mod_name + &#34;__class_report_.txt&#34;)
+                        with open(_cr_file, &#34;w&#34;, encoding=&#34;utf-8&#34;) as text_file:
+                            text_file.write(cr)
+
+                    except IOError as e:
+                        raise IOError (&#34;failed to write classification report.&#34;) from e        
+
+                    try:
+                        # confusion matrix
+                        model_cm = confusion_matrix(y_true=y_truth, y_pred=y_pred)
+                        plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                            self.FIG_W, self.FIG_H
+                        )
+                        plot_confusion_matrix(
+                            model_cm,
+                            classes=class_names,
+                            #title=&#34;Confusion matrix - (&#34; + str(threshold) + &#34;)&#34;,
+                            title=&#34;Confusion matrix&#34;,
+                        )
+                        plt.savefig(
+                            pathlib.Path(
+                                self.FIGS_DIR, self.fit_mod_name + &#34;_fig_cm.svg&#34;
+                            )
+                        )
+                        plt.close()
+                        if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_cm.svg&#34;)):
+                            raise IOError(&#34;failed to write confusion matrix.&#34;)
+
+                        # confusion matrix normalized
+                        plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                            self.FIG_W, self.FIG_H
+                        )
+                        plot_confusion_matrix(
+                            model_cm,
+                            normalize=True,
+                            classes=class_names,
+                            title=&#34;Confusion matrix (norm)&#34;,
+                        )
+                        plt.savefig(
+                            pathlib.Path(
+                                self.FIGS_DIR,
+                                self.fit_mod_name + &#34;_fig_cm_norm.svg&#34;,
+                            )
+                        )
+                        plt.close()
+                        if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_cm_norm.svg&#34;)):
+                            raise IOError(&#34;failed to write confusion matrix (normlalized).&#34;)
+
+                        # ROC plot
+                        plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                            self.FIG_W, self.FIG_H
+                        )
+                        rcd.from_predictions(y_truth, y_pred, name=&#34;ROC&#34;)
+                        plt.savefig(
+                            pathlib.Path(
+                                self.FIGS_DIR,
+                                self.fit_mod_name + &#34;_fig_ROC_Disp_frm_pred.svg&#34;))
+                        plt.close()
+                        if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_ROC_Disp_frm_pred.svg&#34;)):
+                            raise IOError(&#34;failed to write ROC display from pred.&#34;)
+
+                        # PRC threshold
+                        plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                            self.FIG_W, self.FIG_H
+                        )
+                        # plt.figure.suptitle(&#34;2-class Precision-Recall curve&#34;)
+                        # plt_ = precision_recall_threshold(
+                        #     self.fit_mod,
+                        #     _tst_data_features,
+                        #     y_truth,
+                        #     y_preds=self.yhat,
+                        #     thold=threshold,
+                        #     title=&#34;&#34;,
+                        # )
+                        pcd.from_predictions(y_truth, y_pred, name=&#34;MLCS&#34;)
+
+                        plt.savefig(
+                            pathlib.Path(
+                                self.FIGS_DIR,
+                                self.fit_mod_name + &#34;_prc_threshold.svg&#34;,
+                            )
+                        )
+                        plt.close()
+                        if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_prc_threshold.svg&#34;)):
+                            raise IOError(&#34;failed to write PRC threshold.&#34;)
+
+                        print(f&#34;- Confusion matrix and plotts in f-&gt; {self.FIGS_DIR}&#34;
+                                )
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;Error creating plots.&#34;) from e
+        else:
+            raise RuntimeError(
+                &#34;test data not loaded - load test data with load_test_data(tst_data_filename.csv)&#34;
+            )
+        return acc, bal_acc, err, model_cm
+
+    # PLOTS FOR INTERPRETING THE MODEL referenced from
+    # https://github.com/UrbsLab/scikit-ExSTraCS/blob/master/scikit-ExSTraCS%20User%20Guide.ipynb
+    def _roc_prc_curves(self, Xs=None, ys=None, verbose=False) -&gt; None:
+        &#34;&#34;&#34;Create ROC and PRC curves based on current model and training data.
+
+        Args:
+            Xs (ndarray, optional): x-values for provided data. Defaults to None.
+            ys (array, optional): y-values for provided data. Defaults to None.
+            verbose (bool, optional): Print metrics to console. Defaults to False.
+
+        Raises:
+            IOError: If failed to write ROC curve.
+            IOError: If failed to write PRC curve.
+            RuntimeError: If failed to create plots for ROC/PRC curve.
+            RuntimeError: If is not fit or loaded before producing ROC/PRC plot.
+        &#34;&#34;&#34;
+        if not any(elem is None for elem in [Xs, ys, self.fit_mod]):
+            if self.pred_probs is None:
+                self.pred_probs = self.fit_mod.predict_proba(Xs)
+
+            try:
+                # no skill pred
+                ns_probs = [0 for _ in range(len(ys))]
+                # keep probabilities for the positive outcome only
+                pos_probs = self.pred_probs[:, 1]
+
+                # calculate scores
+                ns_auc = roc_auc_score(ys, ns_probs)
+                lcs_auc = roc_auc_score(ys, pos_probs)
+
+                # summarize scores
+                # print(&#34;-- LCS AUC=%.3f&#34; % (lcs_auc), end=&#34;&#34;)
+                # print(&#34;, No Skill AUC=%.3f&#34; % (ns_auc), end=&#34;&#34;)
+
+                # calculate roc curves
+                ns_fpr, ns_tpr, _ = roc_curve(ys, ns_probs)
+                fpr, tpr, _ = roc_curve(ys, pos_probs)
+
+                # plot the roc curve for the model
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(ns_fpr, ns_tpr, linestyle=&#34;--&#34;, label=&#34;No Skill&#34;)
+                plt.plot(fpr, tpr, marker=&#34;.&#34;, label=&#34;LCS&#34;)
+
+                # axis labels
+                plt.xlabel(&#34;False Positive Rate&#34;)
+                plt.ylabel(&#34;True Positive Rate&#34;)
+
+                # show the legend
+                plt.legend()
+
+                # save figure
+                plt.savefig(
+                    pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_ROC.svg&#34;)
+                )
+                plt.close()
+
+                if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_ROC.svg&#34;)):
+                    raise IOError(&#34;failed to write ROC curve.&#34;)
+
+                ### Now precision recall curve
+                # predict class values
+                precision, recall, _ = precision_recall_curve(ys, pos_probs)
+                f1, lcs_auc = f1_score(ys, self.yhat), auc(recall, precision)
+
+                # summarize scores
+                print(&#34;-- F1=%.3f, AUC=%.3f&#34; % (f1, lcs_auc))
+
+                # plot the precision-recall curves
+                # no_skill = len(ys[ys==1]) / len(ys)
+                # plt.plot([0, 1], [no_skill, no_skill], linestyle=&#39;--&#39;, label=&#39;No Skill&#39;)
+                plt.plot(recall, precision, marker=&#34;.&#34;, label=&#34;LCS&#34;)
+                # axis labels
+                plt.xlabel(&#34;Recall&#34;)
+                plt.ylabel(&#34;Precision&#34;)
+                # show the legend
+                plt.legend()
+                plt.savefig(
+                    pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_PRC.svg&#34;)
+                )
+                plt.close()
+                if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_PRC.svg&#34;)):
+                    raise IOError(&#34;failed to write PRC curve.&#34;)
+
+            except RuntimeError as e:
+                raise RuntimeError(&#34;Failed to create plots for ROC/PRC curve.&#34;) from e
+
+            if verbose:
+                print(&#34;\n&#34; + &#34;PRC AUC: \t&#34; + str(round(auc(recall, precision), 3)))
+                print(&#34;ROC AUC:\t&#34; + str(round(auc(fpr, tpr), 3)))
+
+                print(
+                    &#34;Final Training Accuracy: &#34;
+                    + str(self.fit_mod.get_final_training_accuracy())
+                )
+                print(
+                    &#34;Final Instance Coverage: &#34;
+                    + str(self.fit_mod.get_final_instance_coverage())
+                )
+                print(
+                    &#34;Final Attribute Specificity List: &#34;
+                    + str(self.fit_mod.get_final_attribute_specificity_list())
+                )
+                print(
+                    &#34;Final Attribute Accuracy List: &#34;
+                    + str(self.fit_mod.get_final_attribute_accuracy_list())
+                )
+                print(&#34;Final Attribute Tracking Sums:&#34;)
+                print(self.fit_mod.get_final_attribute_tracking_sums())
+                print(&#34;Final Attribute Cooccurences:&#34;)
+                print(self.fit_mod.get_final_attribute_coocurrences(self.hdrs.values))
+        else:
+            raise RuntimeError(&#34;model must be fit or loaded before producing ROC/PRC plot.&#34;)
+
+    def _plot_model_stats(self, iter_file = None) -&gt; None:
+        &#34;&#34;&#34;Create plots for the fit_mod if training metadata is available.
+
+        Raises:
+            IOError: If failed to create plots for model metrics.
+            FileNotFoundError If iterData file is not found.
+            RuntimeError: If model not fit.
+        &#34;&#34;&#34;
+        if iter_file is not None:
+            _iter_data_file = pathlib.Path(iter_file)    
+        else:
+            #_mod_name = &#34;&#34;.join(self.fit_mod_name.rsplit(&#34;_model&#34;, 1))
+            _iter_data_file = pathlib.Path(
+                self.WRK_DIR, &#34;&#34;.join(self.fit_mod_name.rsplit(&#34;_model&#34;, 1)) + &#34;_iterData.csv&#34;
+            )
+            
+        if not os.path.isfile(_iter_data_file):
+            raise FileNotFoundError(f&#34;iterData not found at {str(_iter_data_file)}!&#34;)
+
+        if self.fit_mod is not None:
+            data_tracking = pd.read_csv(_iter_data_file)
+
+            iterations = data_tracking[&#34;Iteration&#34;].values
+            accuracy = data_tracking[&#34;Accuracy (approx)&#34;].values
+            generality = data_tracking[&#34;Average Population Generality&#34;].values
+            macro_pop = data_tracking[&#34;Macropopulation Size&#34;].values
+            micro_pop = data_tracking[&#34;Micropopulation Size&#34;].values
+            m_size = data_tracking[&#34;Match Set Size&#34;].values
+            c_size = data_tracking[&#34;Correct Set Size&#34;].values
+            experience = data_tracking[
+                &#34;Average Iteration Age of Correct Set Classifiers&#34;
+            ].values
+            subsumption = data_tracking[&#34;# Classifiers Subsumed in Iteration&#34;].values
+            crossover = data_tracking[
+                &#34;# Crossover Operations Performed in Iteration&#34;
+            ].values
+            mutation = data_tracking[
+                &#34;# Mutation Operations Performed in Iteration&#34;
+            ].values
+            covering = data_tracking[
+                &#34;# Covering Operations Performed in Iteration&#34;
+            ].values
+            deletion = data_tracking[
+                &#34;# Deletion Operations Performed in Iteration&#34;
+            ].values
+            rc = data_tracking[&#34;# Rules Removed via Rule Compaction&#34;].values
+
+            g_time = data_tracking[&#34;Total Global Time&#34;].values
+            m_time = data_tracking[&#34;Total Matching Time&#34;].values
+            cross_time = data_tracking[&#34;Total Crossover Time&#34;].values
+            cov_time = data_tracking[&#34;Total Covering Time&#34;].values
+            mut_time = data_tracking[&#34;Total Mutation Time&#34;].values
+            at_time = data_tracking[&#34;Total Attribute Tracking Time&#34;].values
+            init_time = data_tracking[&#34;Total Model Initialization Time&#34;].values
+            rc_time = data_tracking[&#34;Total Rule Compaction Time&#34;].values
+            del_time = data_tracking[&#34;Total Deletion Time&#34;].values
+            sub_time = data_tracking[&#34;Total Subsumption Time&#34;].values
+            sel_time = data_tracking[&#34;Total Selection Time&#34;].values
+            eval_time = data_tracking[&#34;Total Evaluation Time&#34;].values
+
+            _met_dir = pathlib.Path()
+            try:
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_acc-gen_vs_iter.svg&#34;)
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(iterations, accuracy, label=&#34;approx accuracy&#34;)
+                plt.plot(iterations, generality, label=&#34;avg generality&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                plt.ylabel(&#34;Accuracy/Generality&#34;)
+                plt.legend()
+                plt.savefig(_out)
+                plt.close()
+
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_acc-gen_vs_iter&#34;)
+
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(iterations, macro_pop, label=&#34;MacroPop Size&#34;)
+                plt.plot(iterations, micro_pop, label=&#34;MicroPop Size&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                plt.ylabel(&#34;Macro/MicroPop Size&#34;)
+                plt.legend()
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_macro_pop-micro_vs_iter.svg&#34;)
+                plt.savefig(_out)
+                plt.close()
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_macro_pop-micro_vs_iter&#34;)
+
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(iterations, m_size, label=&#34;[M] size&#34;)
+                plt.plot(iterations, movingAvg(m_size), label=&#34;[M] size movingAvg&#34;)
+                plt.plot(iterations, c_size, label=&#34;[C] size&#34;)
+                plt.plot(iterations, movingAvg(c_size), label=&#34;[C] size movingAvg&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                plt.ylabel(&#34;[M]/[C] size per iteration&#34;)
+                plt.legend()
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_match-correct_vs_iter.svg&#34;)
+                plt.savefig(_out)
+                plt.close()
+
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_match-correct_vs_iter&#34;)
+
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(iterations, experience)
+                plt.ylabel(&#34;Average [C] Classifier Age&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_class-age_vs_iter.svg&#34;)
+                plt.savefig(_out)
+                plt.close()
+
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_class-age_vs_iter&#34;)
+
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(
+                    iterations, cumulativeFreq(subsumption), label=&#34;Subsumption Count&#34;
+                )
+                plt.plot(iterations, cumulativeFreq(crossover), label=&#34;Crossover Count&#34;)
+                plt.plot(iterations, cumulativeFreq(mutation), label=&#34;Mutation Count&#34;)
+                plt.plot(iterations, cumulativeFreq(deletion), label=&#34;Deletion Count&#34;)
+                plt.plot(iterations, cumulativeFreq(covering), label=&#34;Covering Count&#34;)
+                plt.plot(iterations, cumulativeFreq(rc), label=&#34;RC Count&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                plt.ylabel(&#34;Cumulative Operations Count Over Iterations&#34;)
+                plt.legend()
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_cum-op-cnt_vs_iter.svg&#34;)
+                plt.savefig(_out)
+                plt.close()
+
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_cum-op-cnt_vs_iter&#34;)
+
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(iterations, init_time, label=&#34;Init Time&#34;)
+                plt.plot(iterations, m_time + init_time, label=&#34;Matching Time&#34;)
+                plt.plot(iterations, cov_time + m_time + init_time, label=&#34;Covering Time&#34;)
+                plt.plot(
+                    iterations,
+                    sel_time + cov_time + m_time + init_time,
+                    label=&#34;Selection Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    cross_time + sel_time + cov_time + m_time + init_time,
+                    label=&#34;Crossover Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    mut_time + cross_time + sel_time + cov_time + m_time + init_time,
+                    label=&#34;Mutation Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    sub_time
+                    + mut_time
+                    + cross_time
+                    + sel_time
+                    + cov_time
+                    + m_time
+                    + init_time,
+                    label=&#34;Subsumption Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    at_time
+                    + sub_time
+                    + mut_time
+                    + cross_time
+                    + sel_time
+                    + cov_time
+                    + m_time
+                    + init_time,
+                    label=&#34;AT Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    del_time
+                    + at_time
+                    + sub_time
+                    + mut_time
+                    + cross_time
+                    + sel_time
+                    + cov_time
+                    + m_time
+                    + init_time,
+                    label=&#34;Deletion Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    rc_time
+                    + del_time
+                    + at_time
+                    + sub_time
+                    + mut_time
+                    + cross_time
+                    + sel_time
+                    + cov_time
+                    + m_time
+                    + init_time,
+                    label=&#34;RC Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    eval_time
+                    + rc_time
+                    + del_time
+                    + at_time
+                    + sub_time
+                    + mut_time
+                    + cross_time
+                    + sel_time
+                    + cov_time
+                    + m_time
+                    + init_time,
+                    label=&#34;Evaluation Time&#34;,
+                )
+                plt.plot(iterations, g_time, label=&#34;Total Time&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                plt.ylabel(&#34;Cumulative Time (Stacked)&#34;)
+                plt.legend()
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_cum-time_vs_iter.svg&#34;)
+                plt.savefig(_out)
+                plt.close()
+
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_cum-time_vs_iter&#34;)
+
+            except RuntimeError as e:
+                raise IOError(&#34;plot model metrics failed.&#34;) from e
+        else:
+            raise RuntimeError(&#34;model must be fit or loaded before plotting model stats.&#34;)
+
+    def _set_wrk_dir(self, mod_path: pathlib.Path, dir=False):
+        &#34;&#34;&#34;Internal method to set working directory.
+
+        Args:
+            mod_path (pathlib.Path): path object to the loaded model.
+            dir (bool, optional): boolean object representing if the path is a directory. Defaults to False.
+
+        Raises:
+            IOError: If failed to set working directory. 
+        &#34;&#34;&#34;
+        try:
+            if dir:
+                # its only the work dir
+                assert os.path.isdir(
+                    mod_path
+                ), f&#34; model directory not found at {mod_path}&#34;
+                _mod_dir = str(mod_path)
+                _fig_dir = str(pathlib.Path(mod_path, &#34;figures&#34;))
+
+            else:
+                assert os.path.isfile(mod_path), f&#34; model file not found at {mod_path}&#34;
+                _mod_dir = str(mod_path.parent)
+                _mod_file = str(mod_path.name)
+                _mod_name = _mod_file.replace(&#34;.pkl&#34;, &#34;&#34;)
+                _fig_dir = str(pathlib.Path(_mod_dir, &#34;figures&#34;))
+                self.fit_mod_name = _mod_name
+                self.name = _mod_name
+
+            if not os.path.exists(_fig_dir):
+                os.makedirs(_fig_dir)
+
+            self.WRK_DIR = _mod_dir
+            self.FIGS_DIR = _fig_dir
+
+        except IOError as e:
+            raise IOError(&#34;failed to set working directory.&#34;) from e
+
+    def do_analysis(self):
+        &#34;&#34;&#34; Method to create reports used to do analysis, including FP/FN reports, and FULL and SUMMARY final reports.
+        &#34;&#34;&#34;
+        assert self.pred_fn is not None, &#34;prediction file not created&#34;
+        assert self.fit_mod_name is not None, &#34;model must be fit and loaded before doing analysis&#34;
+        
+        # get file name from feature vector training file name
+        dti_file = f&#34;data/{self.trn_fn.replace(&#39;fv_&#39;,&#39;&#39;)}&#34;
+        
+        # get path to model prediction on test data file
+        mod_pred_file = str(self.pred_fn)
+        assert os.path.isfile(mod_pred_file), &#34;model prediction file not found&#34;
+
+        # get dti file to match with predicted, so content is shown during review
+        dti_df = pd.read_csv(dti_file)
+        mod_pred_df = pd.read_csv(mod_pred_file)
+        
+        # create FP and FN reports in model directory
+        analyze_model(dti_df,mod_pred_df,&#39;rel&#39;,self.WRK_DIR)
+
+        # copy EK rules in model dir.
+        copy_ek_rules(self.WRK_DIR, self.rules)
+
+        # produce final prediction report
+        self.report_path = str(report(dti_df,mod_pred_df, self.WRK_DIR))
+
+    def pred_from_model(self, model_path=None, trn_data=None, tst_data=None, class_label = None, out_dir=&#39;.&#39;, sum_flds = None) -&gt; pathlib:
+        &#34;&#34;&#34;Predict on unseen data using an existing model located at model_path.  
+
+        Args:
+            model_path (str): path to the model being used to predict.
+            trn_data (str): path to training data used to train the model.
+            tst_data (str): path to unsee data.
+            class_label (str): class label.
+            out_dir (str, optional): path to output directory. Defaults to &#39;.&#39;.
+
+        Raises:
+            RuntimeError: If failed to drop empty columsn from training and test data sets before training.
+            ValueError: If class label is not found in data training and unseen datasets.
+            ValueError: If unseen data headers do not match training headers.
+            RuntimeError: If failed to drop class label.
+            RuntimeError: If model predict failed.
+            IOError: If failed to write predicted values to file.
+
+        Returns:
+            pathlib: _description_
+        &#34;&#34;&#34;
+        # load model
+        self.load_model(model_path)
+
+        # set class label
+        self.class_label = class_label
+
+        # load data
+        self.load_train_data(trn_data_fn=trn_data)
+        self.load_test_data(tst_data_fn=tst_data)
+
+        # Drop all features that are not present in both datasets.
+        try:
+            cols_in_trn = self.trn_data.loc[:, ~self.trn_data.any()].columns.values
+            cols_in_tst = self.tst_data.loc[:, ~self.trn_data.any()].columns.values
+            drop_cols = set(cols_in_trn) &amp; set(cols_in_tst)
+            self.trn_data.drop(drop_cols, axis=1, inplace=True)
+            self.tst_data.drop(drop_cols, axis=1, inplace=True)
+        except RuntimeError as drop_dataframes_error:
+            raise RuntimeError(
+                &#34;failed to drop empty columsn from training and test data sets before training&#34;
+            ) from drop_dataframes_error
+
+        # get prediction
+        if self.tst_data is not None and self.trn_data is not None:
+            if self.fit_mod is not None:
+                self.hdrs = self.trn_data.columns.tolist()
+                _tst_hdrs = self.tst_data.columns.tolist()
+
+            if self.class_label not in self.hdrs or self.class_label not in _tst_hdrs:
+                raise ValueError(
+                    f&#34;Class label {class_label} not found in data training and test datasets.\n Acutal labels are not required for only predicting, however, the column must exist in the test data.&#34;
+                )
+
+            try:
+                # get header names while still a df
+                self.tst_hdrs = self.tst_data.columns.tolist()
+                # get test data values
+                if set(self.hdrs) != set(self.tst_hdrs):
+                    raise ValueError(
+                        &#34;test_model: test data hdrs do not match training hdrs.&#34;
+                    )
+                # _test_ys = self.tst_data[self.class_label].values
+                _tst_data_features = self.tst_data.drop(self.class_label, axis=1).values
+            except RuntimeError as e:
+                raise RuntimeError(
+                    f&#34;Failed to drop class label: {self.class_label}&#34;
+                ) from e
+
+            # get prediction for each unseen observation
+            with Timer() as t:
+                try:
+                    print(&#34;&gt; Predict test&#34;, end=&#34;\r&#34;)
+                    self.yhat = self.fit_mod.predict(_tst_data_features)
+                    self.tst_data[&#34;pred&#34;] = self.yhat
+                    self.pred_fn = pathlib.Path(
+                        out_dir,
+                        self.fit_mod_name + &#34;__pred_on_&#34; + self.tst_fn,
+                    )
+
+                except RuntimeError as e:
+                    raise RuntimeError(&#34;Model predict failed.&#34;) from e
+
+            try:
+                self.tst_data.to_csv(self.pred_fn, index=False)
+                print(
+                    f&#34;- Predicted test saved to -&gt; {str(self.pred_fn)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;
+                )
+            except IOError as e:
+                raise IOError(&#34;Failed to write predicted values to file.&#34;) from e
+
+            train_fn = str(self.pred_fn).split(&#34;_fv_&#34;)[1]
+            dti_file = f&#34;data/{train_fn}&#34;
+            # mod_pred_file = str(self.pred_fn)
+            # Analyze model
+            dti_df = pd.read_csv(dti_file)
+            print(&#34;Loaded dti file: &#34; + dti_file)
+
+            # produce final prediction report
+            # report_path = report(dti_df,self.tst_data, out_dir)
+            # reset index
+            dti_df.reset_index()
+            self.tst_data.reset_index()
+
+            # combine dti file with model pred
+            result = pd.merge(dti_df, self.tst_data, left_index=True, right_index=True)
+            # get mask from features and prediction
+            mask = self.tst_data == 1
+
+            features = mask.columns.values
+            for index, col in mask.items():
+                mask.loc[mask[index] == True, index] = index
+                mask.loc[mask[index] == False, index] = &#34;#&#34;
+            self.tst_data[&#34;tags&#34;] = mask[features].agg(&#34;,&#34;.join, axis=1)
+            self.tst_data[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;].str.replace(&#34;#,&#34;, &#34;&#34;)
+            self.tst_data[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;].str.replace(&#34;,#&#34;, &#34;&#34;)
+            self.tst_data[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;].str.replace(&#34;#&#34;, &#34;&#34;)
+
+            dti_df[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;]
+            dti_df[&#34;pred&#34;] = result[&#34;pred&#34;]
+
+            dti_df.sort_values(&#34;datetime&#34;, ascending=True, inplace=True)
+            # full report
+            full_report = pathlib.Path(
+                out_dir, f&#34;{self.name}_FULL_dti_predict_report.csv&#34;
+            )
+            dti_df.to_csv(full_report, index=False)
+
+            # summary report, only predicted relevant
+            dti_df = dti_df[dti_df[&#34;pred&#34;] == 1]
+            
+            # if summary report columns is specified apply the columns
+            try:
+                if sum_flds:
+                    assert isinstance(sum_flds, list)
+                    dti_df = dti_df[sum_flds]
+            except KeyError as e:
+                raise KeyError(&#39;failed to select summary fields specified.&#39;)
+                
+            # drop class label and pred
+            if self.class_label in dti_df:
+                dti_df.drop([self.class_label], axis=1, inplace=True)
+                
+            summ_out = pathlib.Path(out_dir, f&#34;{self.name}_SUMMARY_report.csv&#34;)
+            dti_df.to_csv(summ_out, index=False)
+
+            # &#34;- Loaded train data: \t{str(_data_file)} ({len(self.trn_data)} rows)  &#34;
+            print(f&#34;Summary report ready for review at -&gt; {str(summ_out)}&#34;)
+
+        return summ_out</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="app.dti.proto.DTILCS.DTILCS"><code class="flex name class">
+<span>class <span class="ident">DTILCS</span></span>
+<span>(</span><span>name: str, class_label=None, rules=None, headless=False)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DTILCS:
+    __version__=&#34;0.0.30&#34;
+    DATA_DIR = &#34;./data/&#34;
+    MOD_DIR = &#34;./models/&#34;
+    FIGS_DIR = None
+    WRK_DIR = None
+    FIG_W = 6.8
+    FIG_H = 6.8
+    FIG_DPI = 1000
+    CLR = &#39;\x1b[1K\r&#39;
+    CLRN = &#39;\x1b[1K\r\n&#39;
+
+    def __init__(self, name: str, class_label=None, rules=None, headless=False) -&gt; None:
+        self.name = name
+        self.fit_mod_name = None
+        self.class_label = class_label
+        self.cur_mod = None
+        self.fit_mod = None
+        self.x_trn = None
+        self.x_val = None
+        self.y_trn = None
+        self.y_val = None
+        self.trn_data = None
+        self.hdrs = None
+        self.trn_fn = None
+        self.tst_fn = None
+        self.tst_hdrs = None
+        self.tst_data = None
+        self.EK_scores = None
+        self.TEST_DATA_FILE = None
+        self.headless = headless
+        self.trl_name = None
+        self.pred = None
+        self.pred_probs = None
+        self.yhat = None
+        self.pred_fn = None
+        self.rules = rules
+        self.report_path = None
+
+        # run setup
+        self._setup()
+
+        # rich install custom console output
+        install()
+        # self.con = Console(width=250)
+
+    def _reset(self) -&gt; None:
+        # reset state on all object variables
+        self.fit_mod_name = None
+        self.class_label = None
+        self.cur_mod = None
+        self.fit_mod = None
+        self.x_trn = None
+        self.x_val = None
+        self.y_trn = None
+        self.y_val = None
+        self.trn_data = None
+        self.hdrs = None
+        self.tst_fn = None
+        self.tst_hdrs = None
+        self.tst_data = None
+        self.EK_scores = None
+        self.TEST_DATA_FILE = None
+
+
+    def _setup(self) -&gt; None:
+        # Create working directories and check environment
+        try:
+            if not os.path.exists(self.MOD_DIR):
+                os.makedirs(self.MOD_DIR)
+
+            if not os.path.exists(self.DATA_DIR):
+                os.makedirs(self.DATA_DIR)
+
+        except OSError as e:
+            raise IsADirectoryError(
+                &#34;Setup failed. Check permissions in local directory.&#34;
+            ) from e
+        plt.style.use(&#39;fast&#39;)
+        font = {&#39;family&#39; : &#39;arial&#39;,
+        &#39;size&#39;   : 16}
+        plt.rc(&#39;font&#39;, **font)
+
+    def load_train_data(self, trn_data_fn: str = None, headers_only=False) -&gt; None:
+        &#34;&#34;&#34;Load DTI training data from a CSV file.
+
+        Args:
+            trn_data_fn (str, optional): Path to the DTI source file. Defaults to None.
+            headers_only (bool, optional): True if only headers are being loaded, e.g., full data is not required. Defaults to False.
+
+        Raises:
+            FileExistsError: If data directory does not exist and it can not be created.
+            FileExistsError: If the trn_data in DATA_DIR can not be loaded.
+        &#34;&#34;&#34;
+        _data_file = pathlib.Path(self.DATA_DIR, trn_data_fn)
+        _data_file_reduced = pathlib.Path(self.DATA_DIR, trn_data_fn, &#34;_reduced.csv&#34;)
+        try:
+            if os.path.isfile(_data_file):
+                if headers_only:
+                    self.trn_data = pd.read_csv(_data_file, nrows=5)
+                else:
+                    # print(f&#34;&gt; Load train data:\t{str(_data_file)}&#34;)
+                    print(f&#34;&gt; Load train data:\t{str(_data_file)}&#34;, end=&#34;\r&#34;)
+                    self.trn_data = pd.read_csv(_data_file)
+                    self.trn_fn = trn_data_fn
+
+                # remove any uef that might have been appended
+                # self.trn_dat.rename(lambda x: x  if any(k in x for k in keys) else x, axis=1)
+
+                print(
+                    f&#34;- Loaded train data: \t{str(_data_file)} ({len(self.trn_data)} rows)  &#34;
+                )
+
+            else:
+                raise FileExistsError(
+                    &#34;file not found at &#34; + str(_data_file)
+                )
+
+        except OSError as e:
+            raise FileExistsError(
+                &#34;unable to load file &#34; + str(_data_file)
+            ) from e
+
+    def load_test_data(self, tst_data_fn: str = None) -&gt; None:
+        &#34;&#34;&#34;Load DTI test data from a CSV file.
+
+        Args:
+            tst_data_fn (str): Filename of test data rule set to load. This file must be in the
+            DATA_DIR.
+
+        Raises:
+            FileExistsError: If data directory does not exist and it can not be created.
+            FileExistsError: If the tst_data_fn in DATA_DIR can not be loaded into a DataFrame.
+        &#34;&#34;&#34;
+        _test_file = pathlib.Path(self.DATA_DIR, tst_data_fn)
+        try:
+            if os.path.isfile(_test_file):
+                print(f&#34;&gt; Load test data:\t{str(_test_file)}&#34;, end=&#34;\r&#34;)
+                self.tst_data = pd.read_csv(_test_file)
+                self.tst_fn = tst_data_fn
+                print(
+                    f&#34;- Loaded test data: \t{str(_test_file)} ({len(self.tst_data)} rows)&#34;)
+            else:
+                raise FileExistsError(
+                    &#34;load_train_data: FILE NOT FOUND at &#34; + str(_test_file)
+                )
+
+        except OSError as e:
+            raise FileExistsError(
+                &#34;load_train_data: Unable to load file &#34; + str(_test_file)
+            ) from e
+
+    def prep_dataset(
+        self, val_size=0, random_state=None, do_ek=False, reduce_features=True, oversample_minority=True
+    ) -&gt; None:
+        &#34;&#34;&#34;Split data into train and validation split.
+
+        Args:
+            class_label (str): phenotype/class either 1 or 0.
+            val_size (float, optional): float value between 0-1. Defaults to .30.
+            random_state (int, optional): int value. Defaults to None.
+
+        Raises:
+            KeyError: If self.trn_data is not loaded.
+            RuntimeError: If class label not found self.trn_data.
+            RuntimeError: If sklearn.model_selection.train_test_split or skrebate.ReliefF functions fail
+            to execute correctly.
+            ValueError: If self.trn_data not set. Use load_train_data(filename.csv).
+        &#34;&#34;&#34;
+        # check if a data source has be set
+        if self.trn_data is not None:
+            # verify the class label being used is in the training data
+            if self.class_label not in self.trn_data:
+                raise KeyError(&#34;class label not found in dataset -&gt; &#34; + self.class_label)
+
+            try:
+                # if any features are completely empty, drop them before proceeding.
+                # tmp_headers_before = set(self.trn_data.columns)
+                # self.trn_data = self.trn_data.loc[:, (self.trn_data != 0).any(axis=0)]
+                # tmp_headers_after = set(self.trn_data.columns)
+                # if tmp_headers_before != tmp_headers_after:
+                #     print(f&#34;\n  [!] Removed empty features: {tmp_headers_before.difference(tmp_headers_after)}&#34;)
+
+                if reduce_features and self.tst_data is not None:
+                    print(f&#39;Reducing feature set to match train and test data provided.&#39;)
+                    # Drop all rows that are not found in train or test datasets.
+                    try:
+                        cols_in_trn = self.trn_data.loc[:, ~self.trn_data.any()].columns.values
+                        cols_in_tst = self.tst_data.loc[:, ~self.trn_data.any()].columns.values
+                        drop_cols = set(cols_in_trn) &amp; set(cols_in_tst)
+                        self.trn_data.drop(drop_cols, axis=1, inplace=True)
+                        self.tst_data.drop(drop_cols, axis=1, inplace=True)
+                    except RuntimeError as drop_dataframes_error:
+                        raise RuntimeError(
+                            &#34;failed to drop empty columsn from training and test data sets before training&#34;
+                        ) from drop_dataframes_error
+
+                # get data values for to split
+                _data_features = self.trn_data.drop(self.class_label, axis=1)
+                # get header names (meta-feature names) while still a df
+                self.hdrs = _data_features.columns
+                print(f&#39;\n  [:)] Training with [{len(self.hdrs)}] features: {str(self.hdrs)}\n&#39;)
+                # get np array of training data
+                _data_features = _data_features.values
+                # get np array of phenotype label (class)
+                _data_labels = self.trn_data[self.class_label].values
+                # create a balanced dataset using oversampling
+                if oversample_minority:
+                    oversample = RandomOverSampler(sampling_strategy=&#39;minority&#39;)
+                    # fit and apply the transform
+                    Xs, ys = oversample.fit_resample(_data_features, _data_labels)
+                else:
+                    Xs = _data_features
+                    ys = _data_labels
+
+                print(&#34;&gt; Preparing data&#34;)
+
+                if val_size == 0:
+                    self.x_trn = Xs
+                    self.y_trn = ys
+                    print(f&#39;  o Class disribution: {Counter(self.y_trn)}&#39;)
+                else:
+                    (
+                        self.x_trn,
+                        self.x_val,
+                        self.y_trn,
+                        self.y_val,
+                    ) = train_test_split(
+                        Xs,
+                        ys,
+                        test_size=val_size,
+                        random_state=random_state
+                    )
+                    print(f&#39;  o Class disribution in training data: {Counter(self.y_trn)}&#39;)
+                    print(f&#39;  o Class disribution in validation data: {Counter(self.y_val)}&#39;)
+
+                print(&#34;&gt; Split training data&#34;, end=&#34;\r&#34;)
+
+            except RuntimeError as e:
+                raise RuntimeError(&#34;failed to split data.&#34;) from e
+
+            try:
+                if do_ek:
+                    with Timer() as t: 
+                        # set EK scores for use during fit
+                        print(&#34;&gt; Find feature importance&#34;, end=&#34;\r&#34;)
+                        relieff = ReliefF()
+                        relieff.fit(self.x_trn, self.y_trn)
+                        self.EK_scores = relieff.feature_importances_
+
+                    print(f&#34;[DONE] Found feature importance ({&#39;%.03f&#39;% t.interval} sec.)&#34;)    
+                else:
+                    self.EK_scores = None
+
+            except RuntimeError as e:
+                raise RuntimeError(
+                    &#34;failed to create EK_scores to identify feature importance.&#34;
+                ) from e
+
+        else:
+            raise ValueError(
+                &#34;self.trn_data not set, use load_train_data(filename.csv).&#34;
+            )
+
+    def compile(
+        self, trial=None, iters=10000, N=6000, nu=5, random_state=None
+    ) -&gt; ExSTraCS:
+        &#34;&#34;&#34;Initialize the ExSTraCS LCS and sets hyper parameters.
+
+        Args:
+            iters (int, optional): The number of training cycles to run. Defaults to 10000.
+            N (int, optional):  Maximum micro classifier population size (sum of classifier numerosities). Defaults to 6000.
+            nu (int, optional): Power parameter used to determine the importance of high accuracy when calculating fitness. Defaults to 5.
+
+        Returns:
+            ExSTraCS: ExSTraCS 2.0 object (Extended Supervised Tracking and Classifying System)
+        &#34;&#34;&#34;
+        try:
+
+            if trial is not None:
+                self.trl_name = (
+                    str(trial) + &#34;_&#34; + str(iters) + &#34;_&#34; + str(N) + &#34;_&#34; + str(nu)
+                )
+                if random_state is not None:
+                    self.trl_name = self.trl_name + &#34;_seed-&#34; + str(random_state)
+
+            # Initialize ExSTraCS Model
+            if self.EK_scores is not None:
+                self.cur_mod = ExSTraCS(
+                    learning_iterations=iters,
+                    N=N,
+                    nu=nu,
+                    track_accuracy_while_fit=True,
+                    expert_knowledge=self.EK_scores,
+                )
+            else:
+                self.cur_mod = ExSTraCS(
+                    learning_iterations=iters, N=N, nu=nu, track_accuracy_while_fit=True
+                )
+        except RuntimeError as e:
+            raise RuntimeError(&#34;compile: Failed to create ExSTraCS model.&#34;) from e
+
+    def fit(self, exp_trking_data: bool = True) -&gt; None:
+        &#34;&#34;&#34;Fit the current model using paramters set by compile.
+
+        Args:
+            exp_trking_data (bool, optional): _description_. Defaults to True.
+
+        Raises:
+            ValueError: If self.cur_mod not defined.
+            RuntimeError: If model is not yet compiled.
+        &#34;&#34;&#34;
+        if self.cur_mod is not None:
+            if self.x_trn is not None and self.y_trn is not None:
+                print(&#34;&gt; Fit model          &#34;, end=&#34;\r&#34;)
+                # Fit the model using training data and labels
+
+                with Timer() as t:
+                    self.fit_mod = self.cur_mod.fit(self.x_trn, self.y_trn)
+                _build_tm = &#34;%.03f sec.&#34; % t.interval
+
+                timehack = &#34;_&#34; + time.strftime(&#34;%Y%m%d_%H%M%S&#34;)
+
+                try:
+                    # create work dir to save files and figures in
+                    if self.trl_name is not None:
+                        self.fit_mod_name = self.name + &#34;_&#34; + self.trl_name + timehack
+                    else:
+                        self.fit_mod_name = self.name + timehack
+
+                    # create model named directory
+                    _mod_dir = pathlib.Path(self.MOD_DIR, self.fit_mod_name)
+                    os.makedirs(_mod_dir)
+
+                except IOError as e:
+                    raise IOError(f&#34;failed creating {str(_mod_dir)}&#34;) from e
+
+                # set working directory
+                self._set_wrk_dir(_mod_dir, dir=True)
+
+                # save the iteration tracking to disk
+                if exp_trking_data:
+                    self.fit_mod.export_iteration_tracking_data(
+                        str(
+                            pathlib.Path(
+                                self.WRK_DIR, self.fit_mod_name + &#34;_iterData.csv&#34;
+                            )
+                        )
+                    )
+
+                # export final rule population
+                self.fit_mod.export_final_rule_population(
+                    self.hdrs,
+                    self.class_label,
+                    filename=str(
+                        pathlib.Path(
+                            self.WRK_DIR, self.fit_mod_name + &#34;_finalRulePop.csv&#34;
+                        )
+                    ),
+                    DCAL=False,
+                )
+                print(f&#34;- Model fit in {_build_tm}&#34;)
+
+            else:
+                raise ValueError(&#34;x_trn and y_trn not set: run load_test_data first.&#34;)
+        else:
+            raise RuntimeError(&#34;cur_mod not defined: compile model before fitting.&#34;)
+
+    def cross_validate(self, k=5) -&gt; float:
+        &#34;&#34;&#34;Cross validate the current model using sklearn cross_val_score.
+
+        Args:
+            k (int, optional): Cross validation folds. Defaults to 5.
+
+        Raises:
+            RuntimeError: if cross validate fails
+        &#34;&#34;&#34;
+        print(f&#34;&gt; {str(k)}-fold Cross Validation&#34;, end=&#39;\r&#39;)
+        try:
+            # shuffling data before cross validation
+            _formatted = np.insert(self.x_trn, self.x_trn.shape[1], self.y_trn, 1)
+            np.random.shuffle(_formatted)
+            _data_features = np.delete(_formatted, -1, axis=1)
+            _data_labels = _formatted[:, -1]
+
+            # Defaults to 5 fold CV
+            try:
+                with Timer() as t:
+                    try:
+                        cv_scores = cross_val_score(estimator=self.cur_mod, X=_data_features, y=_data_labels, cv=k)
+                        # cv_scores = cross_val_score(self.fit_mod, _data_features, _data_labels, cv=k)
+                        print(f&#39;    o CV Scores: {cv_scores}&#39;)
+                        cv_score = round(np.mean(cv_scores),2,)         
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;Cross validation failed.&#34;) from e    
+            finally:     
+                print(f&#34;- {str(k)}-fold Cross Validation score:\t{str(cv_score)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)
+
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;cross validate failed - check x and y data shapes.&#34;
+            ) from e
+
+        return cv_score
+
+    def save_model(self) -&gt; None:
+        &#34;&#34;&#34;Save a model to disk using pickle file.
+
+        Raises:
+            IOError: If self.fit_mod does not exist.
+            RuntimeError: If picket.dump fails to write the model to disk.
+        &#34;&#34;&#34;
+        if self.fit_mod is not None:
+            try:
+                assert (
+                    self.WRK_DIR is not None
+                ), &#34;can not save without work directory being established.&#34;
+                outfile = pathlib.Path(self.WRK_DIR, self.fit_mod_name + &#34;_model.pkl&#34;)
+                pickle.dump(self.fit_mod, open(outfile, &#34;wb&#34;))
+                print(f&#34;- Saved model -&gt; {str(outfile)}&#34;)
+
+            except IOError as e:
+                raise IOError(
+                    f&#34;pickel.dump: Failed to call picket.dump to {str(outfile)}&#34;
+                ) from e
+        else:
+            raise RuntimeError(
+                &#34;save_model: fit_mod not defined--compile and fit model before savinging.&#34;
+            )
+
+    def load_model(self, model_path: str = None) -&gt; None:
+        &#34;&#34;&#34;Loads existing model from a pkl file and sets the fit_mod and fit_mod_name values.
+
+        Args:
+            model_name (str): file name of the model, normally in the format &#39;mod1_20231010_150556_model.pkl&#39;.
+
+        Raises:
+            FileNotFoundError: If model file does not exist.
+            IOError: if pickel.load fails to load model.
+
+        &#34;&#34;&#34;
+        try:
+            # print(f&#39;provided to load model: {model_path}&#39;)
+            _mod_path = pathlib.Path(model_path)
+            if os.path.isfile(_mod_path):
+                # load model from pkl file
+                print(&#34;&gt; Load model&#34;, end=&#34;\r&#34;)
+                self.fit_mod = pickle.load(open(_mod_path, &#34;rb&#34;))
+
+                # set working directory to loaded models
+                self._set_wrk_dir(_mod_path)
+
+                print(f&#34;- Loaded model:\t\t{str(_mod_path)}   &#34;)
+            else:
+                print(f&#34;[FAIL] Load model\t\t{str(_mod_path)}&#34;)
+                raise FileNotFoundError(f&#34;model file not found: {str(_mod_path)}&#34;)
+
+        except IOError as e:
+            raise IOError(
+                f&#34;pickel.load failed to load model model_name {str(_mod_path)}&#34;
+            ) from e
+
+    def predict(self, unseen_data: pd.DataFrame, class_label=None) -&gt; np.ndarray:
+        &#34;&#34;&#34;Given a pandas DataFrame of observations, predict the phenotype (class) as relevant or not.
+
+        Args:
+            unseen_data (pd.DataFrame): _description_
+            class_label (_type_, optional): _description_. Defaults to None.
+
+        Raises:
+            RuntimeError: If model.predict fails.
+
+        Returns:
+            np.ndarray: array of int values representing phenotype label (0 not relevant, 1 relevant)
+        &#34;&#34;&#34;
+        try:
+            if class_label is not None:
+                # data was provided a label
+                xs = unseen_data.drop(class_label, axis=1).values
+            else:
+                xs = unseen_data.values
+
+            # get predcition for each unseen observation
+            self.pred = self.fit_mod.predict(xs)
+
+            return self.pred
+
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;predict failed, if unseen data is labled, specific class_label=&#39;class&#39;&#34;
+            ) from e
+
+    def test_model(
+        self,
+        predict=True,
+        acc_score=True,
+        class_rpt=True,
+        model_metrics=False,
+        roc_prc=False,
+        predict_proba=False,
+        threshold=0.5,
+        train_data=None,
+        class_label=None,
+    ):
+        &#34;&#34;&#34;Test a fit or loaded model and produce various reports and plots. By default, only predict, accuracy score,
+        and classification report are produced if no options are specified.
+
+        Args:
+            predict (bool, optional): Predict using fit model x and y data. Defaults to True.
+            acc_score (bool, optional): Calculate accuracy score using fit model x and y data. Defaults to True.
+            class_rpt (bool, optional): Create a classification report using fit model x and y data.. Defaults to True.
+            model_metrics (bool, optional): Output plots of model metrics. Defaults to False.
+            roc_prc (bool, optional): Create ROC/PRC plots using fit model x and y data. Defaults to False.
+            predict_proba (bool, optional): Predict probabilities using fit model x and y data. Defaults to False.
+            threshold (float, optional): Set threshold. Defaults to 0.5.
+            train_data (_type_, optional): x-data to be tested with fit or loaded model. Defaults to None.
+            class_label (_type_, optional): Class label as string, the column name. Defaults to None.
+
+        Raises:
+            ValueError: If class label not found in data training and test datasets.
+            ValueError: If test_model test data hdrs do not match training hdrs.
+            RuntimeError: If failed to drop class label.   
+            RuntimeError: If model predict failed.
+            RuntimeError: If predict test failed.
+            IOError: If failed to write test data to csv.
+            RuntimeError: If model predict proba failed.
+            RuntimeError: If failed to create roc/prc curves.
+            RuntimeError: If failed to plot model metrics.
+            RuntimeError: If failed to plot model stats.
+            RuntimeError: If failed to create classification report.
+            IOError: If failed to write classification report.
+            IOError: If failed to write confusion matrix.
+            IOError: If failed to write confusion matrix (normlalized).
+            IOError: If failed to write ROC display from pred.
+            IOError: If failed to write PRC threshold. 
+            RuntimeError: If failed to create plots.
+            RuntimeError: If test data not loaded.
+
+        Returns:
+             np.ndarray: Array of predicted values, e.g., y-hat.
+        &#34;&#34;&#34;
+        assert (
+            self.WRK_DIR is not None
+            and self.fit_mod_name is not None
+            and self.FIGS_DIR is not None
+        ), &#34;directories are not setup!&#34;
+
+        acc, bal_acc, err, model_cm = None, None, None, None
+
+        if self.tst_data is not None:
+            if self.fit_mod is not None:
+                if self.trn_data is None:
+                    assert (
+                        train_data is not None
+                    ), &#34;Training data not loaded, must provide a path to training data.&#34;
+                    self.load_train_data(train_data, headers_only=True)
+
+                assert (
+                    self.trn_data is not None and self.tst_data is not None
+                ), &#34;training or test data not loaded.&#34;
+                self.hdrs = self.trn_data.columns.tolist()
+                _tst_hdrs = self.tst_data.columns.tolist()
+
+                if class_label in self.hdrs and class_label in _tst_hdrs:
+                    self.class_label = class_label
+                else:
+                    raise ValueError(
+                        f&#34;Class label {class_label} not found in data training and test datasets.&#34;
+                    )
+
+                try:
+                    # get header names (meta-feature names) while still a df
+                    self.tst_hdrs = self.tst_data.columns.tolist()
+                    # get test data values
+                    if set(self.hdrs) != set(self.tst_hdrs):
+                        raise ValueError(
+                            &#34;test_model: test data hdrs do not match training hdrs.&#34;
+                        )
+                    _test_ys = self.tst_data[self.class_label].values
+                    _tst_data_features = self.tst_data.drop(
+                        self.class_label, axis=1
+                    ).values
+                except RuntimeError as e:
+                    raise RuntimeError(f&#34;Failed to drop class label: {self.class_label}&#34;) from e
+
+                # get prediction for each unseen observation
+                if predict:
+                    try:
+                        with Timer() as t:
+                            try:
+                                print(&#34;&gt; Predict test&#34;, end=&#34;\r&#34;)
+                                self.yhat = self.fit_mod.predict(_tst_data_features)
+                                self.tst_data[&#34;pred&#34;] = self.yhat
+                                self.pred_fn = pathlib.Path(
+                                    self.WRK_DIR,
+                                    self.fit_mod_name + &#34;__pred_on_&#34; + self.tst_fn,
+                                )
+
+                            except RuntimeError as e:
+                                raise RuntimeError(&#34;Model predict failed.&#34;) from e
+                        try:    
+                            self.tst_data.to_csv(self.pred_fn, index=False)    
+                            print(f&#34;- Predicted test saved to -&gt; {str(self.pred_fn)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)
+                        except IOError as e:
+                            raise IOError(&#34;Failed to write predicted values to file.&#34;) from e
+
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;predict test failed.&#34;) from e
+
+                # get prediction probablities (default False)
+                if predict_proba:
+                    try:
+                        with Timer() as t:
+
+                            print(
+                                &#34;&gt; Predict proba&#34;,
+                                end=&#34;\r&#34;,
+                            )
+                            self.pred_prob = self.fit_mod.predict_proba(
+                                _tst_data_features
+                            )
+                            self.tst_data[&#34;pred_not_rel&#34;] = self.pred_prob[:, 0]
+                            self.tst_data[&#34;pred_rel&#34;] = self.pred_prob[:, 1]
+                            fn = pathlib.Path(
+                                self.WRK_DIR,
+                                self.fit_mod_name
+                                + &#34;__pred_proba_on_&#34;
+                                + self.tst_fn,
+                            )
+                            try:
+                                self.tst_data.to_csv(fn, index=False)
+                            except IOError as e:
+                                raise IOError(&#34;failed to write test data to csv.&#34;) from e
+
+                        print(f&#34;- Predicted proba saved to -&gt; {str(fn)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)    
+
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;model predict proba failed&#34;) from e
+
+                if roc_prc:
+                    print(&#34;&gt; Plot ROC/PRC&#34;, end=&#34;\r&#34;)
+                    try:
+                        with Timer() as t:
+                            self._roc_prc_curves(Xs=_tst_data_features, ys=_test_ys)
+
+                        print(f&#34;- ROC/PRC plot saved to -&gt; {self.FIGS_DIR} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)
+
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;failed to create roc/prc curves&#34;) from e
+
+                if model_metrics:
+                    print(&#34;&gt; Plot model metrics&#34;, end=&#34;\r&#34;)
+                    try:
+                        with Timer() as t:
+
+                            self._plot_model_stats()
+                        print(f&#34;- Model metrics saved to -&gt; {self.FIGS_DIR} ({&#39;%.03f&#39;% t.interval} sec.) &#34;)        
+
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;failed to plot model metrics&#34;) from e
+
+                if acc_score:
+                    if acc_score and not predict:
+                        print(
+                            &#34;NOTE: Skipping accuracy score--must set predict=True to produce accuracy score.&#34;
+                        )
+
+                    else:
+                        print(&#34;&gt; Check accuracy&#34;, end=&#34;\r&#34;)
+                        try:
+                            with Timer() as t:
+                                acc = accuracy_score(
+                                    self.tst_data[self.class_label].values,
+                                    self.tst_data[&#34;pred&#34;].values,
+                                )
+                                class_names = [&#34;Not Relevant&#34;, &#34;Relevant&#34;]
+
+                                y_truth = self.tst_data[self.class_label].values
+                                y_pred = self.tst_data[&#34;pred&#34;].values
+
+                                if threshold != 0.5:
+                                    y_pred[y_pred &gt; threshold] = 1
+                                    y_pred[y_pred &lt; threshold] = 0
+
+                                # accuracy scores
+                                bal_acc = balanced_accuracy_score(y_truth, y_pred)
+                                acc, bal_acc, err = (
+                                    round(acc, 2),
+                                    round(bal_acc, 2),
+                                    round(1 - acc, 2),
+                                )
+                            print(f&#34;- Accuracy: {str(acc)} | Balanced Accuracy: {str(bal_acc)} | Error: {str(err)} ({&#39;%.03f&#39;% t.interval} sec.) &#34;)
+
+                        except RuntimeError as e:
+                            print(f&#34;[FAIL] Check accuracy scores using {self.fit_mod_name}&#34;)
+                            raise RuntimeError(&#34;failed to plot model stats&#34;) from e    
+
+                # classification report to figures
+                model_cm = None
+                if class_rpt:
+
+                    try: 
+                        # classification report
+                        cr = classification_report(
+                            y_truth, y_pred, target_names=class_names
+                        )
+                    except RuntimeError as e:
+                        raise RuntimeError (&#34;failed to create classification report.&#34;) from e
+
+                    try:
+                        _cr_file = pathlib.Path(self.WRK_DIR,self.fit_mod_name + &#34;__class_report_.txt&#34;)
+                        with open(_cr_file, &#34;w&#34;, encoding=&#34;utf-8&#34;) as text_file:
+                            text_file.write(cr)
+
+                    except IOError as e:
+                        raise IOError (&#34;failed to write classification report.&#34;) from e        
+
+                    try:
+                        # confusion matrix
+                        model_cm = confusion_matrix(y_true=y_truth, y_pred=y_pred)
+                        plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                            self.FIG_W, self.FIG_H
+                        )
+                        plot_confusion_matrix(
+                            model_cm,
+                            classes=class_names,
+                            #title=&#34;Confusion matrix - (&#34; + str(threshold) + &#34;)&#34;,
+                            title=&#34;Confusion matrix&#34;,
+                        )
+                        plt.savefig(
+                            pathlib.Path(
+                                self.FIGS_DIR, self.fit_mod_name + &#34;_fig_cm.svg&#34;
+                            )
+                        )
+                        plt.close()
+                        if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_cm.svg&#34;)):
+                            raise IOError(&#34;failed to write confusion matrix.&#34;)
+
+                        # confusion matrix normalized
+                        plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                            self.FIG_W, self.FIG_H
+                        )
+                        plot_confusion_matrix(
+                            model_cm,
+                            normalize=True,
+                            classes=class_names,
+                            title=&#34;Confusion matrix (norm)&#34;,
+                        )
+                        plt.savefig(
+                            pathlib.Path(
+                                self.FIGS_DIR,
+                                self.fit_mod_name + &#34;_fig_cm_norm.svg&#34;,
+                            )
+                        )
+                        plt.close()
+                        if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_cm_norm.svg&#34;)):
+                            raise IOError(&#34;failed to write confusion matrix (normlalized).&#34;)
+
+                        # ROC plot
+                        plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                            self.FIG_W, self.FIG_H
+                        )
+                        rcd.from_predictions(y_truth, y_pred, name=&#34;ROC&#34;)
+                        plt.savefig(
+                            pathlib.Path(
+                                self.FIGS_DIR,
+                                self.fit_mod_name + &#34;_fig_ROC_Disp_frm_pred.svg&#34;))
+                        plt.close()
+                        if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_ROC_Disp_frm_pred.svg&#34;)):
+                            raise IOError(&#34;failed to write ROC display from pred.&#34;)
+
+                        # PRC threshold
+                        plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                            self.FIG_W, self.FIG_H
+                        )
+                        # plt.figure.suptitle(&#34;2-class Precision-Recall curve&#34;)
+                        # plt_ = precision_recall_threshold(
+                        #     self.fit_mod,
+                        #     _tst_data_features,
+                        #     y_truth,
+                        #     y_preds=self.yhat,
+                        #     thold=threshold,
+                        #     title=&#34;&#34;,
+                        # )
+                        pcd.from_predictions(y_truth, y_pred, name=&#34;MLCS&#34;)
+
+                        plt.savefig(
+                            pathlib.Path(
+                                self.FIGS_DIR,
+                                self.fit_mod_name + &#34;_prc_threshold.svg&#34;,
+                            )
+                        )
+                        plt.close()
+                        if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_prc_threshold.svg&#34;)):
+                            raise IOError(&#34;failed to write PRC threshold.&#34;)
+
+                        print(f&#34;- Confusion matrix and plotts in f-&gt; {self.FIGS_DIR}&#34;
+                                )
+                    except RuntimeError as e:
+                        raise RuntimeError(&#34;Error creating plots.&#34;) from e
+        else:
+            raise RuntimeError(
+                &#34;test data not loaded - load test data with load_test_data(tst_data_filename.csv)&#34;
+            )
+        return acc, bal_acc, err, model_cm
+
+    # PLOTS FOR INTERPRETING THE MODEL referenced from
+    # https://github.com/UrbsLab/scikit-ExSTraCS/blob/master/scikit-ExSTraCS%20User%20Guide.ipynb
+    def _roc_prc_curves(self, Xs=None, ys=None, verbose=False) -&gt; None:
+        &#34;&#34;&#34;Create ROC and PRC curves based on current model and training data.
+
+        Args:
+            Xs (ndarray, optional): x-values for provided data. Defaults to None.
+            ys (array, optional): y-values for provided data. Defaults to None.
+            verbose (bool, optional): Print metrics to console. Defaults to False.
+
+        Raises:
+            IOError: If failed to write ROC curve.
+            IOError: If failed to write PRC curve.
+            RuntimeError: If failed to create plots for ROC/PRC curve.
+            RuntimeError: If is not fit or loaded before producing ROC/PRC plot.
+        &#34;&#34;&#34;
+        if not any(elem is None for elem in [Xs, ys, self.fit_mod]):
+            if self.pred_probs is None:
+                self.pred_probs = self.fit_mod.predict_proba(Xs)
+
+            try:
+                # no skill pred
+                ns_probs = [0 for _ in range(len(ys))]
+                # keep probabilities for the positive outcome only
+                pos_probs = self.pred_probs[:, 1]
+
+                # calculate scores
+                ns_auc = roc_auc_score(ys, ns_probs)
+                lcs_auc = roc_auc_score(ys, pos_probs)
+
+                # summarize scores
+                # print(&#34;-- LCS AUC=%.3f&#34; % (lcs_auc), end=&#34;&#34;)
+                # print(&#34;, No Skill AUC=%.3f&#34; % (ns_auc), end=&#34;&#34;)
+
+                # calculate roc curves
+                ns_fpr, ns_tpr, _ = roc_curve(ys, ns_probs)
+                fpr, tpr, _ = roc_curve(ys, pos_probs)
+
+                # plot the roc curve for the model
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(ns_fpr, ns_tpr, linestyle=&#34;--&#34;, label=&#34;No Skill&#34;)
+                plt.plot(fpr, tpr, marker=&#34;.&#34;, label=&#34;LCS&#34;)
+
+                # axis labels
+                plt.xlabel(&#34;False Positive Rate&#34;)
+                plt.ylabel(&#34;True Positive Rate&#34;)
+
+                # show the legend
+                plt.legend()
+
+                # save figure
+                plt.savefig(
+                    pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_ROC.svg&#34;)
+                )
+                plt.close()
+
+                if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_ROC.svg&#34;)):
+                    raise IOError(&#34;failed to write ROC curve.&#34;)
+
+                ### Now precision recall curve
+                # predict class values
+                precision, recall, _ = precision_recall_curve(ys, pos_probs)
+                f1, lcs_auc = f1_score(ys, self.yhat), auc(recall, precision)
+
+                # summarize scores
+                print(&#34;-- F1=%.3f, AUC=%.3f&#34; % (f1, lcs_auc))
+
+                # plot the precision-recall curves
+                # no_skill = len(ys[ys==1]) / len(ys)
+                # plt.plot([0, 1], [no_skill, no_skill], linestyle=&#39;--&#39;, label=&#39;No Skill&#39;)
+                plt.plot(recall, precision, marker=&#34;.&#34;, label=&#34;LCS&#34;)
+                # axis labels
+                plt.xlabel(&#34;Recall&#34;)
+                plt.ylabel(&#34;Precision&#34;)
+                # show the legend
+                plt.legend()
+                plt.savefig(
+                    pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_PRC.svg&#34;)
+                )
+                plt.close()
+                if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_PRC.svg&#34;)):
+                    raise IOError(&#34;failed to write PRC curve.&#34;)
+
+            except RuntimeError as e:
+                raise RuntimeError(&#34;Failed to create plots for ROC/PRC curve.&#34;) from e
+
+            if verbose:
+                print(&#34;\n&#34; + &#34;PRC AUC: \t&#34; + str(round(auc(recall, precision), 3)))
+                print(&#34;ROC AUC:\t&#34; + str(round(auc(fpr, tpr), 3)))
+
+                print(
+                    &#34;Final Training Accuracy: &#34;
+                    + str(self.fit_mod.get_final_training_accuracy())
+                )
+                print(
+                    &#34;Final Instance Coverage: &#34;
+                    + str(self.fit_mod.get_final_instance_coverage())
+                )
+                print(
+                    &#34;Final Attribute Specificity List: &#34;
+                    + str(self.fit_mod.get_final_attribute_specificity_list())
+                )
+                print(
+                    &#34;Final Attribute Accuracy List: &#34;
+                    + str(self.fit_mod.get_final_attribute_accuracy_list())
+                )
+                print(&#34;Final Attribute Tracking Sums:&#34;)
+                print(self.fit_mod.get_final_attribute_tracking_sums())
+                print(&#34;Final Attribute Cooccurences:&#34;)
+                print(self.fit_mod.get_final_attribute_coocurrences(self.hdrs.values))
+        else:
+            raise RuntimeError(&#34;model must be fit or loaded before producing ROC/PRC plot.&#34;)
+
+    def _plot_model_stats(self, iter_file = None) -&gt; None:
+        &#34;&#34;&#34;Create plots for the fit_mod if training metadata is available.
+
+        Raises:
+            IOError: If failed to create plots for model metrics.
+            FileNotFoundError If iterData file is not found.
+            RuntimeError: If model not fit.
+        &#34;&#34;&#34;
+        if iter_file is not None:
+            _iter_data_file = pathlib.Path(iter_file)    
+        else:
+            #_mod_name = &#34;&#34;.join(self.fit_mod_name.rsplit(&#34;_model&#34;, 1))
+            _iter_data_file = pathlib.Path(
+                self.WRK_DIR, &#34;&#34;.join(self.fit_mod_name.rsplit(&#34;_model&#34;, 1)) + &#34;_iterData.csv&#34;
+            )
+            
+        if not os.path.isfile(_iter_data_file):
+            raise FileNotFoundError(f&#34;iterData not found at {str(_iter_data_file)}!&#34;)
+
+        if self.fit_mod is not None:
+            data_tracking = pd.read_csv(_iter_data_file)
+
+            iterations = data_tracking[&#34;Iteration&#34;].values
+            accuracy = data_tracking[&#34;Accuracy (approx)&#34;].values
+            generality = data_tracking[&#34;Average Population Generality&#34;].values
+            macro_pop = data_tracking[&#34;Macropopulation Size&#34;].values
+            micro_pop = data_tracking[&#34;Micropopulation Size&#34;].values
+            m_size = data_tracking[&#34;Match Set Size&#34;].values
+            c_size = data_tracking[&#34;Correct Set Size&#34;].values
+            experience = data_tracking[
+                &#34;Average Iteration Age of Correct Set Classifiers&#34;
+            ].values
+            subsumption = data_tracking[&#34;# Classifiers Subsumed in Iteration&#34;].values
+            crossover = data_tracking[
+                &#34;# Crossover Operations Performed in Iteration&#34;
+            ].values
+            mutation = data_tracking[
+                &#34;# Mutation Operations Performed in Iteration&#34;
+            ].values
+            covering = data_tracking[
+                &#34;# Covering Operations Performed in Iteration&#34;
+            ].values
+            deletion = data_tracking[
+                &#34;# Deletion Operations Performed in Iteration&#34;
+            ].values
+            rc = data_tracking[&#34;# Rules Removed via Rule Compaction&#34;].values
+
+            g_time = data_tracking[&#34;Total Global Time&#34;].values
+            m_time = data_tracking[&#34;Total Matching Time&#34;].values
+            cross_time = data_tracking[&#34;Total Crossover Time&#34;].values
+            cov_time = data_tracking[&#34;Total Covering Time&#34;].values
+            mut_time = data_tracking[&#34;Total Mutation Time&#34;].values
+            at_time = data_tracking[&#34;Total Attribute Tracking Time&#34;].values
+            init_time = data_tracking[&#34;Total Model Initialization Time&#34;].values
+            rc_time = data_tracking[&#34;Total Rule Compaction Time&#34;].values
+            del_time = data_tracking[&#34;Total Deletion Time&#34;].values
+            sub_time = data_tracking[&#34;Total Subsumption Time&#34;].values
+            sel_time = data_tracking[&#34;Total Selection Time&#34;].values
+            eval_time = data_tracking[&#34;Total Evaluation Time&#34;].values
+
+            _met_dir = pathlib.Path()
+            try:
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_acc-gen_vs_iter.svg&#34;)
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(iterations, accuracy, label=&#34;approx accuracy&#34;)
+                plt.plot(iterations, generality, label=&#34;avg generality&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                plt.ylabel(&#34;Accuracy/Generality&#34;)
+                plt.legend()
+                plt.savefig(_out)
+                plt.close()
+
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_acc-gen_vs_iter&#34;)
+
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(iterations, macro_pop, label=&#34;MacroPop Size&#34;)
+                plt.plot(iterations, micro_pop, label=&#34;MicroPop Size&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                plt.ylabel(&#34;Macro/MicroPop Size&#34;)
+                plt.legend()
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_macro_pop-micro_vs_iter.svg&#34;)
+                plt.savefig(_out)
+                plt.close()
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_macro_pop-micro_vs_iter&#34;)
+
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(iterations, m_size, label=&#34;[M] size&#34;)
+                plt.plot(iterations, movingAvg(m_size), label=&#34;[M] size movingAvg&#34;)
+                plt.plot(iterations, c_size, label=&#34;[C] size&#34;)
+                plt.plot(iterations, movingAvg(c_size), label=&#34;[C] size movingAvg&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                plt.ylabel(&#34;[M]/[C] size per iteration&#34;)
+                plt.legend()
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_match-correct_vs_iter.svg&#34;)
+                plt.savefig(_out)
+                plt.close()
+
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_match-correct_vs_iter&#34;)
+
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(iterations, experience)
+                plt.ylabel(&#34;Average [C] Classifier Age&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_class-age_vs_iter.svg&#34;)
+                plt.savefig(_out)
+                plt.close()
+
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_class-age_vs_iter&#34;)
+
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(
+                    iterations, cumulativeFreq(subsumption), label=&#34;Subsumption Count&#34;
+                )
+                plt.plot(iterations, cumulativeFreq(crossover), label=&#34;Crossover Count&#34;)
+                plt.plot(iterations, cumulativeFreq(mutation), label=&#34;Mutation Count&#34;)
+                plt.plot(iterations, cumulativeFreq(deletion), label=&#34;Deletion Count&#34;)
+                plt.plot(iterations, cumulativeFreq(covering), label=&#34;Covering Count&#34;)
+                plt.plot(iterations, cumulativeFreq(rc), label=&#34;RC Count&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                plt.ylabel(&#34;Cumulative Operations Count Over Iterations&#34;)
+                plt.legend()
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_cum-op-cnt_vs_iter.svg&#34;)
+                plt.savefig(_out)
+                plt.close()
+
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_cum-op-cnt_vs_iter&#34;)
+
+                plt.figure(dpi=self.FIG_DPI).set_size_inches(self.FIG_W, self.FIG_H)
+                plt.plot(iterations, init_time, label=&#34;Init Time&#34;)
+                plt.plot(iterations, m_time + init_time, label=&#34;Matching Time&#34;)
+                plt.plot(iterations, cov_time + m_time + init_time, label=&#34;Covering Time&#34;)
+                plt.plot(
+                    iterations,
+                    sel_time + cov_time + m_time + init_time,
+                    label=&#34;Selection Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    cross_time + sel_time + cov_time + m_time + init_time,
+                    label=&#34;Crossover Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    mut_time + cross_time + sel_time + cov_time + m_time + init_time,
+                    label=&#34;Mutation Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    sub_time
+                    + mut_time
+                    + cross_time
+                    + sel_time
+                    + cov_time
+                    + m_time
+                    + init_time,
+                    label=&#34;Subsumption Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    at_time
+                    + sub_time
+                    + mut_time
+                    + cross_time
+                    + sel_time
+                    + cov_time
+                    + m_time
+                    + init_time,
+                    label=&#34;AT Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    del_time
+                    + at_time
+                    + sub_time
+                    + mut_time
+                    + cross_time
+                    + sel_time
+                    + cov_time
+                    + m_time
+                    + init_time,
+                    label=&#34;Deletion Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    rc_time
+                    + del_time
+                    + at_time
+                    + sub_time
+                    + mut_time
+                    + cross_time
+                    + sel_time
+                    + cov_time
+                    + m_time
+                    + init_time,
+                    label=&#34;RC Time&#34;,
+                )
+                plt.plot(
+                    iterations,
+                    eval_time
+                    + rc_time
+                    + del_time
+                    + at_time
+                    + sub_time
+                    + mut_time
+                    + cross_time
+                    + sel_time
+                    + cov_time
+                    + m_time
+                    + init_time,
+                    label=&#34;Evaluation Time&#34;,
+                )
+                plt.plot(iterations, g_time, label=&#34;Total Time&#34;)
+                plt.xlabel(&#34;Iteration&#34;)
+                plt.ylabel(&#34;Cumulative Time (Stacked)&#34;)
+                plt.legend()
+                _out = pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_metrics_cum-time_vs_iter.svg&#34;)
+                plt.savefig(_out)
+                plt.close()
+
+                if not os.path.isfile(_out):
+                    raise IOError(&#34;failed to write _metrics_cum-time_vs_iter&#34;)
+
+            except RuntimeError as e:
+                raise IOError(&#34;plot model metrics failed.&#34;) from e
+        else:
+            raise RuntimeError(&#34;model must be fit or loaded before plotting model stats.&#34;)
+
+    def _set_wrk_dir(self, mod_path: pathlib.Path, dir=False):
+        &#34;&#34;&#34;Internal method to set working directory.
+
+        Args:
+            mod_path (pathlib.Path): path object to the loaded model.
+            dir (bool, optional): boolean object representing if the path is a directory. Defaults to False.
+
+        Raises:
+            IOError: If failed to set working directory. 
+        &#34;&#34;&#34;
+        try:
+            if dir:
+                # its only the work dir
+                assert os.path.isdir(
+                    mod_path
+                ), f&#34; model directory not found at {mod_path}&#34;
+                _mod_dir = str(mod_path)
+                _fig_dir = str(pathlib.Path(mod_path, &#34;figures&#34;))
+
+            else:
+                assert os.path.isfile(mod_path), f&#34; model file not found at {mod_path}&#34;
+                _mod_dir = str(mod_path.parent)
+                _mod_file = str(mod_path.name)
+                _mod_name = _mod_file.replace(&#34;.pkl&#34;, &#34;&#34;)
+                _fig_dir = str(pathlib.Path(_mod_dir, &#34;figures&#34;))
+                self.fit_mod_name = _mod_name
+                self.name = _mod_name
+
+            if not os.path.exists(_fig_dir):
+                os.makedirs(_fig_dir)
+
+            self.WRK_DIR = _mod_dir
+            self.FIGS_DIR = _fig_dir
+
+        except IOError as e:
+            raise IOError(&#34;failed to set working directory.&#34;) from e
+
+    def do_analysis(self):
+        &#34;&#34;&#34; Method to create reports used to do analysis, including FP/FN reports, and FULL and SUMMARY final reports.
+        &#34;&#34;&#34;
+        assert self.pred_fn is not None, &#34;prediction file not created&#34;
+        assert self.fit_mod_name is not None, &#34;model must be fit and loaded before doing analysis&#34;
+        
+        # get file name from feature vector training file name
+        dti_file = f&#34;data/{self.trn_fn.replace(&#39;fv_&#39;,&#39;&#39;)}&#34;
+        
+        # get path to model prediction on test data file
+        mod_pred_file = str(self.pred_fn)
+        assert os.path.isfile(mod_pred_file), &#34;model prediction file not found&#34;
+
+        # get dti file to match with predicted, so content is shown during review
+        dti_df = pd.read_csv(dti_file)
+        mod_pred_df = pd.read_csv(mod_pred_file)
+        
+        # create FP and FN reports in model directory
+        analyze_model(dti_df,mod_pred_df,&#39;rel&#39;,self.WRK_DIR)
+
+        # copy EK rules in model dir.
+        copy_ek_rules(self.WRK_DIR, self.rules)
+
+        # produce final prediction report
+        self.report_path = str(report(dti_df,mod_pred_df, self.WRK_DIR))
+
+    def pred_from_model(self, model_path=None, trn_data=None, tst_data=None, class_label = None, out_dir=&#39;.&#39;, sum_flds = None) -&gt; pathlib:
+        &#34;&#34;&#34;Predict on unseen data using an existing model located at model_path.  
+
+        Args:
+            model_path (str): path to the model being used to predict.
+            trn_data (str): path to training data used to train the model.
+            tst_data (str): path to unsee data.
+            class_label (str): class label.
+            out_dir (str, optional): path to output directory. Defaults to &#39;.&#39;.
+
+        Raises:
+            RuntimeError: If failed to drop empty columsn from training and test data sets before training.
+            ValueError: If class label is not found in data training and unseen datasets.
+            ValueError: If unseen data headers do not match training headers.
+            RuntimeError: If failed to drop class label.
+            RuntimeError: If model predict failed.
+            IOError: If failed to write predicted values to file.
+
+        Returns:
+            pathlib: _description_
+        &#34;&#34;&#34;
+        # load model
+        self.load_model(model_path)
+
+        # set class label
+        self.class_label = class_label
+
+        # load data
+        self.load_train_data(trn_data_fn=trn_data)
+        self.load_test_data(tst_data_fn=tst_data)
+
+        # Drop all features that are not present in both datasets.
+        try:
+            cols_in_trn = self.trn_data.loc[:, ~self.trn_data.any()].columns.values
+            cols_in_tst = self.tst_data.loc[:, ~self.trn_data.any()].columns.values
+            drop_cols = set(cols_in_trn) &amp; set(cols_in_tst)
+            self.trn_data.drop(drop_cols, axis=1, inplace=True)
+            self.tst_data.drop(drop_cols, axis=1, inplace=True)
+        except RuntimeError as drop_dataframes_error:
+            raise RuntimeError(
+                &#34;failed to drop empty columsn from training and test data sets before training&#34;
+            ) from drop_dataframes_error
+
+        # get prediction
+        if self.tst_data is not None and self.trn_data is not None:
+            if self.fit_mod is not None:
+                self.hdrs = self.trn_data.columns.tolist()
+                _tst_hdrs = self.tst_data.columns.tolist()
+
+            if self.class_label not in self.hdrs or self.class_label not in _tst_hdrs:
+                raise ValueError(
+                    f&#34;Class label {class_label} not found in data training and test datasets.\n Acutal labels are not required for only predicting, however, the column must exist in the test data.&#34;
+                )
+
+            try:
+                # get header names while still a df
+                self.tst_hdrs = self.tst_data.columns.tolist()
+                # get test data values
+                if set(self.hdrs) != set(self.tst_hdrs):
+                    raise ValueError(
+                        &#34;test_model: test data hdrs do not match training hdrs.&#34;
+                    )
+                # _test_ys = self.tst_data[self.class_label].values
+                _tst_data_features = self.tst_data.drop(self.class_label, axis=1).values
+            except RuntimeError as e:
+                raise RuntimeError(
+                    f&#34;Failed to drop class label: {self.class_label}&#34;
+                ) from e
+
+            # get prediction for each unseen observation
+            with Timer() as t:
+                try:
+                    print(&#34;&gt; Predict test&#34;, end=&#34;\r&#34;)
+                    self.yhat = self.fit_mod.predict(_tst_data_features)
+                    self.tst_data[&#34;pred&#34;] = self.yhat
+                    self.pred_fn = pathlib.Path(
+                        out_dir,
+                        self.fit_mod_name + &#34;__pred_on_&#34; + self.tst_fn,
+                    )
+
+                except RuntimeError as e:
+                    raise RuntimeError(&#34;Model predict failed.&#34;) from e
+
+            try:
+                self.tst_data.to_csv(self.pred_fn, index=False)
+                print(
+                    f&#34;- Predicted test saved to -&gt; {str(self.pred_fn)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;
+                )
+            except IOError as e:
+                raise IOError(&#34;Failed to write predicted values to file.&#34;) from e
+
+            train_fn = str(self.pred_fn).split(&#34;_fv_&#34;)[1]
+            dti_file = f&#34;data/{train_fn}&#34;
+            # mod_pred_file = str(self.pred_fn)
+            # Analyze model
+            dti_df = pd.read_csv(dti_file)
+            print(&#34;Loaded dti file: &#34; + dti_file)
+
+            # produce final prediction report
+            # report_path = report(dti_df,self.tst_data, out_dir)
+            # reset index
+            dti_df.reset_index()
+            self.tst_data.reset_index()
+
+            # combine dti file with model pred
+            result = pd.merge(dti_df, self.tst_data, left_index=True, right_index=True)
+            # get mask from features and prediction
+            mask = self.tst_data == 1
+
+            features = mask.columns.values
+            for index, col in mask.items():
+                mask.loc[mask[index] == True, index] = index
+                mask.loc[mask[index] == False, index] = &#34;#&#34;
+            self.tst_data[&#34;tags&#34;] = mask[features].agg(&#34;,&#34;.join, axis=1)
+            self.tst_data[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;].str.replace(&#34;#,&#34;, &#34;&#34;)
+            self.tst_data[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;].str.replace(&#34;,#&#34;, &#34;&#34;)
+            self.tst_data[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;].str.replace(&#34;#&#34;, &#34;&#34;)
+
+            dti_df[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;]
+            dti_df[&#34;pred&#34;] = result[&#34;pred&#34;]
+
+            dti_df.sort_values(&#34;datetime&#34;, ascending=True, inplace=True)
+            # full report
+            full_report = pathlib.Path(
+                out_dir, f&#34;{self.name}_FULL_dti_predict_report.csv&#34;
+            )
+            dti_df.to_csv(full_report, index=False)
+
+            # summary report, only predicted relevant
+            dti_df = dti_df[dti_df[&#34;pred&#34;] == 1]
+            
+            # if summary report columns is specified apply the columns
+            try:
+                if sum_flds:
+                    assert isinstance(sum_flds, list)
+                    dti_df = dti_df[sum_flds]
+            except KeyError as e:
+                raise KeyError(&#39;failed to select summary fields specified.&#39;)
+                
+            # drop class label and pred
+            if self.class_label in dti_df:
+                dti_df.drop([self.class_label], axis=1, inplace=True)
+                
+            summ_out = pathlib.Path(out_dir, f&#34;{self.name}_SUMMARY_report.csv&#34;)
+            dti_df.to_csv(summ_out, index=False)
+
+            # &#34;- Loaded train data: \t{str(_data_file)} ({len(self.trn_data)} rows)  &#34;
+            print(f&#34;Summary report ready for review at -&gt; {str(summ_out)}&#34;)
+
+        return summ_out</code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="app.dti.proto.DTILCS.DTILCS.CLR"><code class="name">var <span class="ident">CLR</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.CLRN"><code class="name">var <span class="ident">CLRN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.DATA_DIR"><code class="name">var <span class="ident">DATA_DIR</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.FIGS_DIR"><code class="name">var <span class="ident">FIGS_DIR</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.FIG_DPI"><code class="name">var <span class="ident">FIG_DPI</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.FIG_H"><code class="name">var <span class="ident">FIG_H</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.FIG_W"><code class="name">var <span class="ident">FIG_W</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.MOD_DIR"><code class="name">var <span class="ident">MOD_DIR</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.WRK_DIR"><code class="name">var <span class="ident">WRK_DIR</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="app.dti.proto.DTILCS.DTILCS.compile"><code class="name flex">
+<span>def <span class="ident">compile</span></span>(<span>self, trial=None, iters=10000, N=6000, nu=5, random_state=None) ‑> skExSTraCS.ExSTraCS.ExSTraCS</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Initialize the ExSTraCS LCS and sets hyper parameters.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>iters</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>The number of training cycles to run. Defaults to 10000.</dd>
+<dt><strong><code>N</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Maximum micro classifier population size (sum of classifier numerosities). Defaults to 6000.</dd>
+<dt><strong><code>nu</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Power parameter used to determine the importance of high accuracy when calculating fitness. Defaults to 5.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ExSTraCS</code></dt>
+<dd>ExSTraCS 2.0 object (Extended Supervised Tracking and Classifying System)</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def compile(
+    self, trial=None, iters=10000, N=6000, nu=5, random_state=None
+) -&gt; ExSTraCS:
+    &#34;&#34;&#34;Initialize the ExSTraCS LCS and sets hyper parameters.
+
+    Args:
+        iters (int, optional): The number of training cycles to run. Defaults to 10000.
+        N (int, optional):  Maximum micro classifier population size (sum of classifier numerosities). Defaults to 6000.
+        nu (int, optional): Power parameter used to determine the importance of high accuracy when calculating fitness. Defaults to 5.
+
+    Returns:
+        ExSTraCS: ExSTraCS 2.0 object (Extended Supervised Tracking and Classifying System)
+    &#34;&#34;&#34;
+    try:
+
+        if trial is not None:
+            self.trl_name = (
+                str(trial) + &#34;_&#34; + str(iters) + &#34;_&#34; + str(N) + &#34;_&#34; + str(nu)
+            )
+            if random_state is not None:
+                self.trl_name = self.trl_name + &#34;_seed-&#34; + str(random_state)
+
+        # Initialize ExSTraCS Model
+        if self.EK_scores is not None:
+            self.cur_mod = ExSTraCS(
+                learning_iterations=iters,
+                N=N,
+                nu=nu,
+                track_accuracy_while_fit=True,
+                expert_knowledge=self.EK_scores,
+            )
+        else:
+            self.cur_mod = ExSTraCS(
+                learning_iterations=iters, N=N, nu=nu, track_accuracy_while_fit=True
+            )
+    except RuntimeError as e:
+        raise RuntimeError(&#34;compile: Failed to create ExSTraCS model.&#34;) from e</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.cross_validate"><code class="name flex">
+<span>def <span class="ident">cross_validate</span></span>(<span>self, k=5) ‑> float</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Cross validate the current model using sklearn cross_val_score.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>k</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>Cross validation folds. Defaults to 5.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>RuntimeError</code></dt>
+<dd>if cross validate fails</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def cross_validate(self, k=5) -&gt; float:
+    &#34;&#34;&#34;Cross validate the current model using sklearn cross_val_score.
+
+    Args:
+        k (int, optional): Cross validation folds. Defaults to 5.
+
+    Raises:
+        RuntimeError: if cross validate fails
+    &#34;&#34;&#34;
+    print(f&#34;&gt; {str(k)}-fold Cross Validation&#34;, end=&#39;\r&#39;)
+    try:
+        # shuffling data before cross validation
+        _formatted = np.insert(self.x_trn, self.x_trn.shape[1], self.y_trn, 1)
+        np.random.shuffle(_formatted)
+        _data_features = np.delete(_formatted, -1, axis=1)
+        _data_labels = _formatted[:, -1]
+
+        # Defaults to 5 fold CV
+        try:
+            with Timer() as t:
+                try:
+                    cv_scores = cross_val_score(estimator=self.cur_mod, X=_data_features, y=_data_labels, cv=k)
+                    # cv_scores = cross_val_score(self.fit_mod, _data_features, _data_labels, cv=k)
+                    print(f&#39;    o CV Scores: {cv_scores}&#39;)
+                    cv_score = round(np.mean(cv_scores),2,)         
+                except RuntimeError as e:
+                    raise RuntimeError(&#34;Cross validation failed.&#34;) from e    
+        finally:     
+            print(f&#34;- {str(k)}-fold Cross Validation score:\t{str(cv_score)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)
+
+    except RuntimeError as e:
+        raise RuntimeError(
+            &#34;cross validate failed - check x and y data shapes.&#34;
+        ) from e
+
+    return cv_score</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.do_analysis"><code class="name flex">
+<span>def <span class="ident">do_analysis</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Method to create reports used to do analysis, including FP/FN reports, and FULL and SUMMARY final reports.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def do_analysis(self):
+    &#34;&#34;&#34; Method to create reports used to do analysis, including FP/FN reports, and FULL and SUMMARY final reports.
+    &#34;&#34;&#34;
+    assert self.pred_fn is not None, &#34;prediction file not created&#34;
+    assert self.fit_mod_name is not None, &#34;model must be fit and loaded before doing analysis&#34;
+    
+    # get file name from feature vector training file name
+    dti_file = f&#34;data/{self.trn_fn.replace(&#39;fv_&#39;,&#39;&#39;)}&#34;
+    
+    # get path to model prediction on test data file
+    mod_pred_file = str(self.pred_fn)
+    assert os.path.isfile(mod_pred_file), &#34;model prediction file not found&#34;
+
+    # get dti file to match with predicted, so content is shown during review
+    dti_df = pd.read_csv(dti_file)
+    mod_pred_df = pd.read_csv(mod_pred_file)
+    
+    # create FP and FN reports in model directory
+    analyze_model(dti_df,mod_pred_df,&#39;rel&#39;,self.WRK_DIR)
+
+    # copy EK rules in model dir.
+    copy_ek_rules(self.WRK_DIR, self.rules)
+
+    # produce final prediction report
+    self.report_path = str(report(dti_df,mod_pred_df, self.WRK_DIR))</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.fit"><code class="name flex">
+<span>def <span class="ident">fit</span></span>(<span>self, exp_trking_data: bool = True) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fit the current model using paramters set by compile.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>exp_trking_data</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd><em>description</em>. Defaults to True.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>If self.cur_mod not defined.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If model is not yet compiled.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def fit(self, exp_trking_data: bool = True) -&gt; None:
+    &#34;&#34;&#34;Fit the current model using paramters set by compile.
+
+    Args:
+        exp_trking_data (bool, optional): _description_. Defaults to True.
+
+    Raises:
+        ValueError: If self.cur_mod not defined.
+        RuntimeError: If model is not yet compiled.
+    &#34;&#34;&#34;
+    if self.cur_mod is not None:
+        if self.x_trn is not None and self.y_trn is not None:
+            print(&#34;&gt; Fit model          &#34;, end=&#34;\r&#34;)
+            # Fit the model using training data and labels
+
+            with Timer() as t:
+                self.fit_mod = self.cur_mod.fit(self.x_trn, self.y_trn)
+            _build_tm = &#34;%.03f sec.&#34; % t.interval
+
+            timehack = &#34;_&#34; + time.strftime(&#34;%Y%m%d_%H%M%S&#34;)
+
+            try:
+                # create work dir to save files and figures in
+                if self.trl_name is not None:
+                    self.fit_mod_name = self.name + &#34;_&#34; + self.trl_name + timehack
+                else:
+                    self.fit_mod_name = self.name + timehack
+
+                # create model named directory
+                _mod_dir = pathlib.Path(self.MOD_DIR, self.fit_mod_name)
+                os.makedirs(_mod_dir)
+
+            except IOError as e:
+                raise IOError(f&#34;failed creating {str(_mod_dir)}&#34;) from e
+
+            # set working directory
+            self._set_wrk_dir(_mod_dir, dir=True)
+
+            # save the iteration tracking to disk
+            if exp_trking_data:
+                self.fit_mod.export_iteration_tracking_data(
+                    str(
+                        pathlib.Path(
+                            self.WRK_DIR, self.fit_mod_name + &#34;_iterData.csv&#34;
+                        )
+                    )
+                )
+
+            # export final rule population
+            self.fit_mod.export_final_rule_population(
+                self.hdrs,
+                self.class_label,
+                filename=str(
+                    pathlib.Path(
+                        self.WRK_DIR, self.fit_mod_name + &#34;_finalRulePop.csv&#34;
+                    )
+                ),
+                DCAL=False,
+            )
+            print(f&#34;- Model fit in {_build_tm}&#34;)
+
+        else:
+            raise ValueError(&#34;x_trn and y_trn not set: run load_test_data first.&#34;)
+    else:
+        raise RuntimeError(&#34;cur_mod not defined: compile model before fitting.&#34;)</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.load_model"><code class="name flex">
+<span>def <span class="ident">load_model</span></span>(<span>self, model_path: str = None) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Loads existing model from a pkl file and sets the fit_mod and fit_mod_name values.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>model_name</code></strong> :&ensp;<code>str</code></dt>
+<dd>file name of the model, normally in the format 'mod1_20231010_150556_model.pkl'.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>FileNotFoundError</code></dt>
+<dd>If model file does not exist.</dd>
+<dt><code>IOError</code></dt>
+<dd>if pickel.load fails to load model.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_model(self, model_path: str = None) -&gt; None:
+    &#34;&#34;&#34;Loads existing model from a pkl file and sets the fit_mod and fit_mod_name values.
+
+    Args:
+        model_name (str): file name of the model, normally in the format &#39;mod1_20231010_150556_model.pkl&#39;.
+
+    Raises:
+        FileNotFoundError: If model file does not exist.
+        IOError: if pickel.load fails to load model.
+
+    &#34;&#34;&#34;
+    try:
+        # print(f&#39;provided to load model: {model_path}&#39;)
+        _mod_path = pathlib.Path(model_path)
+        if os.path.isfile(_mod_path):
+            # load model from pkl file
+            print(&#34;&gt; Load model&#34;, end=&#34;\r&#34;)
+            self.fit_mod = pickle.load(open(_mod_path, &#34;rb&#34;))
+
+            # set working directory to loaded models
+            self._set_wrk_dir(_mod_path)
+
+            print(f&#34;- Loaded model:\t\t{str(_mod_path)}   &#34;)
+        else:
+            print(f&#34;[FAIL] Load model\t\t{str(_mod_path)}&#34;)
+            raise FileNotFoundError(f&#34;model file not found: {str(_mod_path)}&#34;)
+
+    except IOError as e:
+        raise IOError(
+            f&#34;pickel.load failed to load model model_name {str(_mod_path)}&#34;
+        ) from e</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.load_test_data"><code class="name flex">
+<span>def <span class="ident">load_test_data</span></span>(<span>self, tst_data_fn: str = None) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load DTI test data from a CSV file.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>tst_data_fn</code></strong> :&ensp;<code>str</code></dt>
+<dd>Filename of test data rule set to load. This file must be in the</dd>
+</dl>
+<p>DATA_DIR.</p>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>FileExistsError</code></dt>
+<dd>If data directory does not exist and it can not be created.</dd>
+<dt><code>FileExistsError</code></dt>
+<dd>If the tst_data_fn in DATA_DIR can not be loaded into a DataFrame.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_test_data(self, tst_data_fn: str = None) -&gt; None:
+    &#34;&#34;&#34;Load DTI test data from a CSV file.
+
+    Args:
+        tst_data_fn (str): Filename of test data rule set to load. This file must be in the
+        DATA_DIR.
+
+    Raises:
+        FileExistsError: If data directory does not exist and it can not be created.
+        FileExistsError: If the tst_data_fn in DATA_DIR can not be loaded into a DataFrame.
+    &#34;&#34;&#34;
+    _test_file = pathlib.Path(self.DATA_DIR, tst_data_fn)
+    try:
+        if os.path.isfile(_test_file):
+            print(f&#34;&gt; Load test data:\t{str(_test_file)}&#34;, end=&#34;\r&#34;)
+            self.tst_data = pd.read_csv(_test_file)
+            self.tst_fn = tst_data_fn
+            print(
+                f&#34;- Loaded test data: \t{str(_test_file)} ({len(self.tst_data)} rows)&#34;)
+        else:
+            raise FileExistsError(
+                &#34;load_train_data: FILE NOT FOUND at &#34; + str(_test_file)
+            )
+
+    except OSError as e:
+        raise FileExistsError(
+            &#34;load_train_data: Unable to load file &#34; + str(_test_file)
+        ) from e</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.load_train_data"><code class="name flex">
+<span>def <span class="ident">load_train_data</span></span>(<span>self, trn_data_fn: str = None, headers_only=False) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load DTI training data from a CSV file.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>trn_data_fn</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>Path to the DTI source file. Defaults to None.</dd>
+<dt><strong><code>headers_only</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>True if only headers are being loaded, e.g., full data is not required. Defaults to False.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>FileExistsError</code></dt>
+<dd>If data directory does not exist and it can not be created.</dd>
+<dt><code>FileExistsError</code></dt>
+<dd>If the trn_data in DATA_DIR can not be loaded.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_train_data(self, trn_data_fn: str = None, headers_only=False) -&gt; None:
+    &#34;&#34;&#34;Load DTI training data from a CSV file.
+
+    Args:
+        trn_data_fn (str, optional): Path to the DTI source file. Defaults to None.
+        headers_only (bool, optional): True if only headers are being loaded, e.g., full data is not required. Defaults to False.
+
+    Raises:
+        FileExistsError: If data directory does not exist and it can not be created.
+        FileExistsError: If the trn_data in DATA_DIR can not be loaded.
+    &#34;&#34;&#34;
+    _data_file = pathlib.Path(self.DATA_DIR, trn_data_fn)
+    _data_file_reduced = pathlib.Path(self.DATA_DIR, trn_data_fn, &#34;_reduced.csv&#34;)
+    try:
+        if os.path.isfile(_data_file):
+            if headers_only:
+                self.trn_data = pd.read_csv(_data_file, nrows=5)
+            else:
+                # print(f&#34;&gt; Load train data:\t{str(_data_file)}&#34;)
+                print(f&#34;&gt; Load train data:\t{str(_data_file)}&#34;, end=&#34;\r&#34;)
+                self.trn_data = pd.read_csv(_data_file)
+                self.trn_fn = trn_data_fn
+
+            # remove any uef that might have been appended
+            # self.trn_dat.rename(lambda x: x  if any(k in x for k in keys) else x, axis=1)
+
+            print(
+                f&#34;- Loaded train data: \t{str(_data_file)} ({len(self.trn_data)} rows)  &#34;
+            )
+
+        else:
+            raise FileExistsError(
+                &#34;file not found at &#34; + str(_data_file)
+            )
+
+    except OSError as e:
+        raise FileExistsError(
+            &#34;unable to load file &#34; + str(_data_file)
+        ) from e</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.pred_from_model"><code class="name flex">
+<span>def <span class="ident">pred_from_model</span></span>(<span>self, model_path=None, trn_data=None, tst_data=None, class_label=None, out_dir='.', sum_flds=None) ‑> <module 'pathlib' from 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\lib\\pathlib.py'></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Predict on unseen data using an existing model located at model_path.
+</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>model_path</code></strong> :&ensp;<code>str</code></dt>
+<dd>path to the model being used to predict.</dd>
+<dt><strong><code>trn_data</code></strong> :&ensp;<code>str</code></dt>
+<dd>path to training data used to train the model.</dd>
+<dt><strong><code>tst_data</code></strong> :&ensp;<code>str</code></dt>
+<dd>path to unsee data.</dd>
+<dt><strong><code>class_label</code></strong> :&ensp;<code>str</code></dt>
+<dd>class label.</dd>
+<dt><strong><code>out_dir</code></strong> :&ensp;<code>str</code>, optional</dt>
+<dd>path to output directory. Defaults to '.'.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>RuntimeError</code></dt>
+<dd>If failed to drop empty columsn from training and test data sets before training.</dd>
+<dt><code>ValueError</code></dt>
+<dd>If class label is not found in data training and unseen datasets.</dd>
+<dt><code>ValueError</code></dt>
+<dd>If unseen data headers do not match training headers.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If failed to drop class label.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If model predict failed.</dd>
+<dt><code>IOError</code></dt>
+<dd>If failed to write predicted values to file.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pathlib</code></dt>
+<dd><em>description</em></dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pred_from_model(self, model_path=None, trn_data=None, tst_data=None, class_label = None, out_dir=&#39;.&#39;, sum_flds = None) -&gt; pathlib:
+    &#34;&#34;&#34;Predict on unseen data using an existing model located at model_path.  
+
+    Args:
+        model_path (str): path to the model being used to predict.
+        trn_data (str): path to training data used to train the model.
+        tst_data (str): path to unsee data.
+        class_label (str): class label.
+        out_dir (str, optional): path to output directory. Defaults to &#39;.&#39;.
+
+    Raises:
+        RuntimeError: If failed to drop empty columsn from training and test data sets before training.
+        ValueError: If class label is not found in data training and unseen datasets.
+        ValueError: If unseen data headers do not match training headers.
+        RuntimeError: If failed to drop class label.
+        RuntimeError: If model predict failed.
+        IOError: If failed to write predicted values to file.
+
+    Returns:
+        pathlib: _description_
+    &#34;&#34;&#34;
+    # load model
+    self.load_model(model_path)
+
+    # set class label
+    self.class_label = class_label
+
+    # load data
+    self.load_train_data(trn_data_fn=trn_data)
+    self.load_test_data(tst_data_fn=tst_data)
+
+    # Drop all features that are not present in both datasets.
+    try:
+        cols_in_trn = self.trn_data.loc[:, ~self.trn_data.any()].columns.values
+        cols_in_tst = self.tst_data.loc[:, ~self.trn_data.any()].columns.values
+        drop_cols = set(cols_in_trn) &amp; set(cols_in_tst)
+        self.trn_data.drop(drop_cols, axis=1, inplace=True)
+        self.tst_data.drop(drop_cols, axis=1, inplace=True)
+    except RuntimeError as drop_dataframes_error:
+        raise RuntimeError(
+            &#34;failed to drop empty columsn from training and test data sets before training&#34;
+        ) from drop_dataframes_error
+
+    # get prediction
+    if self.tst_data is not None and self.trn_data is not None:
+        if self.fit_mod is not None:
+            self.hdrs = self.trn_data.columns.tolist()
+            _tst_hdrs = self.tst_data.columns.tolist()
+
+        if self.class_label not in self.hdrs or self.class_label not in _tst_hdrs:
+            raise ValueError(
+                f&#34;Class label {class_label} not found in data training and test datasets.\n Acutal labels are not required for only predicting, however, the column must exist in the test data.&#34;
+            )
+
+        try:
+            # get header names while still a df
+            self.tst_hdrs = self.tst_data.columns.tolist()
+            # get test data values
+            if set(self.hdrs) != set(self.tst_hdrs):
+                raise ValueError(
+                    &#34;test_model: test data hdrs do not match training hdrs.&#34;
+                )
+            # _test_ys = self.tst_data[self.class_label].values
+            _tst_data_features = self.tst_data.drop(self.class_label, axis=1).values
+        except RuntimeError as e:
+            raise RuntimeError(
+                f&#34;Failed to drop class label: {self.class_label}&#34;
+            ) from e
+
+        # get prediction for each unseen observation
+        with Timer() as t:
+            try:
+                print(&#34;&gt; Predict test&#34;, end=&#34;\r&#34;)
+                self.yhat = self.fit_mod.predict(_tst_data_features)
+                self.tst_data[&#34;pred&#34;] = self.yhat
+                self.pred_fn = pathlib.Path(
+                    out_dir,
+                    self.fit_mod_name + &#34;__pred_on_&#34; + self.tst_fn,
+                )
+
+            except RuntimeError as e:
+                raise RuntimeError(&#34;Model predict failed.&#34;) from e
+
+        try:
+            self.tst_data.to_csv(self.pred_fn, index=False)
+            print(
+                f&#34;- Predicted test saved to -&gt; {str(self.pred_fn)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;
+            )
+        except IOError as e:
+            raise IOError(&#34;Failed to write predicted values to file.&#34;) from e
+
+        train_fn = str(self.pred_fn).split(&#34;_fv_&#34;)[1]
+        dti_file = f&#34;data/{train_fn}&#34;
+        # mod_pred_file = str(self.pred_fn)
+        # Analyze model
+        dti_df = pd.read_csv(dti_file)
+        print(&#34;Loaded dti file: &#34; + dti_file)
+
+        # produce final prediction report
+        # report_path = report(dti_df,self.tst_data, out_dir)
+        # reset index
+        dti_df.reset_index()
+        self.tst_data.reset_index()
+
+        # combine dti file with model pred
+        result = pd.merge(dti_df, self.tst_data, left_index=True, right_index=True)
+        # get mask from features and prediction
+        mask = self.tst_data == 1
+
+        features = mask.columns.values
+        for index, col in mask.items():
+            mask.loc[mask[index] == True, index] = index
+            mask.loc[mask[index] == False, index] = &#34;#&#34;
+        self.tst_data[&#34;tags&#34;] = mask[features].agg(&#34;,&#34;.join, axis=1)
+        self.tst_data[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;].str.replace(&#34;#,&#34;, &#34;&#34;)
+        self.tst_data[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;].str.replace(&#34;,#&#34;, &#34;&#34;)
+        self.tst_data[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;].str.replace(&#34;#&#34;, &#34;&#34;)
+
+        dti_df[&#34;tags&#34;] = self.tst_data[&#34;tags&#34;]
+        dti_df[&#34;pred&#34;] = result[&#34;pred&#34;]
+
+        dti_df.sort_values(&#34;datetime&#34;, ascending=True, inplace=True)
+        # full report
+        full_report = pathlib.Path(
+            out_dir, f&#34;{self.name}_FULL_dti_predict_report.csv&#34;
+        )
+        dti_df.to_csv(full_report, index=False)
+
+        # summary report, only predicted relevant
+        dti_df = dti_df[dti_df[&#34;pred&#34;] == 1]
+        
+        # if summary report columns is specified apply the columns
+        try:
+            if sum_flds:
+                assert isinstance(sum_flds, list)
+                dti_df = dti_df[sum_flds]
+        except KeyError as e:
+            raise KeyError(&#39;failed to select summary fields specified.&#39;)
+            
+        # drop class label and pred
+        if self.class_label in dti_df:
+            dti_df.drop([self.class_label], axis=1, inplace=True)
+            
+        summ_out = pathlib.Path(out_dir, f&#34;{self.name}_SUMMARY_report.csv&#34;)
+        dti_df.to_csv(summ_out, index=False)
+
+        # &#34;- Loaded train data: \t{str(_data_file)} ({len(self.trn_data)} rows)  &#34;
+        print(f&#34;Summary report ready for review at -&gt; {str(summ_out)}&#34;)
+
+    return summ_out</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.predict"><code class="name flex">
+<span>def <span class="ident">predict</span></span>(<span>self, unseen_data: pandas.core.frame.DataFrame, class_label=None) ‑> numpy.ndarray</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Given a pandas DataFrame of observations, predict the phenotype (class) as relevant or not.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>unseen_data</code></strong> :&ensp;<code>pd.DataFrame</code></dt>
+<dd><em>description</em></dd>
+<dt><strong><code>class_label</code></strong> :&ensp;<code>_type_</code>, optional</dt>
+<dd><em>description</em>. Defaults to None.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>RuntimeError</code></dt>
+<dd>If model.predict fails.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.ndarray</code></dt>
+<dd>array of int values representing phenotype label (0 not relevant, 1 relevant)</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def predict(self, unseen_data: pd.DataFrame, class_label=None) -&gt; np.ndarray:
+    &#34;&#34;&#34;Given a pandas DataFrame of observations, predict the phenotype (class) as relevant or not.
+
+    Args:
+        unseen_data (pd.DataFrame): _description_
+        class_label (_type_, optional): _description_. Defaults to None.
+
+    Raises:
+        RuntimeError: If model.predict fails.
+
+    Returns:
+        np.ndarray: array of int values representing phenotype label (0 not relevant, 1 relevant)
+    &#34;&#34;&#34;
+    try:
+        if class_label is not None:
+            # data was provided a label
+            xs = unseen_data.drop(class_label, axis=1).values
+        else:
+            xs = unseen_data.values
+
+        # get predcition for each unseen observation
+        self.pred = self.fit_mod.predict(xs)
+
+        return self.pred
+
+    except RuntimeError as e:
+        raise RuntimeError(
+            &#34;predict failed, if unseen data is labled, specific class_label=&#39;class&#39;&#34;
+        ) from e</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.prep_dataset"><code class="name flex">
+<span>def <span class="ident">prep_dataset</span></span>(<span>self, val_size=0, random_state=None, do_ek=False, reduce_features=True, oversample_minority=True) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Split data into train and validation split.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>class_label</code></strong> :&ensp;<code>str</code></dt>
+<dd>phenotype/class either 1 or 0.</dd>
+<dt><strong><code>val_size</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>float value between 0-1. Defaults to .30.</dd>
+<dt><strong><code>random_state</code></strong> :&ensp;<code>int</code>, optional</dt>
+<dd>int value. Defaults to None.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>KeyError</code></dt>
+<dd>If self.trn_data is not loaded.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If class label not found self.trn_data.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If sklearn.model_selection.train_test_split or skrebate.ReliefF functions fail</dd>
+<dt>to execute correctly.</dt>
+<dt><code>ValueError</code></dt>
+<dd>If self.trn_data not set. Use load_train_data(filename.csv).</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def prep_dataset(
+    self, val_size=0, random_state=None, do_ek=False, reduce_features=True, oversample_minority=True
+) -&gt; None:
+    &#34;&#34;&#34;Split data into train and validation split.
+
+    Args:
+        class_label (str): phenotype/class either 1 or 0.
+        val_size (float, optional): float value between 0-1. Defaults to .30.
+        random_state (int, optional): int value. Defaults to None.
+
+    Raises:
+        KeyError: If self.trn_data is not loaded.
+        RuntimeError: If class label not found self.trn_data.
+        RuntimeError: If sklearn.model_selection.train_test_split or skrebate.ReliefF functions fail
+        to execute correctly.
+        ValueError: If self.trn_data not set. Use load_train_data(filename.csv).
+    &#34;&#34;&#34;
+    # check if a data source has be set
+    if self.trn_data is not None:
+        # verify the class label being used is in the training data
+        if self.class_label not in self.trn_data:
+            raise KeyError(&#34;class label not found in dataset -&gt; &#34; + self.class_label)
+
+        try:
+            # if any features are completely empty, drop them before proceeding.
+            # tmp_headers_before = set(self.trn_data.columns)
+            # self.trn_data = self.trn_data.loc[:, (self.trn_data != 0).any(axis=0)]
+            # tmp_headers_after = set(self.trn_data.columns)
+            # if tmp_headers_before != tmp_headers_after:
+            #     print(f&#34;\n  [!] Removed empty features: {tmp_headers_before.difference(tmp_headers_after)}&#34;)
+
+            if reduce_features and self.tst_data is not None:
+                print(f&#39;Reducing feature set to match train and test data provided.&#39;)
+                # Drop all rows that are not found in train or test datasets.
+                try:
+                    cols_in_trn = self.trn_data.loc[:, ~self.trn_data.any()].columns.values
+                    cols_in_tst = self.tst_data.loc[:, ~self.trn_data.any()].columns.values
+                    drop_cols = set(cols_in_trn) &amp; set(cols_in_tst)
+                    self.trn_data.drop(drop_cols, axis=1, inplace=True)
+                    self.tst_data.drop(drop_cols, axis=1, inplace=True)
+                except RuntimeError as drop_dataframes_error:
+                    raise RuntimeError(
+                        &#34;failed to drop empty columsn from training and test data sets before training&#34;
+                    ) from drop_dataframes_error
+
+            # get data values for to split
+            _data_features = self.trn_data.drop(self.class_label, axis=1)
+            # get header names (meta-feature names) while still a df
+            self.hdrs = _data_features.columns
+            print(f&#39;\n  [:)] Training with [{len(self.hdrs)}] features: {str(self.hdrs)}\n&#39;)
+            # get np array of training data
+            _data_features = _data_features.values
+            # get np array of phenotype label (class)
+            _data_labels = self.trn_data[self.class_label].values
+            # create a balanced dataset using oversampling
+            if oversample_minority:
+                oversample = RandomOverSampler(sampling_strategy=&#39;minority&#39;)
+                # fit and apply the transform
+                Xs, ys = oversample.fit_resample(_data_features, _data_labels)
+            else:
+                Xs = _data_features
+                ys = _data_labels
+
+            print(&#34;&gt; Preparing data&#34;)
+
+            if val_size == 0:
+                self.x_trn = Xs
+                self.y_trn = ys
+                print(f&#39;  o Class disribution: {Counter(self.y_trn)}&#39;)
+            else:
+                (
+                    self.x_trn,
+                    self.x_val,
+                    self.y_trn,
+                    self.y_val,
+                ) = train_test_split(
+                    Xs,
+                    ys,
+                    test_size=val_size,
+                    random_state=random_state
+                )
+                print(f&#39;  o Class disribution in training data: {Counter(self.y_trn)}&#39;)
+                print(f&#39;  o Class disribution in validation data: {Counter(self.y_val)}&#39;)
+
+            print(&#34;&gt; Split training data&#34;, end=&#34;\r&#34;)
+
+        except RuntimeError as e:
+            raise RuntimeError(&#34;failed to split data.&#34;) from e
+
+        try:
+            if do_ek:
+                with Timer() as t: 
+                    # set EK scores for use during fit
+                    print(&#34;&gt; Find feature importance&#34;, end=&#34;\r&#34;)
+                    relieff = ReliefF()
+                    relieff.fit(self.x_trn, self.y_trn)
+                    self.EK_scores = relieff.feature_importances_
+
+                print(f&#34;[DONE] Found feature importance ({&#39;%.03f&#39;% t.interval} sec.)&#34;)    
+            else:
+                self.EK_scores = None
+
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;failed to create EK_scores to identify feature importance.&#34;
+            ) from e
+
+    else:
+        raise ValueError(
+            &#34;self.trn_data not set, use load_train_data(filename.csv).&#34;
+        )</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.save_model"><code class="name flex">
+<span>def <span class="ident">save_model</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Save a model to disk using pickle file.</p>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>IOError</code></dt>
+<dd>If self.fit_mod does not exist.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If picket.dump fails to write the model to disk.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def save_model(self) -&gt; None:
+    &#34;&#34;&#34;Save a model to disk using pickle file.
+
+    Raises:
+        IOError: If self.fit_mod does not exist.
+        RuntimeError: If picket.dump fails to write the model to disk.
+    &#34;&#34;&#34;
+    if self.fit_mod is not None:
+        try:
+            assert (
+                self.WRK_DIR is not None
+            ), &#34;can not save without work directory being established.&#34;
+            outfile = pathlib.Path(self.WRK_DIR, self.fit_mod_name + &#34;_model.pkl&#34;)
+            pickle.dump(self.fit_mod, open(outfile, &#34;wb&#34;))
+            print(f&#34;- Saved model -&gt; {str(outfile)}&#34;)
+
+        except IOError as e:
+            raise IOError(
+                f&#34;pickel.dump: Failed to call picket.dump to {str(outfile)}&#34;
+            ) from e
+    else:
+        raise RuntimeError(
+            &#34;save_model: fit_mod not defined--compile and fit model before savinging.&#34;
+        )</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.DTILCS.DTILCS.test_model"><code class="name flex">
+<span>def <span class="ident">test_model</span></span>(<span>self, predict=True, acc_score=True, class_rpt=True, model_metrics=False, roc_prc=False, predict_proba=False, threshold=0.5, train_data=None, class_label=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Test a fit or loaded model and produce various reports and plots. By default, only predict, accuracy score,
+and classification report are produced if no options are specified.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>predict</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Predict using fit model x and y data. Defaults to True.</dd>
+<dt><strong><code>acc_score</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Calculate accuracy score using fit model x and y data. Defaults to True.</dd>
+<dt><strong><code>class_rpt</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Create a classification report using fit model x and y data.. Defaults to True.</dd>
+<dt><strong><code>model_metrics</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Output plots of model metrics. Defaults to False.</dd>
+<dt><strong><code>roc_prc</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Create ROC/PRC plots using fit model x and y data. Defaults to False.</dd>
+<dt><strong><code>predict_proba</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Predict probabilities using fit model x and y data. Defaults to False.</dd>
+<dt><strong><code>threshold</code></strong> :&ensp;<code>float</code>, optional</dt>
+<dd>Set threshold. Defaults to 0.5.</dd>
+<dt><strong><code>train_data</code></strong> :&ensp;<code>_type_</code>, optional</dt>
+<dd>x-data to be tested with fit or loaded model. Defaults to None.</dd>
+<dt><strong><code>class_label</code></strong> :&ensp;<code>_type_</code>, optional</dt>
+<dd>Class label as string, the column name. Defaults to None.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>ValueError</code></dt>
+<dd>If class label not found in data training and test datasets.</dd>
+<dt><code>ValueError</code></dt>
+<dd>If test_model test data hdrs do not match training hdrs.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If failed to drop class label.
+</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If model predict failed.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If predict test failed.</dd>
+<dt><code>IOError</code></dt>
+<dd>If failed to write test data to csv.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If model predict proba failed.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If failed to create roc/prc curves.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If failed to plot model metrics.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If failed to plot model stats.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If failed to create classification report.</dd>
+<dt><code>IOError</code></dt>
+<dd>If failed to write classification report.</dd>
+<dt><code>IOError</code></dt>
+<dd>If failed to write confusion matrix.</dd>
+<dt><code>IOError</code></dt>
+<dd>If failed to write confusion matrix (normlalized).</dd>
+<dt><code>IOError</code></dt>
+<dd>If failed to write ROC display from pred.</dd>
+<dt><code>IOError</code></dt>
+<dd>If failed to write PRC threshold. </dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If failed to create plots.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If test data not loaded.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.ndarray</code></dt>
+<dd>Array of predicted values, e.g., y-hat.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_model(
+    self,
+    predict=True,
+    acc_score=True,
+    class_rpt=True,
+    model_metrics=False,
+    roc_prc=False,
+    predict_proba=False,
+    threshold=0.5,
+    train_data=None,
+    class_label=None,
+):
+    &#34;&#34;&#34;Test a fit or loaded model and produce various reports and plots. By default, only predict, accuracy score,
+    and classification report are produced if no options are specified.
+
+    Args:
+        predict (bool, optional): Predict using fit model x and y data. Defaults to True.
+        acc_score (bool, optional): Calculate accuracy score using fit model x and y data. Defaults to True.
+        class_rpt (bool, optional): Create a classification report using fit model x and y data.. Defaults to True.
+        model_metrics (bool, optional): Output plots of model metrics. Defaults to False.
+        roc_prc (bool, optional): Create ROC/PRC plots using fit model x and y data. Defaults to False.
+        predict_proba (bool, optional): Predict probabilities using fit model x and y data. Defaults to False.
+        threshold (float, optional): Set threshold. Defaults to 0.5.
+        train_data (_type_, optional): x-data to be tested with fit or loaded model. Defaults to None.
+        class_label (_type_, optional): Class label as string, the column name. Defaults to None.
+
+    Raises:
+        ValueError: If class label not found in data training and test datasets.
+        ValueError: If test_model test data hdrs do not match training hdrs.
+        RuntimeError: If failed to drop class label.   
+        RuntimeError: If model predict failed.
+        RuntimeError: If predict test failed.
+        IOError: If failed to write test data to csv.
+        RuntimeError: If model predict proba failed.
+        RuntimeError: If failed to create roc/prc curves.
+        RuntimeError: If failed to plot model metrics.
+        RuntimeError: If failed to plot model stats.
+        RuntimeError: If failed to create classification report.
+        IOError: If failed to write classification report.
+        IOError: If failed to write confusion matrix.
+        IOError: If failed to write confusion matrix (normlalized).
+        IOError: If failed to write ROC display from pred.
+        IOError: If failed to write PRC threshold. 
+        RuntimeError: If failed to create plots.
+        RuntimeError: If test data not loaded.
+
+    Returns:
+         np.ndarray: Array of predicted values, e.g., y-hat.
+    &#34;&#34;&#34;
+    assert (
+        self.WRK_DIR is not None
+        and self.fit_mod_name is not None
+        and self.FIGS_DIR is not None
+    ), &#34;directories are not setup!&#34;
+
+    acc, bal_acc, err, model_cm = None, None, None, None
+
+    if self.tst_data is not None:
+        if self.fit_mod is not None:
+            if self.trn_data is None:
+                assert (
+                    train_data is not None
+                ), &#34;Training data not loaded, must provide a path to training data.&#34;
+                self.load_train_data(train_data, headers_only=True)
+
+            assert (
+                self.trn_data is not None and self.tst_data is not None
+            ), &#34;training or test data not loaded.&#34;
+            self.hdrs = self.trn_data.columns.tolist()
+            _tst_hdrs = self.tst_data.columns.tolist()
+
+            if class_label in self.hdrs and class_label in _tst_hdrs:
+                self.class_label = class_label
+            else:
+                raise ValueError(
+                    f&#34;Class label {class_label} not found in data training and test datasets.&#34;
+                )
+
+            try:
+                # get header names (meta-feature names) while still a df
+                self.tst_hdrs = self.tst_data.columns.tolist()
+                # get test data values
+                if set(self.hdrs) != set(self.tst_hdrs):
+                    raise ValueError(
+                        &#34;test_model: test data hdrs do not match training hdrs.&#34;
+                    )
+                _test_ys = self.tst_data[self.class_label].values
+                _tst_data_features = self.tst_data.drop(
+                    self.class_label, axis=1
+                ).values
+            except RuntimeError as e:
+                raise RuntimeError(f&#34;Failed to drop class label: {self.class_label}&#34;) from e
+
+            # get prediction for each unseen observation
+            if predict:
+                try:
+                    with Timer() as t:
+                        try:
+                            print(&#34;&gt; Predict test&#34;, end=&#34;\r&#34;)
+                            self.yhat = self.fit_mod.predict(_tst_data_features)
+                            self.tst_data[&#34;pred&#34;] = self.yhat
+                            self.pred_fn = pathlib.Path(
+                                self.WRK_DIR,
+                                self.fit_mod_name + &#34;__pred_on_&#34; + self.tst_fn,
+                            )
+
+                        except RuntimeError as e:
+                            raise RuntimeError(&#34;Model predict failed.&#34;) from e
+                    try:    
+                        self.tst_data.to_csv(self.pred_fn, index=False)    
+                        print(f&#34;- Predicted test saved to -&gt; {str(self.pred_fn)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)
+                    except IOError as e:
+                        raise IOError(&#34;Failed to write predicted values to file.&#34;) from e
+
+                except RuntimeError as e:
+                    raise RuntimeError(&#34;predict test failed.&#34;) from e
+
+            # get prediction probablities (default False)
+            if predict_proba:
+                try:
+                    with Timer() as t:
+
+                        print(
+                            &#34;&gt; Predict proba&#34;,
+                            end=&#34;\r&#34;,
+                        )
+                        self.pred_prob = self.fit_mod.predict_proba(
+                            _tst_data_features
+                        )
+                        self.tst_data[&#34;pred_not_rel&#34;] = self.pred_prob[:, 0]
+                        self.tst_data[&#34;pred_rel&#34;] = self.pred_prob[:, 1]
+                        fn = pathlib.Path(
+                            self.WRK_DIR,
+                            self.fit_mod_name
+                            + &#34;__pred_proba_on_&#34;
+                            + self.tst_fn,
+                        )
+                        try:
+                            self.tst_data.to_csv(fn, index=False)
+                        except IOError as e:
+                            raise IOError(&#34;failed to write test data to csv.&#34;) from e
+
+                    print(f&#34;- Predicted proba saved to -&gt; {str(fn)} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)    
+
+                except RuntimeError as e:
+                    raise RuntimeError(&#34;model predict proba failed&#34;) from e
+
+            if roc_prc:
+                print(&#34;&gt; Plot ROC/PRC&#34;, end=&#34;\r&#34;)
+                try:
+                    with Timer() as t:
+                        self._roc_prc_curves(Xs=_tst_data_features, ys=_test_ys)
+
+                    print(f&#34;- ROC/PRC plot saved to -&gt; {self.FIGS_DIR} ({&#39;%.03f&#39;% t.interval} sec.)&#34;)
+
+                except RuntimeError as e:
+                    raise RuntimeError(&#34;failed to create roc/prc curves&#34;) from e
+
+            if model_metrics:
+                print(&#34;&gt; Plot model metrics&#34;, end=&#34;\r&#34;)
+                try:
+                    with Timer() as t:
+
+                        self._plot_model_stats()
+                    print(f&#34;- Model metrics saved to -&gt; {self.FIGS_DIR} ({&#39;%.03f&#39;% t.interval} sec.) &#34;)        
+
+                except RuntimeError as e:
+                    raise RuntimeError(&#34;failed to plot model metrics&#34;) from e
+
+            if acc_score:
+                if acc_score and not predict:
+                    print(
+                        &#34;NOTE: Skipping accuracy score--must set predict=True to produce accuracy score.&#34;
+                    )
+
+                else:
+                    print(&#34;&gt; Check accuracy&#34;, end=&#34;\r&#34;)
+                    try:
+                        with Timer() as t:
+                            acc = accuracy_score(
+                                self.tst_data[self.class_label].values,
+                                self.tst_data[&#34;pred&#34;].values,
+                            )
+                            class_names = [&#34;Not Relevant&#34;, &#34;Relevant&#34;]
+
+                            y_truth = self.tst_data[self.class_label].values
+                            y_pred = self.tst_data[&#34;pred&#34;].values
+
+                            if threshold != 0.5:
+                                y_pred[y_pred &gt; threshold] = 1
+                                y_pred[y_pred &lt; threshold] = 0
+
+                            # accuracy scores
+                            bal_acc = balanced_accuracy_score(y_truth, y_pred)
+                            acc, bal_acc, err = (
+                                round(acc, 2),
+                                round(bal_acc, 2),
+                                round(1 - acc, 2),
+                            )
+                        print(f&#34;- Accuracy: {str(acc)} | Balanced Accuracy: {str(bal_acc)} | Error: {str(err)} ({&#39;%.03f&#39;% t.interval} sec.) &#34;)
+
+                    except RuntimeError as e:
+                        print(f&#34;[FAIL] Check accuracy scores using {self.fit_mod_name}&#34;)
+                        raise RuntimeError(&#34;failed to plot model stats&#34;) from e    
+
+            # classification report to figures
+            model_cm = None
+            if class_rpt:
+
+                try: 
+                    # classification report
+                    cr = classification_report(
+                        y_truth, y_pred, target_names=class_names
+                    )
+                except RuntimeError as e:
+                    raise RuntimeError (&#34;failed to create classification report.&#34;) from e
+
+                try:
+                    _cr_file = pathlib.Path(self.WRK_DIR,self.fit_mod_name + &#34;__class_report_.txt&#34;)
+                    with open(_cr_file, &#34;w&#34;, encoding=&#34;utf-8&#34;) as text_file:
+                        text_file.write(cr)
+
+                except IOError as e:
+                    raise IOError (&#34;failed to write classification report.&#34;) from e        
+
+                try:
+                    # confusion matrix
+                    model_cm = confusion_matrix(y_true=y_truth, y_pred=y_pred)
+                    plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                        self.FIG_W, self.FIG_H
+                    )
+                    plot_confusion_matrix(
+                        model_cm,
+                        classes=class_names,
+                        #title=&#34;Confusion matrix - (&#34; + str(threshold) + &#34;)&#34;,
+                        title=&#34;Confusion matrix&#34;,
+                    )
+                    plt.savefig(
+                        pathlib.Path(
+                            self.FIGS_DIR, self.fit_mod_name + &#34;_fig_cm.svg&#34;
+                        )
+                    )
+                    plt.close()
+                    if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_cm.svg&#34;)):
+                        raise IOError(&#34;failed to write confusion matrix.&#34;)
+
+                    # confusion matrix normalized
+                    plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                        self.FIG_W, self.FIG_H
+                    )
+                    plot_confusion_matrix(
+                        model_cm,
+                        normalize=True,
+                        classes=class_names,
+                        title=&#34;Confusion matrix (norm)&#34;,
+                    )
+                    plt.savefig(
+                        pathlib.Path(
+                            self.FIGS_DIR,
+                            self.fit_mod_name + &#34;_fig_cm_norm.svg&#34;,
+                        )
+                    )
+                    plt.close()
+                    if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_cm_norm.svg&#34;)):
+                        raise IOError(&#34;failed to write confusion matrix (normlalized).&#34;)
+
+                    # ROC plot
+                    plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                        self.FIG_W, self.FIG_H
+                    )
+                    rcd.from_predictions(y_truth, y_pred, name=&#34;ROC&#34;)
+                    plt.savefig(
+                        pathlib.Path(
+                            self.FIGS_DIR,
+                            self.fit_mod_name + &#34;_fig_ROC_Disp_frm_pred.svg&#34;))
+                    plt.close()
+                    if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_fig_ROC_Disp_frm_pred.svg&#34;)):
+                        raise IOError(&#34;failed to write ROC display from pred.&#34;)
+
+                    # PRC threshold
+                    plt.figure(dpi=self.FIG_DPI).set_size_inches(
+                        self.FIG_W, self.FIG_H
+                    )
+                    # plt.figure.suptitle(&#34;2-class Precision-Recall curve&#34;)
+                    # plt_ = precision_recall_threshold(
+                    #     self.fit_mod,
+                    #     _tst_data_features,
+                    #     y_truth,
+                    #     y_preds=self.yhat,
+                    #     thold=threshold,
+                    #     title=&#34;&#34;,
+                    # )
+                    pcd.from_predictions(y_truth, y_pred, name=&#34;MLCS&#34;)
+
+                    plt.savefig(
+                        pathlib.Path(
+                            self.FIGS_DIR,
+                            self.fit_mod_name + &#34;_prc_threshold.svg&#34;,
+                        )
+                    )
+                    plt.close()
+                    if not os.path.isfile(pathlib.Path(self.FIGS_DIR, self.fit_mod_name + &#34;_prc_threshold.svg&#34;)):
+                        raise IOError(&#34;failed to write PRC threshold.&#34;)
+
+                    print(f&#34;- Confusion matrix and plotts in f-&gt; {self.FIGS_DIR}&#34;
+                            )
+                except RuntimeError as e:
+                    raise RuntimeError(&#34;Error creating plots.&#34;) from e
+    else:
+        raise RuntimeError(
+            &#34;test data not loaded - load test data with load_test_data(tst_data_filename.csv)&#34;
+        )
+    return acc, bal_acc, err, model_cm</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="app.dti.proto" href="index.html">app.dti.proto</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="app.dti.proto.DTILCS.DTILCS" href="#app.dti.proto.DTILCS.DTILCS">DTILCS</a></code></h4>
+<ul class="two-column">
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.CLR" href="#app.dti.proto.DTILCS.DTILCS.CLR">CLR</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.CLRN" href="#app.dti.proto.DTILCS.DTILCS.CLRN">CLRN</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.DATA_DIR" href="#app.dti.proto.DTILCS.DTILCS.DATA_DIR">DATA_DIR</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.FIGS_DIR" href="#app.dti.proto.DTILCS.DTILCS.FIGS_DIR">FIGS_DIR</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.FIG_DPI" href="#app.dti.proto.DTILCS.DTILCS.FIG_DPI">FIG_DPI</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.FIG_H" href="#app.dti.proto.DTILCS.DTILCS.FIG_H">FIG_H</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.FIG_W" href="#app.dti.proto.DTILCS.DTILCS.FIG_W">FIG_W</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.MOD_DIR" href="#app.dti.proto.DTILCS.DTILCS.MOD_DIR">MOD_DIR</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.WRK_DIR" href="#app.dti.proto.DTILCS.DTILCS.WRK_DIR">WRK_DIR</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.compile" href="#app.dti.proto.DTILCS.DTILCS.compile">compile</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.cross_validate" href="#app.dti.proto.DTILCS.DTILCS.cross_validate">cross_validate</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.do_analysis" href="#app.dti.proto.DTILCS.DTILCS.do_analysis">do_analysis</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.fit" href="#app.dti.proto.DTILCS.DTILCS.fit">fit</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.load_model" href="#app.dti.proto.DTILCS.DTILCS.load_model">load_model</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.load_test_data" href="#app.dti.proto.DTILCS.DTILCS.load_test_data">load_test_data</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.load_train_data" href="#app.dti.proto.DTILCS.DTILCS.load_train_data">load_train_data</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.pred_from_model" href="#app.dti.proto.DTILCS.DTILCS.pred_from_model">pred_from_model</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.predict" href="#app.dti.proto.DTILCS.DTILCS.predict">predict</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.prep_dataset" href="#app.dti.proto.DTILCS.DTILCS.prep_dataset">prep_dataset</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.save_model" href="#app.dti.proto.DTILCS.DTILCS.save_model">save_model</a></code></li>
+<li><code><a title="app.dti.proto.DTILCS.DTILCS.test_model" href="#app.dti.proto.DTILCS.DTILCS.test_model">test_model</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

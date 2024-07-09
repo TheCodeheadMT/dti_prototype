@@ -1,0 +1,2309 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>app.dti.proto.FeatureBuilder API documentation</title>
+<meta name="description" content="This software project was created in 2023 by the U.S. Federal government.
+See INTENT.md for information about what that means. See CONTRIBUTORS.md
+…" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>app.dti.proto.FeatureBuilder</code></h1>
+</header>
+<section id="section-intro">
+<p>This software project was created in 2023 by the U.S. Federal government.
+See INTENT.md for information about what that means. See CONTRIBUTORS.md and
+LICENSE.md for licensing, copyright, and attribution information.</p>
+<p>Copyright 2023 U.S. Federal Government (in countries where recognized)
+Copyright 2023 Michael Todd and Gilbert Peterson</p>
+<p>Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">&#39;&#39;&#39;
+This software project was created in 2023 by the U.S. Federal government.
+See INTENT.md for information about what that means. See CONTRIBUTORS.md and
+LICENSE.md for licensing, copyright, and attribution information.
+
+Copyright 2023 U.S. Federal Government (in countries where recognized)
+Copyright 2023 Michael Todd and Gilbert Peterson
+
+Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+&#39;&#39;&#39;
+import pathlib
+import os
+import json
+import pandas as pd
+import numpy as np
+from tqdm.auto import tqdm
+from .RuleExtractor import *
+from .Utils import Timer, pair_start_stop, check_regex
+from rich.traceback import install
+from shutil import get_terminal_size
+
+# from .RuleExtractor import RuleExtractor
+
+
+class FeatureBuilder:
+    &#34;&#34;&#34; This class builds feature vectors using a dti source and rules parsed from yara-like rule files using
+    operations including field_contains(), field_is(), and field_compare().
+    &#34;&#34;&#34;
+    DATA_DIR = &#39;./data/&#39;
+    CLR = &#39;\x1b[1K\r&#39;
+    CLRN = &#39;\x1b[1K\r\n&#39;
+
+    def __init__(self, data=None, rules=None, class_label=None) -&gt; None:
+        self.dti: pd.DataFrame = None
+        self.feat_vec: pd.DataFrame = pd.DataFrame()
+        self.ops_timer = {}
+        self.val_rule_conf = set()
+        self.fn = None
+        self.rules = rules
+        self.class_label = class_label
+        # rich install custom console output
+        install()
+        # self.con: Console = Console(width=200)
+        tqdm.pandas()
+
+        
+                 
+        if data is not None:
+            self.fn = self.DATA_DIR+data
+            self.read_dti(self.fn)
+
+        re = RuleExtractor(rules=rules)
+        if re is not None:
+            self.build(re.rule_list)
+
+    def read_dti(self, resource: str, rows=None):
+        &#34;&#34;&#34;Load dti training data from a CSV file.
+
+        Args:
+            resource (str):  Path to the dti source file. 
+            rows (_type_, optional): Number of rows to load. Defaults to None.
+
+        Raises:
+            FileNotFoundError: If resource is not found at location provided.
+            RuntimeError: If reading dti file fails.
+        &#34;&#34;&#34;
+        self.fn: str = resource
+        _data_file: pathlib.Path = pathlib.Path(resource)
+
+        try:
+            if os.path.isfile(_data_file):
+                print(f&#34;&gt; Loading DTI: {resource}&#34;, end=self.CLR)
+                self.dti: pd.DataFrame = pd.read_csv(
+                    _data_file, dtype=object, nrows=rows)
+                print(f&#34;- DTI source loaded from: {resource}&#34;, end=self.CLRN)
+            else:
+                raise FileNotFoundError(&#34;FILE NOT FOUND at &#34;+str(_data_file))
+        except IOError as e:
+            raise RuntimeError(&#34;unable to load file &#34;+str(_data_file)) from e
+
+    def field_contains(self, field: str, value: str, type: str, sub_field: str) -&gt; np.ndarray:
+        &#34;&#34;&#34; Returns a vector the length of self.dti with a 1 if the field contains value.
+
+        Args:
+            field (str):  Name of the field being considered during calculation.
+            value (str): Value to be checked for within the considered field.
+            type (str): Type of value default is text.
+            sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+        Raises:
+            RuntimeError: If check on self.dti fails.
+
+               
+        Raises:
+            KeyError: If key is not found in the embedded JSON object.
+            RuntimeWarning: If field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.
+            RuntimeError: If check on self.dti fails.
+
+        Returns:
+            np.ndarray: np.ndarry representing a feature vector value for the expert conditions checked.
+        &#34;&#34;&#34;
+        try:
+            _tmp_dti = pd.DataFrame()
+            if sub_field is not None:
+                
+                _tmp_dti = pd.DataFrame()
+                
+                try:
+                    _tmp_dti[sub_field] = self.dti.apply(
+                        lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+                except KeyError as e:
+                    raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;)from e
+                field = sub_field
+            else:
+                if &#39;:&#39; in field:
+                    raise RuntimeWarning(
+                    &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+                _tmp_dti[field] = self.dti[field]
+
+            results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+            
+            #DEBUG
+            #print(f&#39;DEBUG: value to check for {value}&#39;)
+            #print(&#39;DEBUG: value to check for reg exp: &#39;+ &#39;\b&#39;+value+&#39;\b&#39;)
+            #print(f&#39;unescaped string {value.encode(&#34;utf-8&#34;).decode(&#34;unicode_escape&#34;)}&#39;)            
+            #DEBUG
+            try:
+                # check if leading/trailing forward slash is present
+                if value[0] == &#39;/&#39; and value[-1] == &#39;/&#39;:
+                    _value = value[1:-1]
+                else:
+                    _value = value
+                    
+                #print(&#34;Regex starting with: &#34;+_value)
+                if check_regex(_value):
+                    print(&#34;  [OK] Pattern: &#34;+_value)
+                    results = _tmp_dti[field].astype(str).str.contains(_value, regex=True).values
+                    _results = results &amp; 1
+                    _results_sum = sum(_results)
+                    print(f&#39;  ({_results_sum}) hits&#39;)
+                    if _results_sum &gt; 0 and _results_sum &lt;=25:
+                        print(&#34;  [!] WARNING: This feature has very few instances and may cause issues when training.&#34;)
+                    return results &amp; 1            
+            except RuntimeError as e:
+                raise RuntimeError(f&#39;Failed to calculate results for a feature vector. Check regular expression for {_value}&#39;)from e
+
+        except RuntimeError as e:
+            
+            raise RuntimeError(
+                &#34;failed to check if value is a substring of field.&#34;) from e
+
+    def field_is(self, field: str, value: str, type: str, sub_field: str) -&gt; np.ndarray:
+        &#34;&#34;&#34; Returns a vector the length of self.dti with a 1 if the field is an exact match to value.
+
+        Args:
+            field (str): Name of the field being considered during calculation.
+            value (str): Value to be checked for within the considered field.
+            type (str): Type of value default is text.
+            sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+        Raises:
+            RuntimeError: If check on self.dti fails.
+
+        Returns:
+            np.ndarray: ndarry representing a feature vector value for the expert conditions checked.
+        &#34;&#34;&#34;
+        try:
+            _tmp_dti = pd.DataFrame()
+            
+            #if value is numeric but was not presented as a float, add the decimal 
+            #if value.isnumeric():
+            #    if &#39;.&#39; not in value:
+            #        value = value+&#34;.0&#34;
+            #        print(f&#34;- Value updated to {value}&#34;)      
+            
+            if sub_field is not None:
+                try:
+                    _tmp_dti[sub_field] = self.dti.apply(
+                        lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+                except KeyError as e:
+                    raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;)from e
+                field = sub_field
+            else:
+                if &#39;:&#39; in field:
+                    raise RuntimeWarning(
+                    &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+                _tmp_dti[field] = self.dti[field]
+            
+            # in case we have nan values - set them all to 0
+            _tmp_dti[field].fillna(0, inplace=True)
+            #print(self.dti[field])
+            results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+            results = _tmp_dti[field].astype(str).str.fullmatch(value)
+
+            return results &amp; 1
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;failed to check if field is equal to value.&#34;) from e
+
+    def field_between(self, field: str, val1: str, val2: str, type: str, sub_field: str):
+        &#34;&#34;&#34; Returns a vector the length of self.dti with a 1 if the value in the specified field is between val1 and val2.
+
+        Args:
+            field (str): Name of the field being considered during calculation.
+            val1 (str): Value to be checked for within the considered field.
+            val2 (str): Value to be checked for within the considered field.
+            type (str): Type of value default is text.
+            sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+        Raises:
+            RuntimeError: If check on self.dti fails.
+
+        Returns:
+            np.ndarray: ndarry representing a feature vector value for the expert conditions checked.fs
+        &#34;&#34;&#34;
+        try:
+            _tmp_dti = pd.DataFrame()
+            if sub_field is not None:
+                try:
+                    _tmp_dti[sub_field] = self.dti.apply(
+                        lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+                except KeyError as e:
+                    raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;)from e
+
+                field = sub_field
+            else:
+                if &#39;:&#39; in field:
+                    raise RuntimeWarning(
+                    &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+                _tmp_dti[field] = self.dti[field]
+
+            results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+            results = _tmp_dti[field].between(val1, val2).values
+            return results &amp; 1
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;failed to check if field value is between val1 and val2.&#34;) from e
+
+    def field_compare(self, field: str, val1: str, type: str, operator: str, sub_field: str):
+        &#34;&#34;&#34;Returns a vector the length of self.dti with a 1 if the value in the specified field is between val1 and val2.
+
+        Args:
+            field (str): Name of the field being considered during calculation.
+            val1 (str): Value to be checked for within the considered field.
+            val2 (str): Value to be checked for within the considered field.
+            type (str): Type of value default is text.
+            sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+        Raises:
+            RuntimeError: If check on self.dti fails.
+
+        Returns:
+            np.ndarray: ndarry representing a feature vector value for the expert conditions checked.
+        &#34;&#34;&#34;
+        try:
+            _tmp_dti = pd.DataFrame()
+            if sub_field is not None:
+                try:
+                    _tmp_dti[sub_field] = self.dti.apply(
+                        lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+                except KeyError as e:
+                    raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;) from e
+                field = sub_field
+            else:
+                if &#39;:&#39; in field:
+                    raise RuntimeWarning(
+                    &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+                _tmp_dti[field] = self.dti[field]
+
+            results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+            # results = _tmp_dti[field].between(val1, val2).values
+            match operator:
+                case &#39;gt&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).gt(float(val1)).values
+                case &#39;lt&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).lt(float(val1)).values
+                case &#39;ge&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).ge(float(val1)).values
+                case &#39;le&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).le(float(val1)).values
+                case &#39;eq&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).eq(float(val1)).values
+                case &#39;ne&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).ne(float(val1)).values
+                case _:
+                    raise ValueError(
+                        f&#34;Compare field operator {operator} not supported&#34;)
+            return results &amp; 1
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;Failed to check if field value is greater than val1.&#34;) from e
+
+    def field_interval(self, field:str, start_pats: str, stop_pats:str, feature_name: str):
+        
+        #start_strings = [x.strip() for x in start_pats.split(&#39;,&#39;)]      
+        #stop_strings = [x.strip() for x in stop_pats.split(&#39;,&#39;)]     
+        #create shallow copy to do some work but not save it in self.dti
+        data = self.dti.copy(deep=False)
+        #setup results array
+        #results = np.zeros(len(data), dtype=np.int8)
+        #set default value for new feature
+        data[feature_name+&#34;_start&#34;] = 0
+        data[feature_name+&#34;_stop&#34;] = 0
+        data[feature_name] = 0
+        
+        #create  start tqdm for progress bar       
+        #start_tqdm = tqdm(enumerate(start_strings))
+        #print(&#39;start strings ----&gt;&#39; + str(start_strings))
+        # for p in start_tqdm:
+        #     print(f&#39;p: {p[0]}:{p[1]}&#39;)
+        #     start_tqdm.set_description(&#34;- Start &#34;)
+        #     #results = _tmp_dti[field].str.contains(value.encode(&#39;utf-8&#39;).decode(&#39;unicode_escape&#39;), regex=True).values
+        #     #value.encode(&#39;utf-8&#39;).decode(&#39;unicode_escape&#39;), regex=True
+        #     #data[feature_name+p[1]] = [1 if x &gt; 0 else 0 for x in data[field].str.find(p[1], 0)]
+            
+        #     data[feature_name+p[1]] = [1 if x &gt; 0 else 0 for x in data[field].str.contains(p[1].encode(&#39;utf-8&#39;).decode(&#39;unicode_escape&#39;), regex=True).values]
+        #     print(data[feature_name+p[1]].values)
+        #     data[feature_name+p[1]].to_csv(&#39;test_chrome_start.csv&#39;)
+            
+        #     data[feature_name+&#34;_start&#34;] = data[feature_name+&#34;_start&#34;] + data[feature_name+p[1]]
+        #     data.drop(feature_name+p[1], axis=1, inplace=True)
+        
+        if start_pats[0] == &#39;/&#39; and start_pats[-1] == &#39;/&#39;:
+            _start_pats = start_pats[1:-1]
+        else:
+            _start_pats = start_pats
+        
+        
+        if stop_pats[0] == &#39;/&#39; and stop_pats[-1] == &#39;/&#39;:
+            _stop_pats = stop_pats[1:-1]
+        else:
+            _stop_pats = stop_pats
+       
+        #print(f&#39;SELF.DTI! \n{self.dti}&#39;)
+
+
+        #print(&#34;Regex starting with: &#34;+_start_pats)
+        if check_regex(_start_pats) and check_regex(_stop_pats):
+            
+            data[feature_name+&#34;_start&#34;] = data[field].astype(str).str.contains(_start_pats, regex=True).values * 1
+            print(data)
+            data[feature_name+&#34;_stop&#34;] = data[field].astype(str).str.contains(_stop_pats, regex=True).values * 1
+            
+            print(f&#34;  o Start hits: ({data[feature_name+&#39;_start&#39;].sum()}) {_start_pats}&#34;)
+            print(f&#34;  o Stop hits: ({data[feature_name+&#39;_stop&#39;].sum()}) {_stop_pats}&#34;)
+
+            # Find the indices of rows where start patterns are (1) and stop patterns (1)
+            start_indices = data.index[data[feature_name+&#34;_start&#34;] == 1].tolist()
+            data.drop(feature_name+&#34;_start&#34;, axis=1, inplace=True)
+            end_indices = data.index[data[feature_name+&#34;_stop&#34;] == 1].tolist()
+            data.drop(feature_name+&#34;_stop&#34;, axis=1, inplace=True)
+            print(f&#39;start indexes: {start_indices}&#39;)
+            print(f&#39;stop indexes: {end_indices}&#39;)
+        
+            paired_starts, paired_stops = pair_start_stop(start_indices, end_indices)
+            #print(f&#39;paried starts: {paired_starts} len of starts: {len(paired_starts)}&#39;)
+            #print(f&#39;paired stops: {paired_stops} len of stops: {len(paired_stops)}&#39;)
+            # zip start and stop indicies
+            for start, end in zip(paired_starts, paired_stops):
+                data.loc[start:end, feature_name] = 1
+            
+            return data[feature_name]
+
+    def build(self, rules_list):
+        &#34;&#34;&#34;Builds feature vector using rules from RuleGenerator by testing conditions
+        specified for each feature in rule_list.
+
+        Args:
+            rules_list (_type_): Rule list parsed from RuleExtractor. 
+
+        Raises:
+            RuntimeError: If unable to parse subfield.
+            RuntimeError: If failed evaluating ek_list.
+            RuntimeError: If unable to parse contains subfield.
+            RuntimeError: If unable to parse field_contains ek_con.
+            RuntimeError: If unable to parse between subfield.
+            RuntimeError: If field between operation fails.
+            RuntimeError: If unable to parse subfield for &#39;gt&#39;, &#39;lt&#39;, &#39;ge&#39;, &#39;le&#39;, &#39;eq&#39;, &#39;ne&#39;.
+            RuntimeError: If failed parsing ek conditions from rule list.
+        &#34;&#34;&#34;
+        print(&#34;\n[START] -&gt; Feature Builder&#34;)
+        # now test rules and create feature vector with a 1 if all condtions are true and 0 if false.
+        for idx, mf in enumerate(rules_list):
+            
+            ek_list = []
+            for ek_con in mf:
+                #print(&#34;working on &#34;+ str(mf))    
+                try:
+                    operator = ek_con[&#39;condition_terms&#39;][1]
+                    if operator is &#39;interval&#39;:
+                        print(f&#39;found interval rule!!\n {ek_con}&#39;)
+                        exit()
+                        
+                    # process conditions
+                    if operator == &#34;is&#34;:
+                        assert len(
+                            ek_con[&#39;condition_terms&#39;]) == 3, &#34;&#39;is&#39; operator requires two operands, for 3 total terms.&#34;
+
+                        fld_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                        assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                        # now check if there is a subfield present
+                        try:
+                            fld_dict[&#39;sub_field&#39;] = None
+                            if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                                fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                    1]
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;unable to parse subfield&#34;) from e
+
+                        # get values from dict
+                        val_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$VALUE&#34;), None)
+                        assert val_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                        # parse all values from value string (delimiter is &#39;,&#39;)
+                        val_list = [x.strip() for x in val_dict[&#39;value&#39;].split(&#39;,&#39;)]
+                        #print(&#34;val list in &#39;in&#39; check:&#34;, val_list)
+                        try:
+                            print(
+                                f&#34;&gt; Evaluating {ek_con[&#39;rule_name&#39;]}&#34;, end=self.CLR)
+                            with Timer() as t:
+                                if len(val_list) &gt; 1:
+                                    # this provides the OR functionality to check for more than one condition witin a field
+                                    _tmp_resluts_list = []
+                                    for val in val_list:
+                                        _tmp_resluts_list.append(self.field_is(
+                                        fld_dict[&#39;value&#39;], val, val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                                    
+                                    # sum all evaluated results for field contains
+                                    _sum_list = np.sum(_tmp_resluts_list, axis = 0)
+                                    
+                                    # append the final evaluated condition, where anything &gt;0 hits is true.
+                                    ek_list.append((_sum_list &gt;= 1).astype(int))     
+                                else:
+                                    ek_list.append(self.field_is(
+                                    fld_dict[&#39;value&#39;], val_dict[&#39;value&#39;], val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                                
+                                self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                            self.ops_timer[ek_con[&#39;rule_name&#39;] + &#34;_is&#34;] = round(t.interval, 2)
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;failed evaluting ek_list&#34;) from e
+
+                    elif operator == &#34;contains&#34;:
+                        
+                        assert len(
+                            ek_con[&#39;condition_terms&#39;]) == 3, &#34;&#39;contains&#39; operator requires two operands, for 3 total terms.&#34;
+                        fld_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                        assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                        # now check if there is a subfield present
+                        try:
+                            fld_dict[&#39;sub_field&#39;] = None
+                            if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                                fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                    1]
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;unable to parse subfield&#34;) from e
+
+                        # get dict with values 
+                        val_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$VALUE&#34;), None)
+                        assert val_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                        # get values from dict
+                        val_list = [x.strip() for x in val_dict[&#39;value&#39;].split(&#39;,&#39;)]
+                         
+                        try:
+                            print(
+                                f&#34;&gt; Evaluating {ek_con[&#39;rule_name&#39;]}&#34;, end=self.CLR)
+                            with Timer() as t:
+                                
+                                if len(val_list) &gt; 1:
+                                    # this provides the OR functionality to check for more than one condition witin a field
+                                    tmp_resluts_list = []
+                                    for val in val_list:
+                                        # this evaluates the condition to see if the field contains the value.
+                                        tmp_resluts_list.append(self.field_contains(
+                                        fld_dict[&#39;value&#39;], val, val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                                        
+                                    # sum all evaluated results for field contains
+                                    sum_list = np.sum(tmp_resluts_list, axis = 0)
+                                    
+                                    # append the final evaluated condition, where anything &gt;0 hits is true.
+                                    ek_list.append((sum_list &gt;= 1).astype(int))                              
+                                else:
+                                    # this evaluates the condition to see if the field contains the value.
+                                    ek_list.append(self.field_contains(
+                                        fld_dict[&#39;value&#39;], val_dict[&#39;value&#39;], val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                                
+                                
+                                # this adds the evaluated rule results to the ek_list. 
+                                self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                            self.ops_timer[ek_con[&#39;rule_name&#39;] +
+                                           &#34;_contains&#34;] = round(t.interval, 2)
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;unable to parse field_contains ek_con&#34;) from e
+
+                    elif operator == &#34;between&#34;:
+                        assert len(
+                            ek_con[&#39;condition_terms&#39;]) == 5, &#34;&#39;contains&#39; operator requires 3 operands, 2 seprated by the &#39;and&#39; operator, for 5 total terms.&#34;
+
+                        fld_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                        assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+
+                        # now check if there is a subfield present
+                        try:
+                            fld_dict[&#39;sub_field&#39;] = None
+                            if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                                fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                    1]
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;unable to parse subfield&#34;) from e
+
+                        start_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$START&#34;), None)
+                        assert start_dict is not None, &#34;$VALUE not set in rule file.&#34;
+                        stop_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$STOP&#34;), None)
+                        assert stop_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                        try:
+                            print(
+                                f&#34;&gt; Evaluating {ek_con[&#39;rule_name&#39;]}&#34;, end=self.CLR)
+                            # with Timer() as t:
+                            ek_list.append(self.field_between(fld_dict[&#39;value&#39;], start_dict[&#39;value&#39;],
+                                                              stop_dict[&#39;value&#39;], start_dict[&#39;type&#39;],
+                                                              fld_dict[&#39;sub_field&#39;]))
+                            self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#39;field &#34;between&#34; operation failed&#39;) from e
+
+                    elif operator in [&#39;gt&#39;, &#39;lt&#39;, &#39;ge&#39;, &#39;le&#39;, &#39;eq&#39;, &#39;ne&#39;]:
+                        assert len(
+                            ek_con[&#39;condition_terms&#39;]) == 3, &#34;&#39;compare&#39; operators requires two operands, for 3 total terms.&#34;
+
+                        fld_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                        assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                        # now check if there is a subfield present
+                        try:
+                            fld_dict[&#39;sub_field&#39;] = None
+                            if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                                fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                    1]
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;unable to parse subfield&#34;) from e
+
+                        val_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$VALUE&#34;), None)
+                        assert val_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                        try:
+                            with Timer() as t:
+                                ek_list.append(self.field_compare(
+                                    fld_dict[&#39;value&#39;], val_dict[&#39;value&#39;], val_dict[&#39;type&#39;], operator, fld_dict[&#39;sub_field&#39;]))
+                                self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                        finally:
+                            self.ops_timer[ek_con[&#39;rule_name&#39;] +
+                                           &#34;_&#34;+operator] = round(t.interval, 2)
+                    
+                    elif operator == &#34;interval&#34;:
+                        #print(f&#39;interval rule found \n &#39;)
+                        
+                        assert len(
+                            ek_con[&#39;condition_terms&#39;]) == 5, &#34;&#39;interval&#39; operators requires FIELD, \
+                                                              START and STOP operands, for 5 total terms.&#34;
+
+                        fld_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                        assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                        
+                        start_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$START&#34;), None)
+                        assert start_dict is not None, &#34;$VALUE not set in rule file.&#34;
+                        
+                        stop_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$STOP&#34;), None)
+                        assert stop_dict is not None, &#34;$VALUE not set in rule file.&#34;
+                        
+                        try:
+                            with Timer() as t:
+                                ek_list.append(self.field_interval(fld_dict[&#39;value&#39;], start_dict[&#39;value&#39;], stop_dict[&#39;value&#39;], ek_con[&#39;rule_name&#39;]))
+                                self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                        finally:
+                            self.ops_timer[ek_con[&#39;rule_name&#39;] +
+                                           &#34;_&#34;+operator] = round(t.interval, 2)
+                    else:
+                        raise ValueError(
+                            f&#34;conditional term &#39;{ek_con[&#39;condition_terms&#39;][1]}&#39; -- not currently supported.&#34;)
+
+                except RuntimeError as e:
+                    raise RuntimeError(
+                        &#34;failed parsing ek conditions from rule list&#34;) from e
+
+            print(f&#34;  - Built feature: {ek_con[&#39;tags&#39;][0]} &#34;)
+            print(u&#39;\u2500&#39; * get_terminal_size()[0])
+
+            # self.con.print(np.array(ek_list))
+            self.feat_vec[ek_con[&#39;tags&#39;][0]] = np.logical_and.reduce(
+                np.array(ek_list)) &amp; 1
+            self.val_rule_conf.add(ek_con[&#39;tags&#39;][0])
+        
+        # assign a label to feature vectors
+        self.feat_vec[self.class_label] = self.dti[self.class_label]
+
+        # cleanup: if any columns are empty, remove them.
+        tmp_headers_before = set(self.feat_vec.columns)
+        _empty_features = self.feat_vec.loc[:, (self.feat_vec != 0).any(axis=0)].columns
+        tmp_headers_after = set(_empty_features)
+        if tmp_headers_before != tmp_headers_after:
+            print(f&#34;\n  [!] Empty features: {tmp_headers_before.difference(tmp_headers_after)}\n&#34;)
+                
+        print(&#34;[DONE] &lt;- Feature Builder\n&#34;, end=self.CLRN)
+
+    def get_feature_vector(self):
+        &#34;&#34;&#34;Get method for FeatureBuilder object feat_vec object. 
+
+        Returns:
+            pandas.DataFrame: A DataFrame with feature vector value which conatins 1 if true and 0 if false. 
+        &#34;&#34;&#34;
+        return self.feat_vec
+    
+    def get_dti(self) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;Get method for FeatureBuilder object dti object. 
+
+        Returns:
+            pandas.DataFrame: A DataFrame with dti source data. 
+        &#34;&#34;&#34;
+        return self.dti
+     
+    def to_csv(self, file_name=None, drop=None):
+        &#34;&#34;&#34;Helper function wrapper for pandas to_csv funciton.
+
+        Args:
+            file_name (string, optional): Filename to save the csv to. Defaults to None.
+            drop (list, optional): List of columns to drop from the dataframe before saving to csv. Defaults to None.
+
+        Raises:
+            IOError: _description_
+        &#34;&#34;&#34;
+        try:
+            if drop is not None:
+                self.feat_vec.drop(drop, axis=1, inplace=True)
+                print(f&#39;[NOTE] Dropped features: {drop} during build.\n&#39;)
+            self.feat_vec.to_csv(self.DATA_DIR+file_name,  index=False) 
+        except IOError as e:
+            raise IOError(f&#34;Failed to write to csv: {file_name}.&#34;)       
+        
+       </code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder"><code class="flex name class">
+<span>class <span class="ident">FeatureBuilder</span></span>
+<span>(</span><span>data=None, rules=None, class_label=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This class builds feature vectors using a dti source and rules parsed from yara-like rule files using
+operations including field_contains(), field_is(), and field_compare().</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FeatureBuilder:
+    &#34;&#34;&#34; This class builds feature vectors using a dti source and rules parsed from yara-like rule files using
+    operations including field_contains(), field_is(), and field_compare().
+    &#34;&#34;&#34;
+    DATA_DIR = &#39;./data/&#39;
+    CLR = &#39;\x1b[1K\r&#39;
+    CLRN = &#39;\x1b[1K\r\n&#39;
+
+    def __init__(self, data=None, rules=None, class_label=None) -&gt; None:
+        self.dti: pd.DataFrame = None
+        self.feat_vec: pd.DataFrame = pd.DataFrame()
+        self.ops_timer = {}
+        self.val_rule_conf = set()
+        self.fn = None
+        self.rules = rules
+        self.class_label = class_label
+        # rich install custom console output
+        install()
+        # self.con: Console = Console(width=200)
+        tqdm.pandas()
+
+        
+                 
+        if data is not None:
+            self.fn = self.DATA_DIR+data
+            self.read_dti(self.fn)
+
+        re = RuleExtractor(rules=rules)
+        if re is not None:
+            self.build(re.rule_list)
+
+    def read_dti(self, resource: str, rows=None):
+        &#34;&#34;&#34;Load dti training data from a CSV file.
+
+        Args:
+            resource (str):  Path to the dti source file. 
+            rows (_type_, optional): Number of rows to load. Defaults to None.
+
+        Raises:
+            FileNotFoundError: If resource is not found at location provided.
+            RuntimeError: If reading dti file fails.
+        &#34;&#34;&#34;
+        self.fn: str = resource
+        _data_file: pathlib.Path = pathlib.Path(resource)
+
+        try:
+            if os.path.isfile(_data_file):
+                print(f&#34;&gt; Loading DTI: {resource}&#34;, end=self.CLR)
+                self.dti: pd.DataFrame = pd.read_csv(
+                    _data_file, dtype=object, nrows=rows)
+                print(f&#34;- DTI source loaded from: {resource}&#34;, end=self.CLRN)
+            else:
+                raise FileNotFoundError(&#34;FILE NOT FOUND at &#34;+str(_data_file))
+        except IOError as e:
+            raise RuntimeError(&#34;unable to load file &#34;+str(_data_file)) from e
+
+    def field_contains(self, field: str, value: str, type: str, sub_field: str) -&gt; np.ndarray:
+        &#34;&#34;&#34; Returns a vector the length of self.dti with a 1 if the field contains value.
+
+        Args:
+            field (str):  Name of the field being considered during calculation.
+            value (str): Value to be checked for within the considered field.
+            type (str): Type of value default is text.
+            sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+        Raises:
+            RuntimeError: If check on self.dti fails.
+
+               
+        Raises:
+            KeyError: If key is not found in the embedded JSON object.
+            RuntimeWarning: If field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.
+            RuntimeError: If check on self.dti fails.
+
+        Returns:
+            np.ndarray: np.ndarry representing a feature vector value for the expert conditions checked.
+        &#34;&#34;&#34;
+        try:
+            _tmp_dti = pd.DataFrame()
+            if sub_field is not None:
+                
+                _tmp_dti = pd.DataFrame()
+                
+                try:
+                    _tmp_dti[sub_field] = self.dti.apply(
+                        lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+                except KeyError as e:
+                    raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;)from e
+                field = sub_field
+            else:
+                if &#39;:&#39; in field:
+                    raise RuntimeWarning(
+                    &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+                _tmp_dti[field] = self.dti[field]
+
+            results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+            
+            #DEBUG
+            #print(f&#39;DEBUG: value to check for {value}&#39;)
+            #print(&#39;DEBUG: value to check for reg exp: &#39;+ &#39;\b&#39;+value+&#39;\b&#39;)
+            #print(f&#39;unescaped string {value.encode(&#34;utf-8&#34;).decode(&#34;unicode_escape&#34;)}&#39;)            
+            #DEBUG
+            try:
+                # check if leading/trailing forward slash is present
+                if value[0] == &#39;/&#39; and value[-1] == &#39;/&#39;:
+                    _value = value[1:-1]
+                else:
+                    _value = value
+                    
+                #print(&#34;Regex starting with: &#34;+_value)
+                if check_regex(_value):
+                    print(&#34;  [OK] Pattern: &#34;+_value)
+                    results = _tmp_dti[field].astype(str).str.contains(_value, regex=True).values
+                    _results = results &amp; 1
+                    _results_sum = sum(_results)
+                    print(f&#39;  ({_results_sum}) hits&#39;)
+                    if _results_sum &gt; 0 and _results_sum &lt;=25:
+                        print(&#34;  [!] WARNING: This feature has very few instances and may cause issues when training.&#34;)
+                    return results &amp; 1            
+            except RuntimeError as e:
+                raise RuntimeError(f&#39;Failed to calculate results for a feature vector. Check regular expression for {_value}&#39;)from e
+
+        except RuntimeError as e:
+            
+            raise RuntimeError(
+                &#34;failed to check if value is a substring of field.&#34;) from e
+
+    def field_is(self, field: str, value: str, type: str, sub_field: str) -&gt; np.ndarray:
+        &#34;&#34;&#34; Returns a vector the length of self.dti with a 1 if the field is an exact match to value.
+
+        Args:
+            field (str): Name of the field being considered during calculation.
+            value (str): Value to be checked for within the considered field.
+            type (str): Type of value default is text.
+            sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+        Raises:
+            RuntimeError: If check on self.dti fails.
+
+        Returns:
+            np.ndarray: ndarry representing a feature vector value for the expert conditions checked.
+        &#34;&#34;&#34;
+        try:
+            _tmp_dti = pd.DataFrame()
+            
+            #if value is numeric but was not presented as a float, add the decimal 
+            #if value.isnumeric():
+            #    if &#39;.&#39; not in value:
+            #        value = value+&#34;.0&#34;
+            #        print(f&#34;- Value updated to {value}&#34;)      
+            
+            if sub_field is not None:
+                try:
+                    _tmp_dti[sub_field] = self.dti.apply(
+                        lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+                except KeyError as e:
+                    raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;)from e
+                field = sub_field
+            else:
+                if &#39;:&#39; in field:
+                    raise RuntimeWarning(
+                    &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+                _tmp_dti[field] = self.dti[field]
+            
+            # in case we have nan values - set them all to 0
+            _tmp_dti[field].fillna(0, inplace=True)
+            #print(self.dti[field])
+            results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+            results = _tmp_dti[field].astype(str).str.fullmatch(value)
+
+            return results &amp; 1
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;failed to check if field is equal to value.&#34;) from e
+
+    def field_between(self, field: str, val1: str, val2: str, type: str, sub_field: str):
+        &#34;&#34;&#34; Returns a vector the length of self.dti with a 1 if the value in the specified field is between val1 and val2.
+
+        Args:
+            field (str): Name of the field being considered during calculation.
+            val1 (str): Value to be checked for within the considered field.
+            val2 (str): Value to be checked for within the considered field.
+            type (str): Type of value default is text.
+            sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+        Raises:
+            RuntimeError: If check on self.dti fails.
+
+        Returns:
+            np.ndarray: ndarry representing a feature vector value for the expert conditions checked.fs
+        &#34;&#34;&#34;
+        try:
+            _tmp_dti = pd.DataFrame()
+            if sub_field is not None:
+                try:
+                    _tmp_dti[sub_field] = self.dti.apply(
+                        lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+                except KeyError as e:
+                    raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;)from e
+
+                field = sub_field
+            else:
+                if &#39;:&#39; in field:
+                    raise RuntimeWarning(
+                    &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+                _tmp_dti[field] = self.dti[field]
+
+            results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+            results = _tmp_dti[field].between(val1, val2).values
+            return results &amp; 1
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;failed to check if field value is between val1 and val2.&#34;) from e
+
+    def field_compare(self, field: str, val1: str, type: str, operator: str, sub_field: str):
+        &#34;&#34;&#34;Returns a vector the length of self.dti with a 1 if the value in the specified field is between val1 and val2.
+
+        Args:
+            field (str): Name of the field being considered during calculation.
+            val1 (str): Value to be checked for within the considered field.
+            val2 (str): Value to be checked for within the considered field.
+            type (str): Type of value default is text.
+            sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+        Raises:
+            RuntimeError: If check on self.dti fails.
+
+        Returns:
+            np.ndarray: ndarry representing a feature vector value for the expert conditions checked.
+        &#34;&#34;&#34;
+        try:
+            _tmp_dti = pd.DataFrame()
+            if sub_field is not None:
+                try:
+                    _tmp_dti[sub_field] = self.dti.apply(
+                        lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+                except KeyError as e:
+                    raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;) from e
+                field = sub_field
+            else:
+                if &#39;:&#39; in field:
+                    raise RuntimeWarning(
+                    &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+                _tmp_dti[field] = self.dti[field]
+
+            results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+            # results = _tmp_dti[field].between(val1, val2).values
+            match operator:
+                case &#39;gt&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).gt(float(val1)).values
+                case &#39;lt&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).lt(float(val1)).values
+                case &#39;ge&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).ge(float(val1)).values
+                case &#39;le&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).le(float(val1)).values
+                case &#39;eq&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).eq(float(val1)).values
+                case &#39;ne&#39;:
+                    results = _tmp_dti[field].astype(
+                        float).ne(float(val1)).values
+                case _:
+                    raise ValueError(
+                        f&#34;Compare field operator {operator} not supported&#34;)
+            return results &amp; 1
+        except RuntimeError as e:
+            raise RuntimeError(
+                &#34;Failed to check if field value is greater than val1.&#34;) from e
+
+    def field_interval(self, field:str, start_pats: str, stop_pats:str, feature_name: str):
+        
+        #start_strings = [x.strip() for x in start_pats.split(&#39;,&#39;)]      
+        #stop_strings = [x.strip() for x in stop_pats.split(&#39;,&#39;)]     
+        #create shallow copy to do some work but not save it in self.dti
+        data = self.dti.copy(deep=False)
+        #setup results array
+        #results = np.zeros(len(data), dtype=np.int8)
+        #set default value for new feature
+        data[feature_name+&#34;_start&#34;] = 0
+        data[feature_name+&#34;_stop&#34;] = 0
+        data[feature_name] = 0
+        
+        #create  start tqdm for progress bar       
+        #start_tqdm = tqdm(enumerate(start_strings))
+        #print(&#39;start strings ----&gt;&#39; + str(start_strings))
+        # for p in start_tqdm:
+        #     print(f&#39;p: {p[0]}:{p[1]}&#39;)
+        #     start_tqdm.set_description(&#34;- Start &#34;)
+        #     #results = _tmp_dti[field].str.contains(value.encode(&#39;utf-8&#39;).decode(&#39;unicode_escape&#39;), regex=True).values
+        #     #value.encode(&#39;utf-8&#39;).decode(&#39;unicode_escape&#39;), regex=True
+        #     #data[feature_name+p[1]] = [1 if x &gt; 0 else 0 for x in data[field].str.find(p[1], 0)]
+            
+        #     data[feature_name+p[1]] = [1 if x &gt; 0 else 0 for x in data[field].str.contains(p[1].encode(&#39;utf-8&#39;).decode(&#39;unicode_escape&#39;), regex=True).values]
+        #     print(data[feature_name+p[1]].values)
+        #     data[feature_name+p[1]].to_csv(&#39;test_chrome_start.csv&#39;)
+            
+        #     data[feature_name+&#34;_start&#34;] = data[feature_name+&#34;_start&#34;] + data[feature_name+p[1]]
+        #     data.drop(feature_name+p[1], axis=1, inplace=True)
+        
+        if start_pats[0] == &#39;/&#39; and start_pats[-1] == &#39;/&#39;:
+            _start_pats = start_pats[1:-1]
+        else:
+            _start_pats = start_pats
+        
+        
+        if stop_pats[0] == &#39;/&#39; and stop_pats[-1] == &#39;/&#39;:
+            _stop_pats = stop_pats[1:-1]
+        else:
+            _stop_pats = stop_pats
+       
+        #print(f&#39;SELF.DTI! \n{self.dti}&#39;)
+
+
+        #print(&#34;Regex starting with: &#34;+_start_pats)
+        if check_regex(_start_pats) and check_regex(_stop_pats):
+            
+            data[feature_name+&#34;_start&#34;] = data[field].astype(str).str.contains(_start_pats, regex=True).values * 1
+            print(data)
+            data[feature_name+&#34;_stop&#34;] = data[field].astype(str).str.contains(_stop_pats, regex=True).values * 1
+            
+            print(f&#34;  o Start hits: ({data[feature_name+&#39;_start&#39;].sum()}) {_start_pats}&#34;)
+            print(f&#34;  o Stop hits: ({data[feature_name+&#39;_stop&#39;].sum()}) {_stop_pats}&#34;)
+
+            # Find the indices of rows where start patterns are (1) and stop patterns (1)
+            start_indices = data.index[data[feature_name+&#34;_start&#34;] == 1].tolist()
+            data.drop(feature_name+&#34;_start&#34;, axis=1, inplace=True)
+            end_indices = data.index[data[feature_name+&#34;_stop&#34;] == 1].tolist()
+            data.drop(feature_name+&#34;_stop&#34;, axis=1, inplace=True)
+            print(f&#39;start indexes: {start_indices}&#39;)
+            print(f&#39;stop indexes: {end_indices}&#39;)
+        
+            paired_starts, paired_stops = pair_start_stop(start_indices, end_indices)
+            #print(f&#39;paried starts: {paired_starts} len of starts: {len(paired_starts)}&#39;)
+            #print(f&#39;paired stops: {paired_stops} len of stops: {len(paired_stops)}&#39;)
+            # zip start and stop indicies
+            for start, end in zip(paired_starts, paired_stops):
+                data.loc[start:end, feature_name] = 1
+            
+            return data[feature_name]
+
+    def build(self, rules_list):
+        &#34;&#34;&#34;Builds feature vector using rules from RuleGenerator by testing conditions
+        specified for each feature in rule_list.
+
+        Args:
+            rules_list (_type_): Rule list parsed from RuleExtractor. 
+
+        Raises:
+            RuntimeError: If unable to parse subfield.
+            RuntimeError: If failed evaluating ek_list.
+            RuntimeError: If unable to parse contains subfield.
+            RuntimeError: If unable to parse field_contains ek_con.
+            RuntimeError: If unable to parse between subfield.
+            RuntimeError: If field between operation fails.
+            RuntimeError: If unable to parse subfield for &#39;gt&#39;, &#39;lt&#39;, &#39;ge&#39;, &#39;le&#39;, &#39;eq&#39;, &#39;ne&#39;.
+            RuntimeError: If failed parsing ek conditions from rule list.
+        &#34;&#34;&#34;
+        print(&#34;\n[START] -&gt; Feature Builder&#34;)
+        # now test rules and create feature vector with a 1 if all condtions are true and 0 if false.
+        for idx, mf in enumerate(rules_list):
+            
+            ek_list = []
+            for ek_con in mf:
+                #print(&#34;working on &#34;+ str(mf))    
+                try:
+                    operator = ek_con[&#39;condition_terms&#39;][1]
+                    if operator is &#39;interval&#39;:
+                        print(f&#39;found interval rule!!\n {ek_con}&#39;)
+                        exit()
+                        
+                    # process conditions
+                    if operator == &#34;is&#34;:
+                        assert len(
+                            ek_con[&#39;condition_terms&#39;]) == 3, &#34;&#39;is&#39; operator requires two operands, for 3 total terms.&#34;
+
+                        fld_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                        assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                        # now check if there is a subfield present
+                        try:
+                            fld_dict[&#39;sub_field&#39;] = None
+                            if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                                fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                    1]
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;unable to parse subfield&#34;) from e
+
+                        # get values from dict
+                        val_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$VALUE&#34;), None)
+                        assert val_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                        # parse all values from value string (delimiter is &#39;,&#39;)
+                        val_list = [x.strip() for x in val_dict[&#39;value&#39;].split(&#39;,&#39;)]
+                        #print(&#34;val list in &#39;in&#39; check:&#34;, val_list)
+                        try:
+                            print(
+                                f&#34;&gt; Evaluating {ek_con[&#39;rule_name&#39;]}&#34;, end=self.CLR)
+                            with Timer() as t:
+                                if len(val_list) &gt; 1:
+                                    # this provides the OR functionality to check for more than one condition witin a field
+                                    _tmp_resluts_list = []
+                                    for val in val_list:
+                                        _tmp_resluts_list.append(self.field_is(
+                                        fld_dict[&#39;value&#39;], val, val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                                    
+                                    # sum all evaluated results for field contains
+                                    _sum_list = np.sum(_tmp_resluts_list, axis = 0)
+                                    
+                                    # append the final evaluated condition, where anything &gt;0 hits is true.
+                                    ek_list.append((_sum_list &gt;= 1).astype(int))     
+                                else:
+                                    ek_list.append(self.field_is(
+                                    fld_dict[&#39;value&#39;], val_dict[&#39;value&#39;], val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                                
+                                self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                            self.ops_timer[ek_con[&#39;rule_name&#39;] + &#34;_is&#34;] = round(t.interval, 2)
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;failed evaluting ek_list&#34;) from e
+
+                    elif operator == &#34;contains&#34;:
+                        
+                        assert len(
+                            ek_con[&#39;condition_terms&#39;]) == 3, &#34;&#39;contains&#39; operator requires two operands, for 3 total terms.&#34;
+                        fld_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                        assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                        # now check if there is a subfield present
+                        try:
+                            fld_dict[&#39;sub_field&#39;] = None
+                            if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                                fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                    1]
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;unable to parse subfield&#34;) from e
+
+                        # get dict with values 
+                        val_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$VALUE&#34;), None)
+                        assert val_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                        # get values from dict
+                        val_list = [x.strip() for x in val_dict[&#39;value&#39;].split(&#39;,&#39;)]
+                         
+                        try:
+                            print(
+                                f&#34;&gt; Evaluating {ek_con[&#39;rule_name&#39;]}&#34;, end=self.CLR)
+                            with Timer() as t:
+                                
+                                if len(val_list) &gt; 1:
+                                    # this provides the OR functionality to check for more than one condition witin a field
+                                    tmp_resluts_list = []
+                                    for val in val_list:
+                                        # this evaluates the condition to see if the field contains the value.
+                                        tmp_resluts_list.append(self.field_contains(
+                                        fld_dict[&#39;value&#39;], val, val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                                        
+                                    # sum all evaluated results for field contains
+                                    sum_list = np.sum(tmp_resluts_list, axis = 0)
+                                    
+                                    # append the final evaluated condition, where anything &gt;0 hits is true.
+                                    ek_list.append((sum_list &gt;= 1).astype(int))                              
+                                else:
+                                    # this evaluates the condition to see if the field contains the value.
+                                    ek_list.append(self.field_contains(
+                                        fld_dict[&#39;value&#39;], val_dict[&#39;value&#39;], val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                                
+                                
+                                # this adds the evaluated rule results to the ek_list. 
+                                self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                            self.ops_timer[ek_con[&#39;rule_name&#39;] +
+                                           &#34;_contains&#34;] = round(t.interval, 2)
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;unable to parse field_contains ek_con&#34;) from e
+
+                    elif operator == &#34;between&#34;:
+                        assert len(
+                            ek_con[&#39;condition_terms&#39;]) == 5, &#34;&#39;contains&#39; operator requires 3 operands, 2 seprated by the &#39;and&#39; operator, for 5 total terms.&#34;
+
+                        fld_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                        assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+
+                        # now check if there is a subfield present
+                        try:
+                            fld_dict[&#39;sub_field&#39;] = None
+                            if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                                fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                    1]
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;unable to parse subfield&#34;) from e
+
+                        start_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$START&#34;), None)
+                        assert start_dict is not None, &#34;$VALUE not set in rule file.&#34;
+                        stop_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$STOP&#34;), None)
+                        assert stop_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                        try:
+                            print(
+                                f&#34;&gt; Evaluating {ek_con[&#39;rule_name&#39;]}&#34;, end=self.CLR)
+                            # with Timer() as t:
+                            ek_list.append(self.field_between(fld_dict[&#39;value&#39;], start_dict[&#39;value&#39;],
+                                                              stop_dict[&#39;value&#39;], start_dict[&#39;type&#39;],
+                                                              fld_dict[&#39;sub_field&#39;]))
+                            self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#39;field &#34;between&#34; operation failed&#39;) from e
+
+                    elif operator in [&#39;gt&#39;, &#39;lt&#39;, &#39;ge&#39;, &#39;le&#39;, &#39;eq&#39;, &#39;ne&#39;]:
+                        assert len(
+                            ek_con[&#39;condition_terms&#39;]) == 3, &#34;&#39;compare&#39; operators requires two operands, for 3 total terms.&#34;
+
+                        fld_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                        assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                        # now check if there is a subfield present
+                        try:
+                            fld_dict[&#39;sub_field&#39;] = None
+                            if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                                fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                    1]
+                        except RuntimeError as e:
+                            raise RuntimeError(
+                                &#34;unable to parse subfield&#34;) from e
+
+                        val_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$VALUE&#34;), None)
+                        assert val_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                        try:
+                            with Timer() as t:
+                                ek_list.append(self.field_compare(
+                                    fld_dict[&#39;value&#39;], val_dict[&#39;value&#39;], val_dict[&#39;type&#39;], operator, fld_dict[&#39;sub_field&#39;]))
+                                self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                        finally:
+                            self.ops_timer[ek_con[&#39;rule_name&#39;] +
+                                           &#34;_&#34;+operator] = round(t.interval, 2)
+                    
+                    elif operator == &#34;interval&#34;:
+                        #print(f&#39;interval rule found \n &#39;)
+                        
+                        assert len(
+                            ek_con[&#39;condition_terms&#39;]) == 5, &#34;&#39;interval&#39; operators requires FIELD, \
+                                                              START and STOP operands, for 5 total terms.&#34;
+
+                        fld_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                        assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                        
+                        start_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$START&#34;), None)
+                        assert start_dict is not None, &#34;$VALUE not set in rule file.&#34;
+                        
+                        stop_dict = next(
+                            (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$STOP&#34;), None)
+                        assert stop_dict is not None, &#34;$VALUE not set in rule file.&#34;
+                        
+                        try:
+                            with Timer() as t:
+                                ek_list.append(self.field_interval(fld_dict[&#39;value&#39;], start_dict[&#39;value&#39;], stop_dict[&#39;value&#39;], ek_con[&#39;rule_name&#39;]))
+                                self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                        finally:
+                            self.ops_timer[ek_con[&#39;rule_name&#39;] +
+                                           &#34;_&#34;+operator] = round(t.interval, 2)
+                    else:
+                        raise ValueError(
+                            f&#34;conditional term &#39;{ek_con[&#39;condition_terms&#39;][1]}&#39; -- not currently supported.&#34;)
+
+                except RuntimeError as e:
+                    raise RuntimeError(
+                        &#34;failed parsing ek conditions from rule list&#34;) from e
+
+            print(f&#34;  - Built feature: {ek_con[&#39;tags&#39;][0]} &#34;)
+            print(u&#39;\u2500&#39; * get_terminal_size()[0])
+
+            # self.con.print(np.array(ek_list))
+            self.feat_vec[ek_con[&#39;tags&#39;][0]] = np.logical_and.reduce(
+                np.array(ek_list)) &amp; 1
+            self.val_rule_conf.add(ek_con[&#39;tags&#39;][0])
+        
+        # assign a label to feature vectors
+        self.feat_vec[self.class_label] = self.dti[self.class_label]
+
+        # cleanup: if any columns are empty, remove them.
+        tmp_headers_before = set(self.feat_vec.columns)
+        _empty_features = self.feat_vec.loc[:, (self.feat_vec != 0).any(axis=0)].columns
+        tmp_headers_after = set(_empty_features)
+        if tmp_headers_before != tmp_headers_after:
+            print(f&#34;\n  [!] Empty features: {tmp_headers_before.difference(tmp_headers_after)}\n&#34;)
+                
+        print(&#34;[DONE] &lt;- Feature Builder\n&#34;, end=self.CLRN)
+
+    def get_feature_vector(self):
+        &#34;&#34;&#34;Get method for FeatureBuilder object feat_vec object. 
+
+        Returns:
+            pandas.DataFrame: A DataFrame with feature vector value which conatins 1 if true and 0 if false. 
+        &#34;&#34;&#34;
+        return self.feat_vec
+    
+    def get_dti(self) -&gt; pd.DataFrame:
+        &#34;&#34;&#34;Get method for FeatureBuilder object dti object. 
+
+        Returns:
+            pandas.DataFrame: A DataFrame with dti source data. 
+        &#34;&#34;&#34;
+        return self.dti
+     
+    def to_csv(self, file_name=None, drop=None):
+        &#34;&#34;&#34;Helper function wrapper for pandas to_csv funciton.
+
+        Args:
+            file_name (string, optional): Filename to save the csv to. Defaults to None.
+            drop (list, optional): List of columns to drop from the dataframe before saving to csv. Defaults to None.
+
+        Raises:
+            IOError: _description_
+        &#34;&#34;&#34;
+        try:
+            if drop is not None:
+                self.feat_vec.drop(drop, axis=1, inplace=True)
+                print(f&#39;[NOTE] Dropped features: {drop} during build.\n&#39;)
+            self.feat_vec.to_csv(self.DATA_DIR+file_name,  index=False) 
+        except IOError as e:
+            raise IOError(f&#34;Failed to write to csv: {file_name}.&#34;)       </code></pre>
+</details>
+<h3>Class variables</h3>
+<dl>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.CLR"><code class="name">var <span class="ident">CLR</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.CLRN"><code class="name">var <span class="ident">CLRN</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.DATA_DIR"><code class="name">var <span class="ident">DATA_DIR</span></code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Methods</h3>
+<dl>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.build"><code class="name flex">
+<span>def <span class="ident">build</span></span>(<span>self, rules_list)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Builds feature vector using rules from RuleGenerator by testing conditions
+specified for each feature in rule_list.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>rules_list</code></strong> :&ensp;<code>_type_</code></dt>
+<dd>Rule list parsed from RuleExtractor. </dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>RuntimeError</code></dt>
+<dd>If unable to parse subfield.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If failed evaluating ek_list.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If unable to parse contains subfield.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If unable to parse field_contains ek_con.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If unable to parse between subfield.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If field between operation fails.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If unable to parse subfield for 'gt', 'lt', 'ge', 'le', 'eq', 'ne'.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If failed parsing ek conditions from rule list.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def build(self, rules_list):
+    &#34;&#34;&#34;Builds feature vector using rules from RuleGenerator by testing conditions
+    specified for each feature in rule_list.
+
+    Args:
+        rules_list (_type_): Rule list parsed from RuleExtractor. 
+
+    Raises:
+        RuntimeError: If unable to parse subfield.
+        RuntimeError: If failed evaluating ek_list.
+        RuntimeError: If unable to parse contains subfield.
+        RuntimeError: If unable to parse field_contains ek_con.
+        RuntimeError: If unable to parse between subfield.
+        RuntimeError: If field between operation fails.
+        RuntimeError: If unable to parse subfield for &#39;gt&#39;, &#39;lt&#39;, &#39;ge&#39;, &#39;le&#39;, &#39;eq&#39;, &#39;ne&#39;.
+        RuntimeError: If failed parsing ek conditions from rule list.
+    &#34;&#34;&#34;
+    print(&#34;\n[START] -&gt; Feature Builder&#34;)
+    # now test rules and create feature vector with a 1 if all condtions are true and 0 if false.
+    for idx, mf in enumerate(rules_list):
+        
+        ek_list = []
+        for ek_con in mf:
+            #print(&#34;working on &#34;+ str(mf))    
+            try:
+                operator = ek_con[&#39;condition_terms&#39;][1]
+                if operator is &#39;interval&#39;:
+                    print(f&#39;found interval rule!!\n {ek_con}&#39;)
+                    exit()
+                    
+                # process conditions
+                if operator == &#34;is&#34;:
+                    assert len(
+                        ek_con[&#39;condition_terms&#39;]) == 3, &#34;&#39;is&#39; operator requires two operands, for 3 total terms.&#34;
+
+                    fld_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                    assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                    # now check if there is a subfield present
+                    try:
+                        fld_dict[&#39;sub_field&#39;] = None
+                        if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                            fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                1]
+                    except RuntimeError as e:
+                        raise RuntimeError(
+                            &#34;unable to parse subfield&#34;) from e
+
+                    # get values from dict
+                    val_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$VALUE&#34;), None)
+                    assert val_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                    # parse all values from value string (delimiter is &#39;,&#39;)
+                    val_list = [x.strip() for x in val_dict[&#39;value&#39;].split(&#39;,&#39;)]
+                    #print(&#34;val list in &#39;in&#39; check:&#34;, val_list)
+                    try:
+                        print(
+                            f&#34;&gt; Evaluating {ek_con[&#39;rule_name&#39;]}&#34;, end=self.CLR)
+                        with Timer() as t:
+                            if len(val_list) &gt; 1:
+                                # this provides the OR functionality to check for more than one condition witin a field
+                                _tmp_resluts_list = []
+                                for val in val_list:
+                                    _tmp_resluts_list.append(self.field_is(
+                                    fld_dict[&#39;value&#39;], val, val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                                
+                                # sum all evaluated results for field contains
+                                _sum_list = np.sum(_tmp_resluts_list, axis = 0)
+                                
+                                # append the final evaluated condition, where anything &gt;0 hits is true.
+                                ek_list.append((_sum_list &gt;= 1).astype(int))     
+                            else:
+                                ek_list.append(self.field_is(
+                                fld_dict[&#39;value&#39;], val_dict[&#39;value&#39;], val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                            
+                            self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                        self.ops_timer[ek_con[&#39;rule_name&#39;] + &#34;_is&#34;] = round(t.interval, 2)
+                    except RuntimeError as e:
+                        raise RuntimeError(
+                            &#34;failed evaluting ek_list&#34;) from e
+
+                elif operator == &#34;contains&#34;:
+                    
+                    assert len(
+                        ek_con[&#39;condition_terms&#39;]) == 3, &#34;&#39;contains&#39; operator requires two operands, for 3 total terms.&#34;
+                    fld_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                    assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                    # now check if there is a subfield present
+                    try:
+                        fld_dict[&#39;sub_field&#39;] = None
+                        if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                            fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                1]
+                    except RuntimeError as e:
+                        raise RuntimeError(
+                            &#34;unable to parse subfield&#34;) from e
+
+                    # get dict with values 
+                    val_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$VALUE&#34;), None)
+                    assert val_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                    # get values from dict
+                    val_list = [x.strip() for x in val_dict[&#39;value&#39;].split(&#39;,&#39;)]
+                     
+                    try:
+                        print(
+                            f&#34;&gt; Evaluating {ek_con[&#39;rule_name&#39;]}&#34;, end=self.CLR)
+                        with Timer() as t:
+                            
+                            if len(val_list) &gt; 1:
+                                # this provides the OR functionality to check for more than one condition witin a field
+                                tmp_resluts_list = []
+                                for val in val_list:
+                                    # this evaluates the condition to see if the field contains the value.
+                                    tmp_resluts_list.append(self.field_contains(
+                                    fld_dict[&#39;value&#39;], val, val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                                    
+                                # sum all evaluated results for field contains
+                                sum_list = np.sum(tmp_resluts_list, axis = 0)
+                                
+                                # append the final evaluated condition, where anything &gt;0 hits is true.
+                                ek_list.append((sum_list &gt;= 1).astype(int))                              
+                            else:
+                                # this evaluates the condition to see if the field contains the value.
+                                ek_list.append(self.field_contains(
+                                    fld_dict[&#39;value&#39;], val_dict[&#39;value&#39;], val_dict[&#39;type&#39;], fld_dict[&#39;sub_field&#39;]))
+                            
+                            
+                            # this adds the evaluated rule results to the ek_list. 
+                            self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                        self.ops_timer[ek_con[&#39;rule_name&#39;] +
+                                       &#34;_contains&#34;] = round(t.interval, 2)
+                    except RuntimeError as e:
+                        raise RuntimeError(
+                            &#34;unable to parse field_contains ek_con&#34;) from e
+
+                elif operator == &#34;between&#34;:
+                    assert len(
+                        ek_con[&#39;condition_terms&#39;]) == 5, &#34;&#39;contains&#39; operator requires 3 operands, 2 seprated by the &#39;and&#39; operator, for 5 total terms.&#34;
+
+                    fld_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                    assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+
+                    # now check if there is a subfield present
+                    try:
+                        fld_dict[&#39;sub_field&#39;] = None
+                        if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                            fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                1]
+                    except RuntimeError as e:
+                        raise RuntimeError(
+                            &#34;unable to parse subfield&#34;) from e
+
+                    start_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$START&#34;), None)
+                    assert start_dict is not None, &#34;$VALUE not set in rule file.&#34;
+                    stop_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$STOP&#34;), None)
+                    assert stop_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                    try:
+                        print(
+                            f&#34;&gt; Evaluating {ek_con[&#39;rule_name&#39;]}&#34;, end=self.CLR)
+                        # with Timer() as t:
+                        ek_list.append(self.field_between(fld_dict[&#39;value&#39;], start_dict[&#39;value&#39;],
+                                                          stop_dict[&#39;value&#39;], start_dict[&#39;type&#39;],
+                                                          fld_dict[&#39;sub_field&#39;]))
+                        self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                    except RuntimeError as e:
+                        raise RuntimeError(
+                            &#39;field &#34;between&#34; operation failed&#39;) from e
+
+                elif operator in [&#39;gt&#39;, &#39;lt&#39;, &#39;ge&#39;, &#39;le&#39;, &#39;eq&#39;, &#39;ne&#39;]:
+                    assert len(
+                        ek_con[&#39;condition_terms&#39;]) == 3, &#34;&#39;compare&#39; operators requires two operands, for 3 total terms.&#34;
+
+                    fld_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                    assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                    # now check if there is a subfield present
+                    try:
+                        fld_dict[&#39;sub_field&#39;] = None
+                        if &#34;:&#34; in fld_dict[&#39;value&#39;]:
+                            fld_dict[&#39;sub_field&#39;] = fld_dict[&#39;value&#39;].split(&#39;:&#39;)[
+                                1]
+                    except RuntimeError as e:
+                        raise RuntimeError(
+                            &#34;unable to parse subfield&#34;) from e
+
+                    val_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$VALUE&#34;), None)
+                    assert val_dict is not None, &#34;$VALUE not set in rule file.&#34;
+
+                    try:
+                        with Timer() as t:
+                            ek_list.append(self.field_compare(
+                                fld_dict[&#39;value&#39;], val_dict[&#39;value&#39;], val_dict[&#39;type&#39;], operator, fld_dict[&#39;sub_field&#39;]))
+                            self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                    finally:
+                        self.ops_timer[ek_con[&#39;rule_name&#39;] +
+                                       &#34;_&#34;+operator] = round(t.interval, 2)
+                
+                elif operator == &#34;interval&#34;:
+                    #print(f&#39;interval rule found \n &#39;)
+                    
+                    assert len(
+                        ek_con[&#39;condition_terms&#39;]) == 5, &#34;&#39;interval&#39; operators requires FIELD, \
+                                                          START and STOP operands, for 5 total terms.&#34;
+
+                    fld_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$FIELD&#34;), None)
+                    assert fld_dict is not None, &#34;$FIELD not set in rule file.&#34;
+                    
+                    start_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$START&#34;), None)
+                    assert start_dict is not None, &#34;$VALUE not set in rule file.&#34;
+                    
+                    stop_dict = next(
+                        (item for item in ek_con[&#39;strings&#39;] if item[&#39;name&#39;] == &#34;$STOP&#34;), None)
+                    assert stop_dict is not None, &#34;$VALUE not set in rule file.&#34;
+                    
+                    try:
+                        with Timer() as t:
+                            ek_list.append(self.field_interval(fld_dict[&#39;value&#39;], start_dict[&#39;value&#39;], stop_dict[&#39;value&#39;], ek_con[&#39;rule_name&#39;]))
+                            self.dti[ek_con[&#39;rule_name&#39;]] = ek_list[-1]
+                    finally:
+                        self.ops_timer[ek_con[&#39;rule_name&#39;] +
+                                       &#34;_&#34;+operator] = round(t.interval, 2)
+                else:
+                    raise ValueError(
+                        f&#34;conditional term &#39;{ek_con[&#39;condition_terms&#39;][1]}&#39; -- not currently supported.&#34;)
+
+            except RuntimeError as e:
+                raise RuntimeError(
+                    &#34;failed parsing ek conditions from rule list&#34;) from e
+
+        print(f&#34;  - Built feature: {ek_con[&#39;tags&#39;][0]} &#34;)
+        print(u&#39;\u2500&#39; * get_terminal_size()[0])
+
+        # self.con.print(np.array(ek_list))
+        self.feat_vec[ek_con[&#39;tags&#39;][0]] = np.logical_and.reduce(
+            np.array(ek_list)) &amp; 1
+        self.val_rule_conf.add(ek_con[&#39;tags&#39;][0])
+    
+    # assign a label to feature vectors
+    self.feat_vec[self.class_label] = self.dti[self.class_label]
+
+    # cleanup: if any columns are empty, remove them.
+    tmp_headers_before = set(self.feat_vec.columns)
+    _empty_features = self.feat_vec.loc[:, (self.feat_vec != 0).any(axis=0)].columns
+    tmp_headers_after = set(_empty_features)
+    if tmp_headers_before != tmp_headers_after:
+        print(f&#34;\n  [!] Empty features: {tmp_headers_before.difference(tmp_headers_after)}\n&#34;)
+            
+    print(&#34;[DONE] &lt;- Feature Builder\n&#34;, end=self.CLRN)</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.field_between"><code class="name flex">
+<span>def <span class="ident">field_between</span></span>(<span>self, field: str, val1: str, val2: str, type: str, sub_field: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a vector the length of self.dti with a 1 if the value in the specified field is between val1 and val2.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>field</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of the field being considered during calculation.</dd>
+<dt><strong><code>val1</code></strong> :&ensp;<code>str</code></dt>
+<dd>Value to be checked for within the considered field.</dd>
+<dt><strong><code>val2</code></strong> :&ensp;<code>str</code></dt>
+<dd>Value to be checked for within the considered field.</dd>
+<dt><strong><code>type</code></strong> :&ensp;<code>str</code></dt>
+<dd>Type of value default is text.</dd>
+<dt><strong><code>sub_field</code></strong> :&ensp;<code>str</code></dt>
+<dd>If a sub_field is specificed int he message field this value is not None.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>RuntimeError</code></dt>
+<dd>If check on self.dti fails.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.ndarray</code></dt>
+<dd>ndarry representing a feature vector value for the expert conditions checked.fs</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def field_between(self, field: str, val1: str, val2: str, type: str, sub_field: str):
+    &#34;&#34;&#34; Returns a vector the length of self.dti with a 1 if the value in the specified field is between val1 and val2.
+
+    Args:
+        field (str): Name of the field being considered during calculation.
+        val1 (str): Value to be checked for within the considered field.
+        val2 (str): Value to be checked for within the considered field.
+        type (str): Type of value default is text.
+        sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+    Raises:
+        RuntimeError: If check on self.dti fails.
+
+    Returns:
+        np.ndarray: ndarry representing a feature vector value for the expert conditions checked.fs
+    &#34;&#34;&#34;
+    try:
+        _tmp_dti = pd.DataFrame()
+        if sub_field is not None:
+            try:
+                _tmp_dti[sub_field] = self.dti.apply(
+                    lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+            except KeyError as e:
+                raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;)from e
+
+            field = sub_field
+        else:
+            if &#39;:&#39; in field:
+                raise RuntimeWarning(
+                &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+            _tmp_dti[field] = self.dti[field]
+
+        results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+        results = _tmp_dti[field].between(val1, val2).values
+        return results &amp; 1
+    except RuntimeError as e:
+        raise RuntimeError(
+            &#34;failed to check if field value is between val1 and val2.&#34;) from e</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.field_compare"><code class="name flex">
+<span>def <span class="ident">field_compare</span></span>(<span>self, field: str, val1: str, type: str, operator: str, sub_field: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a vector the length of self.dti with a 1 if the value in the specified field is between val1 and val2.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>field</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of the field being considered during calculation.</dd>
+<dt><strong><code>val1</code></strong> :&ensp;<code>str</code></dt>
+<dd>Value to be checked for within the considered field.</dd>
+<dt><strong><code>val2</code></strong> :&ensp;<code>str</code></dt>
+<dd>Value to be checked for within the considered field.</dd>
+<dt><strong><code>type</code></strong> :&ensp;<code>str</code></dt>
+<dd>Type of value default is text.</dd>
+<dt><strong><code>sub_field</code></strong> :&ensp;<code>str</code></dt>
+<dd>If a sub_field is specificed int he message field this value is not None.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>RuntimeError</code></dt>
+<dd>If check on self.dti fails.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.ndarray</code></dt>
+<dd>ndarry representing a feature vector value for the expert conditions checked.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def field_compare(self, field: str, val1: str, type: str, operator: str, sub_field: str):
+    &#34;&#34;&#34;Returns a vector the length of self.dti with a 1 if the value in the specified field is between val1 and val2.
+
+    Args:
+        field (str): Name of the field being considered during calculation.
+        val1 (str): Value to be checked for within the considered field.
+        val2 (str): Value to be checked for within the considered field.
+        type (str): Type of value default is text.
+        sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+    Raises:
+        RuntimeError: If check on self.dti fails.
+
+    Returns:
+        np.ndarray: ndarry representing a feature vector value for the expert conditions checked.
+    &#34;&#34;&#34;
+    try:
+        _tmp_dti = pd.DataFrame()
+        if sub_field is not None:
+            try:
+                _tmp_dti[sub_field] = self.dti.apply(
+                    lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+            except KeyError as e:
+                raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;) from e
+            field = sub_field
+        else:
+            if &#39;:&#39; in field:
+                raise RuntimeWarning(
+                &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+            _tmp_dti[field] = self.dti[field]
+
+        results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+        # results = _tmp_dti[field].between(val1, val2).values
+        match operator:
+            case &#39;gt&#39;:
+                results = _tmp_dti[field].astype(
+                    float).gt(float(val1)).values
+            case &#39;lt&#39;:
+                results = _tmp_dti[field].astype(
+                    float).lt(float(val1)).values
+            case &#39;ge&#39;:
+                results = _tmp_dti[field].astype(
+                    float).ge(float(val1)).values
+            case &#39;le&#39;:
+                results = _tmp_dti[field].astype(
+                    float).le(float(val1)).values
+            case &#39;eq&#39;:
+                results = _tmp_dti[field].astype(
+                    float).eq(float(val1)).values
+            case &#39;ne&#39;:
+                results = _tmp_dti[field].astype(
+                    float).ne(float(val1)).values
+            case _:
+                raise ValueError(
+                    f&#34;Compare field operator {operator} not supported&#34;)
+        return results &amp; 1
+    except RuntimeError as e:
+        raise RuntimeError(
+            &#34;Failed to check if field value is greater than val1.&#34;) from e</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.field_contains"><code class="name flex">
+<span>def <span class="ident">field_contains</span></span>(<span>self, field: str, value: str, type: str, sub_field: str) ‑> numpy.ndarray</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a vector the length of self.dti with a 1 if the field contains value.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>field</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of the field being considered during calculation.</dd>
+<dt><strong><code>value</code></strong> :&ensp;<code>str</code></dt>
+<dd>Value to be checked for within the considered field.</dd>
+<dt><strong><code>type</code></strong> :&ensp;<code>str</code></dt>
+<dd>Type of value default is text.</dd>
+<dt><strong><code>sub_field</code></strong> :&ensp;<code>str</code></dt>
+<dd>If a sub_field is specificed int he message field this value is not None.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>RuntimeError</code></dt>
+<dd>If check on self.dti fails.</dd>
+</dl>
+<h2 id="raises_1">Raises</h2>
+<dl>
+<dt><code>KeyError</code></dt>
+<dd>If key is not found in the embedded JSON object.</dd>
+<dt><code>RuntimeWarning</code></dt>
+<dd>If field contains ':' but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If check on self.dti fails.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.ndarray</code></dt>
+<dd>np.ndarry representing a feature vector value for the expert conditions checked.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def field_contains(self, field: str, value: str, type: str, sub_field: str) -&gt; np.ndarray:
+    &#34;&#34;&#34; Returns a vector the length of self.dti with a 1 if the field contains value.
+
+    Args:
+        field (str):  Name of the field being considered during calculation.
+        value (str): Value to be checked for within the considered field.
+        type (str): Type of value default is text.
+        sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+    Raises:
+        RuntimeError: If check on self.dti fails.
+
+           
+    Raises:
+        KeyError: If key is not found in the embedded JSON object.
+        RuntimeWarning: If field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.
+        RuntimeError: If check on self.dti fails.
+
+    Returns:
+        np.ndarray: np.ndarry representing a feature vector value for the expert conditions checked.
+    &#34;&#34;&#34;
+    try:
+        _tmp_dti = pd.DataFrame()
+        if sub_field is not None:
+            
+            _tmp_dti = pd.DataFrame()
+            
+            try:
+                _tmp_dti[sub_field] = self.dti.apply(
+                    lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+            except KeyError as e:
+                raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;)from e
+            field = sub_field
+        else:
+            if &#39;:&#39; in field:
+                raise RuntimeWarning(
+                &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+            _tmp_dti[field] = self.dti[field]
+
+        results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+        
+        #DEBUG
+        #print(f&#39;DEBUG: value to check for {value}&#39;)
+        #print(&#39;DEBUG: value to check for reg exp: &#39;+ &#39;\b&#39;+value+&#39;\b&#39;)
+        #print(f&#39;unescaped string {value.encode(&#34;utf-8&#34;).decode(&#34;unicode_escape&#34;)}&#39;)            
+        #DEBUG
+        try:
+            # check if leading/trailing forward slash is present
+            if value[0] == &#39;/&#39; and value[-1] == &#39;/&#39;:
+                _value = value[1:-1]
+            else:
+                _value = value
+                
+            #print(&#34;Regex starting with: &#34;+_value)
+            if check_regex(_value):
+                print(&#34;  [OK] Pattern: &#34;+_value)
+                results = _tmp_dti[field].astype(str).str.contains(_value, regex=True).values
+                _results = results &amp; 1
+                _results_sum = sum(_results)
+                print(f&#39;  ({_results_sum}) hits&#39;)
+                if _results_sum &gt; 0 and _results_sum &lt;=25:
+                    print(&#34;  [!] WARNING: This feature has very few instances and may cause issues when training.&#34;)
+                return results &amp; 1            
+        except RuntimeError as e:
+            raise RuntimeError(f&#39;Failed to calculate results for a feature vector. Check regular expression for {_value}&#39;)from e
+
+    except RuntimeError as e:
+        
+        raise RuntimeError(
+            &#34;failed to check if value is a substring of field.&#34;) from e</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.field_interval"><code class="name flex">
+<span>def <span class="ident">field_interval</span></span>(<span>self, field: str, start_pats: str, stop_pats: str, feature_name: str)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def field_interval(self, field:str, start_pats: str, stop_pats:str, feature_name: str):
+    
+    #start_strings = [x.strip() for x in start_pats.split(&#39;,&#39;)]      
+    #stop_strings = [x.strip() for x in stop_pats.split(&#39;,&#39;)]     
+    #create shallow copy to do some work but not save it in self.dti
+    data = self.dti.copy(deep=False)
+    #setup results array
+    #results = np.zeros(len(data), dtype=np.int8)
+    #set default value for new feature
+    data[feature_name+&#34;_start&#34;] = 0
+    data[feature_name+&#34;_stop&#34;] = 0
+    data[feature_name] = 0
+    
+    #create  start tqdm for progress bar       
+    #start_tqdm = tqdm(enumerate(start_strings))
+    #print(&#39;start strings ----&gt;&#39; + str(start_strings))
+    # for p in start_tqdm:
+    #     print(f&#39;p: {p[0]}:{p[1]}&#39;)
+    #     start_tqdm.set_description(&#34;- Start &#34;)
+    #     #results = _tmp_dti[field].str.contains(value.encode(&#39;utf-8&#39;).decode(&#39;unicode_escape&#39;), regex=True).values
+    #     #value.encode(&#39;utf-8&#39;).decode(&#39;unicode_escape&#39;), regex=True
+    #     #data[feature_name+p[1]] = [1 if x &gt; 0 else 0 for x in data[field].str.find(p[1], 0)]
+        
+    #     data[feature_name+p[1]] = [1 if x &gt; 0 else 0 for x in data[field].str.contains(p[1].encode(&#39;utf-8&#39;).decode(&#39;unicode_escape&#39;), regex=True).values]
+    #     print(data[feature_name+p[1]].values)
+    #     data[feature_name+p[1]].to_csv(&#39;test_chrome_start.csv&#39;)
+        
+    #     data[feature_name+&#34;_start&#34;] = data[feature_name+&#34;_start&#34;] + data[feature_name+p[1]]
+    #     data.drop(feature_name+p[1], axis=1, inplace=True)
+    
+    if start_pats[0] == &#39;/&#39; and start_pats[-1] == &#39;/&#39;:
+        _start_pats = start_pats[1:-1]
+    else:
+        _start_pats = start_pats
+    
+    
+    if stop_pats[0] == &#39;/&#39; and stop_pats[-1] == &#39;/&#39;:
+        _stop_pats = stop_pats[1:-1]
+    else:
+        _stop_pats = stop_pats
+   
+    #print(f&#39;SELF.DTI! \n{self.dti}&#39;)
+
+
+    #print(&#34;Regex starting with: &#34;+_start_pats)
+    if check_regex(_start_pats) and check_regex(_stop_pats):
+        
+        data[feature_name+&#34;_start&#34;] = data[field].astype(str).str.contains(_start_pats, regex=True).values * 1
+        print(data)
+        data[feature_name+&#34;_stop&#34;] = data[field].astype(str).str.contains(_stop_pats, regex=True).values * 1
+        
+        print(f&#34;  o Start hits: ({data[feature_name+&#39;_start&#39;].sum()}) {_start_pats}&#34;)
+        print(f&#34;  o Stop hits: ({data[feature_name+&#39;_stop&#39;].sum()}) {_stop_pats}&#34;)
+
+        # Find the indices of rows where start patterns are (1) and stop patterns (1)
+        start_indices = data.index[data[feature_name+&#34;_start&#34;] == 1].tolist()
+        data.drop(feature_name+&#34;_start&#34;, axis=1, inplace=True)
+        end_indices = data.index[data[feature_name+&#34;_stop&#34;] == 1].tolist()
+        data.drop(feature_name+&#34;_stop&#34;, axis=1, inplace=True)
+        print(f&#39;start indexes: {start_indices}&#39;)
+        print(f&#39;stop indexes: {end_indices}&#39;)
+    
+        paired_starts, paired_stops = pair_start_stop(start_indices, end_indices)
+        #print(f&#39;paried starts: {paired_starts} len of starts: {len(paired_starts)}&#39;)
+        #print(f&#39;paired stops: {paired_stops} len of stops: {len(paired_stops)}&#39;)
+        # zip start and stop indicies
+        for start, end in zip(paired_starts, paired_stops):
+            data.loc[start:end, feature_name] = 1
+        
+        return data[feature_name]</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.field_is"><code class="name flex">
+<span>def <span class="ident">field_is</span></span>(<span>self, field: str, value: str, type: str, sub_field: str) ‑> numpy.ndarray</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a vector the length of self.dti with a 1 if the field is an exact match to value.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>field</code></strong> :&ensp;<code>str</code></dt>
+<dd>Name of the field being considered during calculation.</dd>
+<dt><strong><code>value</code></strong> :&ensp;<code>str</code></dt>
+<dd>Value to be checked for within the considered field.</dd>
+<dt><strong><code>type</code></strong> :&ensp;<code>str</code></dt>
+<dd>Type of value default is text.</dd>
+<dt><strong><code>sub_field</code></strong> :&ensp;<code>str</code></dt>
+<dd>If a sub_field is specificed int he message field this value is not None.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>RuntimeError</code></dt>
+<dd>If check on self.dti fails.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>np.ndarray</code></dt>
+<dd>ndarry representing a feature vector value for the expert conditions checked.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def field_is(self, field: str, value: str, type: str, sub_field: str) -&gt; np.ndarray:
+    &#34;&#34;&#34; Returns a vector the length of self.dti with a 1 if the field is an exact match to value.
+
+    Args:
+        field (str): Name of the field being considered during calculation.
+        value (str): Value to be checked for within the considered field.
+        type (str): Type of value default is text.
+        sub_field (str): If a sub_field is specificed int he message field this value is not None.
+
+    Raises:
+        RuntimeError: If check on self.dti fails.
+
+    Returns:
+        np.ndarray: ndarry representing a feature vector value for the expert conditions checked.
+    &#34;&#34;&#34;
+    try:
+        _tmp_dti = pd.DataFrame()
+        
+        #if value is numeric but was not presented as a float, add the decimal 
+        #if value.isnumeric():
+        #    if &#39;.&#39; not in value:
+        #        value = value+&#34;.0&#34;
+        #        print(f&#34;- Value updated to {value}&#34;)      
+        
+        if sub_field is not None:
+            try:
+                _tmp_dti[sub_field] = self.dti.apply(
+                    lambda x: json.loads(x[&#39;message&#39;])[sub_field], axis=1).astype(str)
+            except KeyError as e:
+                raise KeyError(f&#39;{sub_field} is not a valid field in the loaded dti source. Check rules configuration for refrences to &#34;message:{sub_field}&#34;, as they should not exist.&#39;)from e
+            field = sub_field
+        else:
+            if &#39;:&#39; in field:
+                raise RuntimeWarning(
+                &#34;field contains &#39;:&#39; but is not defined in rules as a subfield. Check rule yara rule files for fields that should not be subfields.&#34;)
+            _tmp_dti[field] = self.dti[field]
+        
+        # in case we have nan values - set them all to 0
+        _tmp_dti[field].fillna(0, inplace=True)
+        #print(self.dti[field])
+        results: np.ndarray = np.zeros(len(_tmp_dti), dtype=np.int8)
+        results = _tmp_dti[field].astype(str).str.fullmatch(value)
+
+        return results &amp; 1
+    except RuntimeError as e:
+        raise RuntimeError(
+            &#34;failed to check if field is equal to value.&#34;) from e</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.get_dti"><code class="name flex">
+<span>def <span class="ident">get_dti</span></span>(<span>self) ‑> pandas.core.frame.DataFrame</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get method for FeatureBuilder object dti object. </p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pandas.DataFrame</code></dt>
+<dd>A DataFrame with dti source data.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_dti(self) -&gt; pd.DataFrame:
+    &#34;&#34;&#34;Get method for FeatureBuilder object dti object. 
+
+    Returns:
+        pandas.DataFrame: A DataFrame with dti source data. 
+    &#34;&#34;&#34;
+    return self.dti</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.get_feature_vector"><code class="name flex">
+<span>def <span class="ident">get_feature_vector</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Get method for FeatureBuilder object feat_vec object. </p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>pandas.DataFrame</code></dt>
+<dd>A DataFrame with feature vector value which conatins 1 if true and 0 if false.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_feature_vector(self):
+    &#34;&#34;&#34;Get method for FeatureBuilder object feat_vec object. 
+
+    Returns:
+        pandas.DataFrame: A DataFrame with feature vector value which conatins 1 if true and 0 if false. 
+    &#34;&#34;&#34;
+    return self.feat_vec</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.read_dti"><code class="name flex">
+<span>def <span class="ident">read_dti</span></span>(<span>self, resource: str, rows=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load dti training data from a CSV file.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>resource</code></strong> :&ensp;<code>str</code></dt>
+<dd>Path to the dti source file. </dd>
+<dt><strong><code>rows</code></strong> :&ensp;<code>_type_</code>, optional</dt>
+<dd>Number of rows to load. Defaults to None.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>FileNotFoundError</code></dt>
+<dd>If resource is not found at location provided.</dd>
+<dt><code>RuntimeError</code></dt>
+<dd>If reading dti file fails.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_dti(self, resource: str, rows=None):
+    &#34;&#34;&#34;Load dti training data from a CSV file.
+
+    Args:
+        resource (str):  Path to the dti source file. 
+        rows (_type_, optional): Number of rows to load. Defaults to None.
+
+    Raises:
+        FileNotFoundError: If resource is not found at location provided.
+        RuntimeError: If reading dti file fails.
+    &#34;&#34;&#34;
+    self.fn: str = resource
+    _data_file: pathlib.Path = pathlib.Path(resource)
+
+    try:
+        if os.path.isfile(_data_file):
+            print(f&#34;&gt; Loading DTI: {resource}&#34;, end=self.CLR)
+            self.dti: pd.DataFrame = pd.read_csv(
+                _data_file, dtype=object, nrows=rows)
+            print(f&#34;- DTI source loaded from: {resource}&#34;, end=self.CLRN)
+        else:
+            raise FileNotFoundError(&#34;FILE NOT FOUND at &#34;+str(_data_file))
+    except IOError as e:
+        raise RuntimeError(&#34;unable to load file &#34;+str(_data_file)) from e</code></pre>
+</details>
+</dd>
+<dt id="app.dti.proto.FeatureBuilder.FeatureBuilder.to_csv"><code class="name flex">
+<span>def <span class="ident">to_csv</span></span>(<span>self, file_name=None, drop=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Helper function wrapper for pandas to_csv funciton.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>file_name</code></strong> :&ensp;<code>string</code>, optional</dt>
+<dd>Filename to save the csv to. Defaults to None.</dd>
+<dt><strong><code>drop</code></strong> :&ensp;<code>list</code>, optional</dt>
+<dd>List of columns to drop from the dataframe before saving to csv. Defaults to None.</dd>
+</dl>
+<h2 id="raises">Raises</h2>
+<dl>
+<dt><code>IOError</code></dt>
+<dd><em>description</em></dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_csv(self, file_name=None, drop=None):
+    &#34;&#34;&#34;Helper function wrapper for pandas to_csv funciton.
+
+    Args:
+        file_name (string, optional): Filename to save the csv to. Defaults to None.
+        drop (list, optional): List of columns to drop from the dataframe before saving to csv. Defaults to None.
+
+    Raises:
+        IOError: _description_
+    &#34;&#34;&#34;
+    try:
+        if drop is not None:
+            self.feat_vec.drop(drop, axis=1, inplace=True)
+            print(f&#39;[NOTE] Dropped features: {drop} during build.\n&#39;)
+        self.feat_vec.to_csv(self.DATA_DIR+file_name,  index=False) 
+    except IOError as e:
+        raise IOError(f&#34;Failed to write to csv: {file_name}.&#34;)       </code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="app.dti.proto" href="index.html">app.dti.proto</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder" href="#app.dti.proto.FeatureBuilder.FeatureBuilder">FeatureBuilder</a></code></h4>
+<ul class="two-column">
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.CLR" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.CLR">CLR</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.CLRN" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.CLRN">CLRN</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.DATA_DIR" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.DATA_DIR">DATA_DIR</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.build" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.build">build</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.field_between" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.field_between">field_between</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.field_compare" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.field_compare">field_compare</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.field_contains" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.field_contains">field_contains</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.field_interval" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.field_interval">field_interval</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.field_is" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.field_is">field_is</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.get_dti" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.get_dti">get_dti</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.get_feature_vector" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.get_feature_vector">get_feature_vector</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.read_dti" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.read_dti">read_dti</a></code></li>
+<li><code><a title="app.dti.proto.FeatureBuilder.FeatureBuilder.to_csv" href="#app.dti.proto.FeatureBuilder.FeatureBuilder.to_csv">to_csv</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
