@@ -1,0 +1,8 @@
+rule win_libs_config : win_libs_configs
+{
+	strings:
+		$FIELD = "message"
+        $VALUE = /\.ini|\.dll/
+    condition:
+        $FIELD contains $VALUE
+}

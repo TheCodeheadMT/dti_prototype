@@ -1,0 +1,8 @@
+rule src_recbin : src_recbin
+{
+	strings:
+		$FIELD = "source"
+		$VALUE = "RECBIN"
+	condition:
+		$FIELD is $VALUE
+}

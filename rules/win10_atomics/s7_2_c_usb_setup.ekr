@@ -1,0 +1,8 @@
+rule usb_setup : usb_setup
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /Microsoft-Windows-DeviceSetupManager.*\['USB/
+	condition:
+		$FIELD contains $VALUE
+}

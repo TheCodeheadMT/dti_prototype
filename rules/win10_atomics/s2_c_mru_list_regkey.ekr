@@ -1,0 +1,8 @@
+rule mru_list_regkey : mru_list_regkey
+{
+	strings:
+		$FIELD = "source_long"
+		$VALUE = "MRUListEx Registry Key"
+	condition:
+		$FIELD is $VALUE
+}

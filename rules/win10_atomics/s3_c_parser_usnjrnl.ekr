@@ -1,0 +1,8 @@
+rule parser_usnjrnl : parser_usnjrnl
+{
+	strings:
+		$FIELD = "parser"
+		$VALUE = "usnjrnl"
+	condition:
+		$FIELD is $VALUE
+}

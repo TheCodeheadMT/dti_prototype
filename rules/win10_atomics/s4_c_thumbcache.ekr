@@ -1,0 +1,9 @@
+rule thumbcache : thumbcache
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /Explorer\\thumbcache/
+	condition:
+		$FIELD contains $VALUE
+}
+

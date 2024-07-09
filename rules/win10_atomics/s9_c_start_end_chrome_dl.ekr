@@ -1,0 +1,8 @@
+rule start_end_chrome_dl : start_end_chrome_dl
+{
+	strings:
+		$FIELD = "timestamp_desc"
+        $VALUE = /Start Time|End Time/
+    condition:
+        $FIELD contains $VALUE
+}

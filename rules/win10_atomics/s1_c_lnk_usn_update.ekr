@@ -1,0 +1,8 @@
+rule lnk_usn_update : lnk_usn_update
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /.lnk.*USN/
+	condition:
+		$FIELD contains $VALUE
+}

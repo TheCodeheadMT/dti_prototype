@@ -1,0 +1,9 @@
+rule url_file : url_file
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /URL:.*file:/
+	condition:
+		$FIELD contains $VALUE
+}
+

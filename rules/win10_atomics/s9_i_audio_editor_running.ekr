@@ -1,0 +1,9 @@
+rule audio_editor_running : audio_editor_running
+{
+    strings:
+        $FIELD = "message"
+        $START = /\[AUDACITY.EXE\] was executed/
+        $STOP =  /\\Device\\.*\\Audacity.exe/
+    condition:
+        $FIELD interval $START and $STOP
+}

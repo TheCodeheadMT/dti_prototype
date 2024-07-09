@@ -1,0 +1,8 @@
+rule usr_lnk_ref : usr_lnk_ref
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /\\Users.*.lnk/
+	condition:
+		$FIELD contains $VALUE
+}

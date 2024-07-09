@@ -1,0 +1,8 @@
+rule webapp_google_drive : webapp_google_drive
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /drive.google.com/
+	condition:
+		$FIELD contains $VALUE
+}

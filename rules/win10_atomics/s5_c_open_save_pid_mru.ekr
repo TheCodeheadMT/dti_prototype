@@ -1,0 +1,8 @@
+rule open_save_pid_mru : open_save_pid_mru
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /OpenSavePidlMRU/
+	condition:
+		$FIELD contains $VALUE
+}

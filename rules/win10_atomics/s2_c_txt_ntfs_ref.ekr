@@ -1,0 +1,9 @@
+rule txt_ntfs_ref : txt_ntfs_ref
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /\.txt NTFS file reference:|\.rtf NTFS file reference:/
+	condition:
+		$FIELD contains $VALUE
+}
+

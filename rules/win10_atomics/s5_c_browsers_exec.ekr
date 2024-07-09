@@ -1,0 +1,8 @@
+rule browsers_exec : browsers_exec
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /\[.*CHROME.EXE.*\] was executed|\[.*EDGE.EXE.*\] was executed/
+	condition:
+		$FIELD contains $VALUE
+}

@@ -1,0 +1,8 @@
+rule usb_activity : usb_activity
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /.*USB.*VID.*|usbstor.inf|USBSTOR.SYS/
+	condition:
+		$FIELD contains $VALUE
+}

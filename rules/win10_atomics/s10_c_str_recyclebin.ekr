@@ -1,0 +1,8 @@
+rule str_recycle_bin : str_recycle_bin
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /Recycle.Bin/
+	condition:
+		$FIELD contains $VALUE
+}

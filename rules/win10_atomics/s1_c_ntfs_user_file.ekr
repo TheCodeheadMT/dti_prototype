@@ -1,0 +1,8 @@
+rule ntfs_user_files : ntfs_user_files
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /NTFS:.*User.*Type: file/
+	condition:
+		$FIELD contains $VALUE
+}

@@ -1,0 +1,8 @@
+rule chrome_cache : chrome_cache
+{
+	strings:
+		$FIELD = "source_long"
+		$VALUE = "Chrome Cache"
+	condition:
+		$FIELD is $VALUE
+}

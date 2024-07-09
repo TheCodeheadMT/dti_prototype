@@ -1,0 +1,8 @@
+rule usb_sys : usb_sys
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /USBSTOR\] Type: Kernel Device Driver/
+	condition:
+		$FIELD contains $VALUE
+}

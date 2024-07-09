@@ -1,0 +1,8 @@
+rule ntfs_file_ref : ntfs_file_ref
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /\{.*\}.*File reference:/
+	condition:
+		$FIELD contains $VALUE
+}

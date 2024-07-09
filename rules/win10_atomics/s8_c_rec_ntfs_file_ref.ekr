@@ -1,0 +1,8 @@
+rule rec_ntfs_file_ref : rec_ntfs_file_ref
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /$.*File reference:.*USN_/
+	condition:
+		$FIELD contains $VALUE
+}

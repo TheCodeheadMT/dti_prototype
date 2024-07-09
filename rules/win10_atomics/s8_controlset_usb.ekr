@@ -1,0 +1,12 @@
+rule controlset_usb : controlset_usb
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /ControlSet.*\\Enum\\USBSTOR/
+	condition:
+		$FIELD contains $VALUE
+}
+
+
+
+

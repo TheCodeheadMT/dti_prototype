@@ -1,0 +1,8 @@
+rule google_search : google_search
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /\(.*Google Search\)/
+	condition:
+		$FIELD contains $VALUE
+}

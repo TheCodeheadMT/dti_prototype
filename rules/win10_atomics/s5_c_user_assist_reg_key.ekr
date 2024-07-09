@@ -1,0 +1,8 @@
+rule user_assist_reg_key : user_assist_reg_key
+{
+	strings:
+		$FIELD = "source_long"
+		$VALUE = "UserAssist Registry Key"
+	condition:
+		$FIELD is $VALUE
+}

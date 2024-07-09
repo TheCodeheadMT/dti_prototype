@@ -1,0 +1,9 @@
+rule chrome_download : chrome_download
+{
+	strings:
+		$FIELD = "timestamp_desc"
+        $START = "Start Time"
+        $STOP =  "End Time"
+    condition:
+        $FIELD interval $START and $STOP
+}

@@ -1,0 +1,8 @@
+rule original_url : original_url
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /Original URL:/
+	condition:
+		$FIELD contains $VALUE
+}

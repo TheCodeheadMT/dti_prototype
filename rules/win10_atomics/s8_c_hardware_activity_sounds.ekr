@@ -1,0 +1,8 @@
+rule hardware_activity_sounds : hardware_activity_sounds
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /Windows Hardware Remove.wav|Windows Hardware Insert.wav/
+	condition:
+		$FIELD contains $VALUE
+}

@@ -1,0 +1,8 @@
+rule ntfs_auto_dest : ntfs_auto_dest
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /automaticDestinations-ms/
+	condition:
+		$FIELD contains $VALUE
+}

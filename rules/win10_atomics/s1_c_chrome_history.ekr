@@ -1,0 +1,8 @@
+rule chrome_history : chrome_history
+{
+	strings:
+		$FIELD = "source_long"
+        $VALUE = "Chrome History"
+    condition:
+        $FIELD is $VALUE
+}

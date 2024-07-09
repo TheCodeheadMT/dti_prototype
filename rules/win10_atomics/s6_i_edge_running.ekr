@@ -1,0 +1,9 @@
+rule edge_running : edge_running
+{
+    strings:
+        $FIELD = "message"
+        $START = /\[MSEDGE.EXE\] was executed/
+        $STOP =  /MSEDGE.EXE.*USN_REASON_CLOSE/
+    condition:
+        $FIELD interval $START and $STOP
+} 

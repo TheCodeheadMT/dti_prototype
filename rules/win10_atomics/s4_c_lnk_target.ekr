@@ -1,0 +1,9 @@
+rule lnk_target : lnk_target
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /C:\\\\.*Link target:/
+	condition:
+		$FIELD contains $VALUE
+}
+

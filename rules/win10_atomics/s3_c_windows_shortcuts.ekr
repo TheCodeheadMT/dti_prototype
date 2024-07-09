@@ -1,0 +1,8 @@
+rule windows_shortcuts : windows_shortcuts
+{
+	strings:
+		$FIELD = "source_long"
+		$VALUE = "Windows Shortcut"
+	condition:
+		$FIELD is $VALUE
+}

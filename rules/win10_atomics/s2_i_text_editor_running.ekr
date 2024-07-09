@@ -1,0 +1,9 @@
+rule text_editor_running : text_editor_running
+{
+    strings:
+        $FIELD = "message"
+        $START = /\[NOTEPAD.EXE] was executed|\[WORDPAD.EXE] was executed/
+        $STOP =  /\\Device\\.*\\notepad.exe|\\Device\\.*\\wordpad.exe/
+    condition:
+        $FIELD interval $START and $STOP
+}

@@ -1,0 +1,10 @@
+rule gmail_traffic : gmail_traffic
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /mail.google.com|gmail.com/
+	condition:
+		$FIELD contains $VALUE
+}
+
+

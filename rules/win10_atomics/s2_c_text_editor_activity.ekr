@@ -1,0 +1,8 @@
+rule text_editor_activity : text_editor_activity
+{
+    strings:
+        $FIELD = "message"
+        $VALUE = /\[NOTEPAD.EXE\] was executed|\[WORDPAD.EXE\] was executed|Wordpad\\Recent File List/        
+    condition:
+        $FIELD contains $VALUE
+}

@@ -1,0 +1,8 @@
+rule crdownload_file_ref : crdownload_file_ref
+{
+	strings:
+		$FIELD = "message"
+        $VALUE = /.crdownload File reference/
+    condition:
+        $FIELD contains $VALUE
+}

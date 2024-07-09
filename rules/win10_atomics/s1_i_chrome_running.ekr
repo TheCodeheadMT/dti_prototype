@@ -1,0 +1,9 @@
+rule chrome_running : chrome_running
+{
+    strings:
+        $FIELD = "message"
+        $START = /\[CHROME.EXE\] was executed/
+        $STOP =  /Google\\Chrome\\Application\\.*snapshot\.bin|\[59 \/.*Chrome Component Updater|CHROME.EXE.*USN_REASON_CLOSE/
+    condition:
+        $FIELD interval $START and $STOP
+}

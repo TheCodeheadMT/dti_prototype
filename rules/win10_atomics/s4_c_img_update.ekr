@@ -1,0 +1,9 @@
+rule img_update : img_update
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /.png.*Update reason:.*_RENAME_|.jpg.*Update reason:.*_RENAME_|.png.*Update reason:.*SECURITY_CHANGE|.jpg.*Update reason:.*SECURITY_CHANGE/
+	condition:
+		$FIELD contains $VALUE
+}
+

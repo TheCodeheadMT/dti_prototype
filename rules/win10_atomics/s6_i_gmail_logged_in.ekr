@@ -1,0 +1,9 @@
+rule gmail_logged_in : gmail_logged_in
+{
+    strings:
+        $FIELD = "message"
+        $START = /Login \(Gmail\)/
+        $STOP =  /Logout \(Gmail\)/
+    condition:
+        $FIELD interval $START and $STOP
+} 

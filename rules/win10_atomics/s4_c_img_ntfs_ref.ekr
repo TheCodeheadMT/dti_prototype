@@ -1,0 +1,9 @@
+rule img_ntfs_ref : img_ntfs_ref
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /.png NTFS file reference:|.jpg NTFS file reference:/
+	condition:
+		$FIELD contains $VALUE
+}
+

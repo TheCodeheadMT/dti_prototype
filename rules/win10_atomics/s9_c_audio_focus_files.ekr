@@ -1,0 +1,8 @@
+rule audio_focus_files : audio_focus_files
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /\.wav|\.mp3|\.mp4/
+	condition:
+		$FIELD contains $VALUE
+}

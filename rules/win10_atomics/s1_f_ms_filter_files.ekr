@@ -1,0 +1,8 @@
+rule ms_filter_files : ms_filter_files
+{
+	strings:
+		$FIELD = "display_name"
+		$VALUE = /AppData.*.dat|winevt.*.evtx|Start Menu\\Programs|\.etl|\.evtx|\.pf|\.pnf|\.mui|desktop.ini/
+	condition:
+		$FIELD contains $VALUE
+}

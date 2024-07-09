@@ -1,0 +1,8 @@
+rule recent_files_display_name : recent_files_display_name
+{
+	strings:
+		$FIELD = "display_name"
+		$VALUE = /.*\\Recent.*|.*\\RecentDocs.*/
+	condition:
+		$FIELD contains $VALUE
+}

@@ -1,0 +1,8 @@
+rule ms_appdata_local : ms_appdata_local
+{
+	strings:
+		$FIELD = "message"
+$VALUE = /\\Windows\\Themes\\CachedFiles|AppData\\Local\\Microsoft|Windows\\SoftwareDistribution|WindowsApps|LogonUI\\Notifications|Microsoft-Windows-AppXDeployment|Software\\Classes|AppData\\Local|Provider identifier: {.*}|\[HKEY_LOCAL_MACHINE|ProgramData|\\Windows.*assembly\\|\\Windows\\Microsoft.NET|\\Windows\\WinSxS|AppData\\Roaming\\Microsoft\\Windows\\Start Menu|\\Microsoft\\Edge|Microsoft\\Windows\\CurrentVersion|\[.*Events\\|OneDrive|\\Windows\\System32|\\WorkItems\\{|WindowsApps|Windows\\diagnostics|\\Windows\\Fonts|\\Windows\\Logs|hints: \\WINDOWS\\SYSTEM32|Microsoft\\Internet Explorer\\Quick Launch|Windows NT\\CurrentVersion/
+	condition:
+		$FIELD contains $VALUE
+}

@@ -1,0 +1,9 @@
+rule img_editor_running : img_editor_running
+{
+    strings:
+        $FIELD = "message"
+        $START = /\[MSPAINT.EXE\] was executed/
+        $STOP =  /^Microsoft.MSPaint_.*\[.*\]|\\Device\\.*\\mspaint.exe/
+    condition:
+        $FIELD interval $START and $STOP
+}

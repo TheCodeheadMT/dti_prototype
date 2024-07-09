@@ -1,0 +1,8 @@
+rule usr_typed_clicked : usr_typed_clicked
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /User typed.*\]|User clicked.*\]/
+	condition:
+		$FIELD contains $VALUE
+} 

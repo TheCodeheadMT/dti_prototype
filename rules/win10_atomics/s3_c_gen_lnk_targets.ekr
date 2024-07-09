@@ -1,0 +1,8 @@
+rule gen_lnk_targets : gen_lnk_targets
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /:.*Link target:/
+	condition:
+		$FIELD contains $VALUE
+}

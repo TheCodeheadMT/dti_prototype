@@ -1,0 +1,8 @@
+rule file_entry : file_entry
+{
+	strings:
+		$FIELD = "source_long"
+        $VALUE = "File entry shell item"
+    condition:
+        $FIELD is $VALUE
+}

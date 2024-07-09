@@ -1,0 +1,8 @@
+rule ntfs_file_ref_autodest : ntfs_file_ref_autodest
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /.*NTFS file reference:.*automaticDestinations|.lnk File reference:/
+	condition:
+		$FIELD contains $VALUE
+}

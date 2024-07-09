@@ -1,0 +1,9 @@
+rule logged_in : logged_in
+{
+    strings:
+        $FIELD = "message"
+        $START = /\[4624 \/.*svchost.exe/
+        $STOP =  /\[4647 \//
+    condition:
+        $FIELD interval $START and $STOP
+}

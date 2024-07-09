@@ -1,0 +1,8 @@
+rule olecf_dest_entry : olecf_dest_entry
+{
+	strings:
+		$FIELD = "source_long"
+        $VALUE = /OLECF Dest list entry|OLECF Item/
+    condition:
+        $FIELD contains $VALUE
+}

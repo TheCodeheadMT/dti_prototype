@@ -1,0 +1,8 @@
+rule recent_files : recent_files
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /.*\\Recent.*|.*\\RecentDocs.*/
+	condition:
+		$FIELD contains $VALUE
+}

@@ -1,0 +1,8 @@
+rule ntfs_lnk_ref : ntfs_lnk_ref
+{
+	strings:
+		$FIELD = "message"
+		$VALUE = /.lnk File reference:/
+	condition:
+		$FIELD contains $VALUE
+}
