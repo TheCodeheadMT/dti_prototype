@@ -43,7 +43,7 @@ pip install dti
 Sub directories under ./data are accepted as well. e.g., data in ./data/dataset1/data1.csv -> input="dataset1/data1.csv" or input="dataset1/data*.csv" if multiple files are included.
 # How to run DTI 
 ```
-from dti import *
+from dti.proto import *
 
 if __name__ == "__main__":
     
