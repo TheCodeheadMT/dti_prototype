@@ -25,7 +25,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="dti",
-    version="0.0.20",
+    version="0.1.0",
     description="A digital trace aggreation and Michigan Style Learning Classifier System machine learning application that applies the ExSTraCS system.",
     package_dir={"": "app"},
     packages=find_packages(where="app"),
@@ -49,7 +49,9 @@ setup(
                     "scikit-ExSTraCS >= 1.1.1",
                     "skrebate >= 0.62",
                     "scikit-learn >= 1.2.2",
-                    "matplotlib >= 3.6.0"],
+                    "matplotlib >= 3.6.0",
+                    "streamlit >= 1.36.0",
+                    "imblearn >= 0.0"],
     extras_require={
         "dev": ["pytest>=7.4", "twine>=4.0.2"],
     },

@@ -60,7 +60,7 @@ if __name__ == "__main__":
  
         ################# BUILD AND TEST MODELS #################
         # Create a DTILCS using labeled data
-        dti = DTILCS(name="s1_100K_model_metrics", class_label="rel", rules=rule_dir)
+        dti = DTILCS(name="s1_100K", class_label="rel", rules=rule_dir)
         
         # Load training data from above
         dti.load_train_data('fv_dti_s1_win10_train_2024-02-19_labeled.csv')
@@ -77,11 +77,14 @@ if __name__ == "__main__":
         # Fit model using loaded training data
         dti.fit()
         
+        # If model already created, use load model instead of fit
+        #dti.load_model("./models/s1_100K_20240709_103602_model.pkl")
+                
         # Save model to 'models' directory
         dti.save_model()
         
         # Check performance using cross validation
-        dti.cross_validate(k=5) #long running
+        dti.cross_validate(k=2) #long running so set to 2
         
         # If testing load test data and specifiy output (reports, plots)
         dti.test_model(

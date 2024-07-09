@@ -14,6 +14,8 @@ The EK Rule framework provides a user-friendly interface for extracting interval
 + skrebate >= 0.62
 + scikit-learn >= 1.2.2
 + matplotlib >= 3.6.0
++ streamlit >= 1.36.0
++ imblearn >= 0.0
 
 ## How to install
 1) Install dti maually (requires setuptools).
