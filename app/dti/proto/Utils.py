@@ -317,10 +317,10 @@ def report(dti_df, mod_pred_df, target_dir):
 
         dti_df.sort_values('datetime', ascending=True, inplace=True)
         
-        #full report
+        # Full report
         dti_df.to_csv(f'{target_dir}/{model_name}_FULL_dti_predict_report.csv')
         
-        #summary report
+        # Summary report
         dti_df = dti_df[dti_df['pred'] == 1]
         summ_out = pathlib.Path(target_dir, model_name+"_SUMMARY_dti_predict_report.csv" )
         dti_df.to_csv(summ_out)
@@ -328,21 +328,7 @@ def report(dti_df, mod_pred_df, target_dir):
         #_data_file = pathlib.Path(self.DATA_DIR, trn_data_fn)
         #"- Loaded train data: \t{str(_data_file)} ({len(self.trn_data)} rows)  "
         print(f'Summary report ready for review at -> {str(summ_out)}')
-        
 
-        # def summary_report():
-        #     if 'df' not in st.session_state:
-        #         st.session_state.df = pd.DataFrame(data=pd.read_csv(df_file))
-
-        #     edited_df = st.data_editor(st.session_state.df, use_container_width=True, hide_index=True)
-
-        #     edited_df.to_csv(df_file, index=False)
-    
-        # if st._is_running_with_streamlit:
-        #     summary_report()
-        # else:
-        #     sys.argv = ["streamlit", "run", "run.py']
-        #     sys.exit(stcli.main())
         return summ_out
 
     except RuntimeError as e:

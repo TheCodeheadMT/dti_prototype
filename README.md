@@ -1,12 +1,25 @@
 # dti-proto
-### This prototype package provides a platform to produce Michigan Style Learning Classifier System binary classifiers for use with temporal metadata.  
-The EK Rule framework provides a user-friendly interface for extracting interval and characteristic abstractions used to train a learning machine. 
+### NOTE: This repository is for reference only and is not maintained. 
+
+
+### This codebase contains the source for the initial study into using binary Michigan-Style Learning Classifier System (MLCS) models to identify targeted activity in temporal metadata. 
+
+Digital Trace Inspector (DTI) is the initial proof of concept of a decision support tool that uses MLCS to locate and group corroborating temporal metadata traces using binary feature vectors formed using an expert knowlege framework (EK rules) inspired by YARA rules.
+
+DTI was designed to be an Augmented Intelligence tool, e.g., an AI  tool desinged to assist humans rather than replace them. Tools like DTI are human in the loop (HITL) systems that require input along with training data to produce models to assist in decision making tasks.
+
+See "Temporal Metadata Analysis: A Learning Classifier System Approach, Forensic Science International: Digital Investigation" for details.
+
+Training data and EK rules for 10 Windows 10 scenarios are provided in this repository.
+
+
+
+### Following a use case study, a full vesrion of DTI will be released. 
 
 **Requires**
 + numpy >= 1.23.3
 + pandas >= 1.4.4
 + pyarrow >= 1.0.0
-+ swifter >= 1.4.0
 + tqdm >= 4.65.0
 + rich >= 13.5.3
 + plyara >= 2.1.1
@@ -14,7 +27,6 @@ The EK Rule framework provides a user-friendly interface for extracting interval
 + skrebate >= 0.62
 + scikit-learn >= 1.2.2
 + matplotlib >= 3.6.0
-+ streamlit >= 1.36.0
 + imblearn >= 0.0
 
 ## How to install
@@ -25,7 +37,7 @@ pip install setuptools, wheel
 ```
 - Clone dti
 ```
-git clone https://github.com/TheCodeheadMT/2023-dti-proto.git
+git clone https://github.com/TheCodeheadMT/dti_prototype.git
 ```
 - Open IDE of choice at the root of the 2023-dti-proto folder (developed using vscode)
 - All required packages will be installed during this process
@@ -35,10 +47,6 @@ python.exe setup.py bdist_wheel sdist
 pip install .
 ```
 
-2) Use pipy (NOT CURRENTLY IMPLEMENTED)
-```
-pip install dti 
-```
 # Note: All data must be under the ./data directory. Datasets are provided in ./data/datasets.zip, unzip before running provided examples.
 Sub directories under ./data are accepted as well. e.g., data in ./data/dataset1/data1.csv -> input="dataset1/data1.csv" or input="dataset1/data*.csv" if multiple files are included.
 # How to run DTI 
@@ -180,8 +188,7 @@ See ./data/ a sample [input](./data/). (must be unzipped)
 
 
 ## Reference
-Under review for publication.  
-
+Todd, M., Peterson, B. (2024). Temporal Metadata Analysis: A Learning Classifier System Approach, Forensic Science International: Digital Investigation, publication pending.
 
 ## License
 

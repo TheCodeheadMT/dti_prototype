@@ -42,7 +42,6 @@ setup(
     install_requires=["numpy >= 1.23.3",
                     "pandas >= 1.4.4",
                     "pyarrow >= 1.0.0",
-                    "swifter >= 1.4.0",
                     "tqdm >= 4.65.0",
                     "rich >= 13.5.3",
                     "plyara >= 2.1.1",
@@ -50,7 +49,6 @@ setup(
                     "skrebate >= 0.62",
                     "scikit-learn >= 1.2.2",
                     "matplotlib >= 3.6.0",
-                    "streamlit >= 1.36.0",
                     "imblearn >= 0.0"],
     extras_require={
         "dev": ["pytest>=7.4", "twine>=4.0.2"],
