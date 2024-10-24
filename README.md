@@ -188,7 +188,7 @@ See ./data/ a sample [input](./data/). (must be unzipped)
 
 
 ## Reference
-Todd, M., Peterson, B. (2024). Temporal Metadata Analysis: A Learning Classifier System Approach, Forensic Science International: Digital Investigation, publication pending.
+Todd, M. C., Peterson, G. L. (2024). Temporal Metadata Analysis: A Learning Classifier System Approach, Forensic Science International: Digital Investigation, https://doi.org/10.1016/j.fsidi.2024.301842.
 
 ## License
 
