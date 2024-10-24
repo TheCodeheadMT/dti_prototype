@@ -154,7 +154,7 @@ if __name__ == "__main__":
     
 
 ```
-# How to create EK rules.
+# How to create EK rules
 ### See EK rules in ../rules/win10_atomics for examples [here](./rules/win10_atomics).
 ```
 #(interval) edge_running.ekr
